@@ -1,0 +1,45 @@
+[
+    {
+        "music": {
+            "bourree_dindes": {
+                "name": "Bourrée des dindes"
+            },
+            "poules_gm": {
+                "name": "Les poules de ma grand-mère"
+            },
+            "grandes_poteries": {
+                "name": "Les grandes poteries"
+            },
+            "bourree_sabotee": {
+                "name": "La Sabotée",
+                "danceId": "bourree_3t"
+            }
+        },
+        "dance": {
+            "bourree_2t": {
+                "name": "Bourrée à 2 temps"
+            },
+            "bourree_3t": {
+                "name": "Bourrée à 3 temps"
+            },
+            "mazurka": {
+                "name": "Mazurka"
+            },
+            "polka": {
+                "name": "Polka"
+            },
+            "andro": {
+                "name": "An dro"
+            },
+            "hanterdro": {
+                "name": "Hanter-dro"
+            },
+            "gavotte": {
+                "name": "Gavotte"
+            },
+            "colo": {
+                "name": "Colo"
+            }
+        }
+    }
+]
