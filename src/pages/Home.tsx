@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import { FunctionComponent } from "react"
-
+import DanseListe from "../components/DanseListe"
 
 const Home:FunctionComponent = () => {
     return (
@@ -10,9 +10,10 @@ const Home:FunctionComponent = () => {
                 variant="body1"
                 fontSize={'1.2rem'}
                 textAlign={'center'}
-                my={'20px'}
+                fontStyle={'italic'}
             >Une application pour choisir les morceaux de musique qui vont être joués.
             </Typography>
+            <DanseListe />
         </Stack>
     )
 

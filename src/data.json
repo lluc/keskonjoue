@@ -1,0 +1,115 @@
+[
+    {
+        "music": {
+            "bourree_dindes": {
+                "name": "Bourrée des dindes"
+            },
+            "bourree_nasbinals": {
+                "name": "Bourrée de Nasbinals",
+                "danceId": "bourree_2t"
+            },
+            "poules_gm": {
+                "name": "Les poules de ma grand-mère"
+            },
+            "grandes_poteries": {
+                "name": "Les grandes poteries"
+            },
+            "bourree_sabotee": {
+                "name": "La Sabotée",
+                "danceId": "bourree_3t"
+            },
+            "polka_john_ryan": {
+                "name": "John Ryan's Polka",
+                "danceId": "polka"
+            },
+            "polka_kerry_frog": {
+                "name": "Kerry  et Frog's Polkas",
+                "danceId": "polka"
+            },
+            "polka_limoise": {
+                "name": "La Limoise",
+                "danceId": "polka"
+            },
+            "polka_mirepoix_pepere": {
+                "name": "Mirepoix et Pepère",
+                "danceId": "polka"
+            },
+            "polka_russe": {
+                "name": "Polka Russe",
+                "danceId": "polka"
+            },
+            "limoise": {
+                "name": "La Limoise",
+                "danceId": "mazurka"
+            },
+            "escholiers": {
+                "name": "Les Escholiers de Saint-Genêt",
+                "danceId": "mazurka"
+            },
+            "mazurka_mathilde": {
+                "name": "Mazurka à Mathilde",
+                "danceId": "mazurka"
+            },
+            "spezet": {
+                "name": "Spezet",
+                "danceId": "andro"
+            },
+            "scot_bourbon": {
+                "name": "Scottish Bourbonnaise",
+                "danceId": "scottish"
+            },
+            "scot_catineau": {
+                "name": "Scottish à Catineau",
+                "danceId": "scottish"
+            },
+            "scot_crassier": {
+                "name": "Scottish du Crassier",
+                "danceId": "scottish"
+            }
+        },
+        "dance": {
+            "bourree_2t": {
+                "name": "Bourrée à 2 temps"
+            },
+            "bourree_3t": {
+                "name": "Bourrée à 3 temps"
+            },
+            "mazurka": {
+                "name": "Mazurka"
+            },
+            "polka": {
+                "name": "Polka"
+            },
+            "andro": {
+                "name": "An dro"
+            },
+            "hanterdro": {
+                "name": "Hanter-dro"
+            },
+            "gavotte": {
+                "name": "Gavotte"
+            },
+            "colo": {
+                "name": "Colo"
+            },
+            "valse": {
+                "name": "Valse"
+            },
+            "valse_ecoss": {
+                "name": "Valse écossaise"
+            },
+            "branle_1": {
+                "name": "Branle simple"
+            },
+            "branle_2": {
+                "name": "Branle double"
+            },
+            "hornpipe": {
+                "name": "Hornpipe"
+            },
+            "scottish": {
+                "name": "Scottish"
+            }
+        }
+    }
+]

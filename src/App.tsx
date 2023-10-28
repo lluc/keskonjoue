@@ -1,10 +1,12 @@
 import { FunctionComponent } from 'react'
 import './App.css'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import ScrollToTopButton from './components/ScrollToTopButton'
 import ButtonAppBar from './components/ButtonAppBar'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Dance from './pages/Dance'
+
 
 const App: FunctionComponent = () => {
 
@@ -16,9 +18,10 @@ const App: FunctionComponent = () => {
 
     >
       <ButtonAppBar />
-      <Box mt={"64px"} mb={"64px"} textAlign={'center'}>
+      <Box mt={"16px"} mb={"64px"} textAlign={'center'}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dance/:slug" element={<Dance />} />
         </Routes>
       </Box>
       <ScrollToTopButton />
