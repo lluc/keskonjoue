@@ -5,6 +5,7 @@ import ScrollToTopButton from './components/ScrollToTopButton'
 import ButtonAppBar from './components/ButtonAppBar'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Dance from './pages/Dance'
 
 
 const App: FunctionComponent = () => {
@@ -20,6 +21,7 @@ const App: FunctionComponent = () => {
       <Box mt={"16px"} mb={"64px"} textAlign={'center'}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dance/:slug" element={<Dance />} />
         </Routes>
       </Box>
       <ScrollToTopButton />

@@ -1,14 +1,14 @@
-import { createIndexes, createRelationships, createStore } from "tinybase";
+import { createIndexes, createQueries, createRelationships, createStore } from "tinybase";
 import jsonData from "../data.json";
 
 export const store = createStore();
 export const relations = createRelationships(store);
 export const indexes = createIndexes(store);
 
-
 // Charge les données depuis le fichier JSON dans Tinybase
 store.setJson(JSON.stringify(jsonData));
 
+// Relations
 relations.setRelationshipDefinition(
     "musicDance", // Nom de la relation
     "music", // Nom de la table
@@ -16,6 +16,7 @@ relations.setRelationshipDefinition(
     "danceId", // Nom de la colonne de la table de la relation
     )
 
+// Indexes
 indexes.setIndexDefinition(
     "danceAsc", // Nom de l'index
     "dance", // Nom de la table
