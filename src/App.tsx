@@ -6,6 +6,7 @@ import ButtonAppBar from './components/ButtonAppBar'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Dance from './pages/Dance'
+import Music from './pages/Music'
 
 
 const App: FunctionComponent = () => {
@@ -22,6 +23,7 @@ const App: FunctionComponent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dance/:slug" element={<Dance />} />
+          <Route path="/music/:slug" element={<Music />} />
         </Routes>
       </Box>
       <ScrollToTopButton />

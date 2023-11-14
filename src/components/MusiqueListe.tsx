@@ -1,8 +1,8 @@
-import Stack from "@mui/material/Stack"
 import { FunctionComponent, useEffect, useState, } from "react"
 import { store } from "../service/store.service"
-import { Box, Typography } from "@mui/material";
-import { createQueries, ResultCell,Cell } from "tinybase";
+import { Button, ButtonGroup } from "@mui/material";
+import { createQueries, ResultCell } from "tinybase";
+import { useNavigate } from "react-router-dom";
 
 
 export interface MusiqueListeProps {
@@ -12,6 +12,8 @@ export interface MusiqueListeProps {
 const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeProps) => {
     const queries = createQueries(store)
     const [musics, setMusics] = useState<{ id: string, name: ResultCell }[]>([])
+
+    const navigateTo = useNavigate()
 
     useEffect(() => {
         queries.setQueryDefinition(
@@ -33,20 +35,31 @@ const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeP
         )
     }, [])
 
+    const handleMusic = (slug: string) => {
+        navigateTo(`/music/${slug}`);
+    }
+
     return (
-        <Stack>
+        <ButtonGroup
+            orientation="vertical"
+            variant="outlined"
+        >
             {musics.map((row) => {
                 return (
-                    <Box key={row.id}>
-                        <Typography>
-                            {row.name}
-                        </Typography>
-
-                    </Box>
+                    <Button
+                        key={row.id}
+                        sx={{
+                            height: "4rem",
+                            fontSize: 20,
+                        }}
+                        onClick={() => handleMusic(row.id)}
+                    >
+                        {row.name}
+                    </Button>
                 )
             })}
 
-        </Stack>
+        </ButtonGroup >
     )
 }
 

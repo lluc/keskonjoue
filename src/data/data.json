@@ -2,32 +2,38 @@
     {
         "music": {
             "bourree_dindes": {
-                "name": "Bourrée des dindes"
+                "name": "Bourrée des dindes",
+                "danceId": "bourree_rond",
+                "test": "test",
+                "notation": "bourree_dindes.abc",
+                "youtube": "LffnyPxNlz8"
             },
             "bourree_nasbinals": {
                 "name": "Bourrée de Nasbinals",
-                "danceId": "bourree_2t"
+                "danceId": "bourree_2t",
+                "notation": "bourree_nasbinals.abc"
             },
             "poules_gm": {
-                "name": "Les poules de ma grand-mère"
+                "name": "Les poules de ma grand-mère",
+                "notation": "poules_gm.abc"
             },
             "grandes_poteries": {
-                "name": "Les grandes poteries"
+                "name": "Les grandes poteries",
+                "notation": "grandes_poteries.abc"
             },
             "bourree_sabotee": {
                 "name": "La Sabotée",
-                "danceId": "bourree_3t"
+                "danceId": "bourree_3t",
+                "notation": "bourree_sabotee.abc"
             },
             "polka_john_ryan": {
                 "name": "John Ryan's Polka",
-                "danceId": "polka"
+                "danceId": "polka",
+                "notation": "john_ryan_polka.abc",
+                "youtube": "dHdI0eLk4Lw"
             },
             "polka_kerry_frog": {
                 "name": "Kerry  et Frog's Polkas",
-                "danceId": "polka"
-            },
-            "polka_limoise": {
-                "name": "La Limoise",
                 "danceId": "polka"
             },
             "polka_mirepoix_pepere": {
@@ -40,7 +46,8 @@
             },
             "limoise": {
                 "name": "La Limoise",
-                "danceId": "mazurka"
+                "danceId": "mazurka",
+                "notation": "limoise.abc"
             },
             "escholiers": {
                 "name": "Les Escholiers de Saint-Genêt",
@@ -73,6 +80,9 @@
             },
             "bourree_3t": {
                 "name": "Bourrée à 3 temps"
+            },
+            "bourree_rond": {
+                "name": "Bourrée en rond"
             },
             "mazurka": {
                 "name": "Mazurka"
