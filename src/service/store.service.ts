@@ -1,5 +1,5 @@
 import { createIndexes, createQueries, createRelationships, createStore } from "tinybase";
-import jsonData from "../data.json";
+import jsonData from "../data/data.json";
 
 export const store = createStore();
 export const relations = createRelationships(store);
