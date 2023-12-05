@@ -13,6 +13,12 @@
                 "danceId": "bourree_2t",
                 "notation": "bourree_nasbinals.abc"
             },
+            "bourree_sans_soucis": {
+                "name": "Bourrée Sans-Souci",
+                "danceId": "bourree_3t",
+                "notation": "bourree_sans_souci.abc",
+                "youtube": "https://youtu.be/azjunXwTyqg"
+            },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
                 "notation": "poules_gm.abc"
@@ -50,8 +56,10 @@
                 "notation": "limoise.abc"
             },
             "escholiers": {
-                "name": "Les Escholiers de Saint-Genêt",
-                "danceId": "mazurka"
+                "name": "Les Escholiers de Saint-Genest",
+                "danceId": "mazurka",
+                "notation": "mazurka_ecoliers_de_saint_genest.abc",
+                "youtube": "https://youtu.be/UD1GgTQuzSY?feature=shared"
             },
             "mazurka_mathilde": {
                 "name": "Mazurka à Mathilde",
