@@ -83,6 +83,9 @@
             }
         },
         "dance": {
+            "avant_deux": {
+                "name": "Avant-deux"
+            },
             "bourree_2t": {
                 "name": "Bourrée à 2 temps"
             },
@@ -91,6 +94,9 @@
             },
             "bourree_rond": {
                 "name": "Bourrée en rond"
+            },
+            "branle_noirmoutier": {
+                "name": "Branle de Noirmoutier"
             },
             "mazurka": {
                 "name": "Mazurka"
@@ -124,6 +130,24 @@
             },
             "hornpipe": {
                 "name": "Hornpipe"
+            },
+            "rond_argenton": {
+                "name": "Rond d'Argenton"
+            },
+            "rond_barbatre": {
+                "name": "Rond de Barbâtre"
+            },
+            "rond_ile_yeu": {
+                "name": "Rond de l'Ile d'Yeu"
+            },
+            "rond_Landeda": {
+                "name": "Rond de Landeda"
+            },
+            "rond_saint_vincent": {
+                "name": "Rond de Saint-Vincent"
+            },
+            "ronde_quercy": {
+                "name": "Ronde du Quercy"
             },
             "scottish": {
                 "name": "Scottish"
