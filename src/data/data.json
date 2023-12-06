@@ -13,11 +13,13 @@
                 "danceId": "bourree_2t",
                 "notation": "bourree_nasbinals.abc"
             },
-            "bourree_sans_soucis": {
+            "bourree_sans_souci": {
                 "name": "Bourrée Sans-Souci",
                 "danceId": "bourree_3t",
                 "notation": "bourree_sans_souci.abc",
-                "youtube": "https://youtu.be/azjunXwTyqg"
+                "youtube": "https://youtu.be/azjunXwTyqg",
+                "rights": 1,
+                "authors": "Gian Marco Pietrasanta"
             },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",

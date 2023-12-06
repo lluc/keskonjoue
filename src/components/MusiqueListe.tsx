@@ -11,7 +11,12 @@ export interface MusiqueListeProps {
 
 const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeProps) => {
     const queries = createQueries(store)
-    const [musics, setMusics] = useState<{ id: string, name: ResultCell }[]>([])
+    const [musics, setMusics] = useState<{
+        id: string,
+        name: ResultCell,
+        rights: ResultCell,
+        authors: ResultCell
+    }[]>([])
 
     const navigateTo = useNavigate()
 
@@ -20,16 +25,21 @@ const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeP
             "music4dance", // Nom de la query
             "music", // Nom de la table
             ({ select, where }) => {
-                select("name")
+                select('name')
+                select('rights')
+                select('authors')
                 where("danceId", props.slug)
             }
         )
 
         setMusics(
             Object.entries(queries.getResultTable('music4dance')).map((row) => {
+                console.log(row)
                 return {
                     id: row[0],
                     name: row[1].name,
+                    rights: row[1].rights,
+                    authors: row[1].authors
                 }
             })
         )
@@ -54,7 +64,7 @@ const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeP
                         }}
                         onClick={() => handleMusic(row.id)}
                     >
-                        {row.name}
+                        {row.name} {row.rights ? "🔒" : ""}
                     </Button>
                 )
             })}
