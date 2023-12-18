@@ -65,7 +65,8 @@
             },
             "maris_wedding": {
                 "name": "Mari's Wedding",
-                "danceId": "polka"
+                "danceId": "polka",
+                "notation": "maris_wedding.abc"
             },
             "mazurka_mathilde": {
                 "name": "Mazurka à Mathilde",
