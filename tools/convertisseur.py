@@ -1,7 +1,7 @@
 from music21 import converter, tablature, note
 
 # Remplacez 'path_to_abc_file.abc' par le chemin de votre fichier ABC
-abc_file_path = "notations/bourree_dindes.abc"
+name_music = "bourree_dindes"
 
 
 # Créer liste de notes pour le violon
@@ -10,9 +10,9 @@ def notes_tab(lib_note: str, nb_frets: int) -> list:
     return [n + i for i in range(0, nb_frets)]
 
 
-def tablature_violon(fichier_abc: str) -> str:
+def tablature_violon(fichier_abc: str) -> None:
     # Utiliser le convertisseur pour lire le fichier ABC
-    abc_score = converter.parse(fichier_abc)
+    abc_score = converter.parse("notations/" + fichier_abc + ".abc")
 
     # Créer liste de notes pour le violon
 
@@ -53,8 +53,9 @@ def tablature_violon(fichier_abc: str) -> str:
     for string in strings:  # Start from the G string
         ascii_tab += string + "|-" + "-".join(str(f) for f in tab_lines[string]) + "\n"
 
-    return ascii_tab
+    # Save the ASCII table to a file
+    with open("tabs_violins/" + name_music + ".tab", "w") as f:
+        f.write(ascii_tab)
 
 
-tab_violon = tablature_violon(abc_file_path)
-print(tab_violon)
+tab_violon = tablature_violon(name_music)
