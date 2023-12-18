@@ -71,6 +71,12 @@ const Music = () => {
         <Stack spacing={2}>
             <Typography variant="h3">
                 {data.name}
+
+                {data.rights == 1 &&
+                    <Typography variant="body1" color="red">
+                        © {data.authors}
+                    </Typography>
+                }
             </Typography>
             {notations &&
                 <Stack>

@@ -1,0 +1,23 @@
+
+I:abc-charset utf-8
+
+X:13048
+T: Mari's Wedding
+T: Mary's Wedding
+M:2/4
+L:1/8
+R:March
+G:Marches ~ LRB
+H:From the Lamprey River Band Tunebook, a part of the NH Country Dance website.
+H:Look for more tunes (New England, Canadian, Swedish) plus resources for 
+H:abc notation and New England traditional music and dance; URL below.
+U: s = !slide!       % To preserve font, staff layout & other formatting,
+U: t = !trill!       % use the file header at the URL below. There are
+F:Tunes Home Page - http://nhcountrydance.com/fiddle/the-tunes.html
+F:File Header & instructions - http://nhcountrydance.com/fiddle/headers.html
+K:G
+   "G" D>E DE  | GAB2 | "C" AG EG | "D" BA B<d |\
+   "G" D>E DE  | GAB2 | "C" AG EC | "D" D2 D2 :|
+|: "G" d>e d>e | dcB2 | "C" AG EG | "D" BA B<d |\
+   "G" d>e de  | dcB2 | "C" AG EC | "D" D2 D2 :|
+
