@@ -13,11 +13,13 @@
                 "danceId": "bourree_2t",
                 "notation": "bourree_nasbinals.abc"
             },
-            "bourree_sans_soucis": {
+            "bourree_sans_souci": {
                 "name": "Bourrée Sans-Souci",
                 "danceId": "bourree_3t",
                 "notation": "bourree_sans_souci.abc",
-                "youtube": "https://youtu.be/azjunXwTyqg"
+                "youtube": "https://youtu.be/azjunXwTyqg",
+                "rights": 1,
+                "authors": "Gian Marco Pietrasanta"
             },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
@@ -61,9 +63,19 @@
                 "notation": "mazurka_ecoliers_de_saint_genest.abc",
                 "youtube": "https://youtu.be/UD1GgTQuzSY?feature=shared"
             },
+            "maris_wedding": {
+                "name": "Mari's Wedding",
+                "danceId": "polka"
+            },
             "mazurka_mathilde": {
                 "name": "Mazurka à Mathilde",
                 "danceId": "mazurka"
+            },
+            "misirlou": {
+                "name": "Misirlou",
+                "danceId": "klezmer",
+                "notation": "misirlou.abc",
+                "youtube": "https: //youtu.be/ZIU0RMV_II8"
             },
             "spezet": {
                 "name": "Spezet",
@@ -83,6 +95,9 @@
             }
         },
         "dance": {
+            "avant_deux": {
+                "name": "Avant-deux"
+            },
             "bourree_2t": {
                 "name": "Bourrée à 2 temps"
             },
@@ -91,6 +106,9 @@
             },
             "bourree_rond": {
                 "name": "Bourrée en rond"
+            },
+            "branle_noirmoutier": {
+                "name": "Branle de Noirmoutier"
             },
             "mazurka": {
                 "name": "Mazurka"
@@ -101,11 +119,14 @@
             "andro": {
                 "name": "An dro"
             },
+            "gavotte": {
+                "name": "Gavotte"
+            },
             "hanterdro": {
                 "name": "Hanter-dro"
             },
-            "gavotte": {
-                "name": "Gavotte"
+            "klezmer": {
+                "name": "Klezmer"
             },
             "colo": {
                 "name": "Colo"
@@ -124,6 +145,24 @@
             },
             "hornpipe": {
                 "name": "Hornpipe"
+            },
+            "rond_argenton": {
+                "name": "Rond d'Argenton"
+            },
+            "rond_barbatre": {
+                "name": "Rond de Barbâtre"
+            },
+            "rond_ile_yeu": {
+                "name": "Rond de l'Ile d'Yeu"
+            },
+            "rond_Landeda": {
+                "name": "Rond de Landeda"
+            },
+            "rond_saint_vincent": {
+                "name": "Rond de Saint-Vincent"
+            },
+            "ronde_quercy": {
+                "name": "Ronde du Quercy"
             },
             "scottish": {
                 "name": "Scottish"
