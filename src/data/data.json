@@ -63,9 +63,19 @@
                 "notation": "mazurka_ecoliers_de_saint_genest.abc",
                 "youtube": "https://youtu.be/UD1GgTQuzSY?feature=shared"
             },
+            "maris_wedding": {
+                "name": "Mari's Wedding",
+                "danceId": "polka"
+            },
             "mazurka_mathilde": {
                 "name": "Mazurka à Mathilde",
                 "danceId": "mazurka"
+            },
+            "misirlou": {
+                "name": "Misirlou",
+                "danceId": "klezmer",
+                "notation": "misirlou.abc",
+                "youtube": "https: //youtu.be/ZIU0RMV_II8"
             },
             "spezet": {
                 "name": "Spezet",
@@ -109,11 +119,14 @@
             "andro": {
                 "name": "An dro"
             },
+            "gavotte": {
+                "name": "Gavotte"
+            },
             "hanterdro": {
                 "name": "Hanter-dro"
             },
-            "gavotte": {
-                "name": "Gavotte"
+            "klezmer": {
+                "name": "Klezmer"
             },
             "colo": {
                 "name": "Colo"
