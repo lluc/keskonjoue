@@ -2,14 +2,17 @@ import os
 import re
 import json
 
+
 def extract_mlk_parts_and_melody(abc_content):
     m_match = re.search(r"^M:\s*([^\n]*)$", abc_content, re.MULTILINE)
     l_match = re.search(r"^L:\s*([^\n]*)$", abc_content, re.MULTILINE)
     k_match = re.search(r"^K:\s*([^\n]*)$", abc_content, re.MULTILINE)
+    q_match = re.search(r"^Q:\s*([^\n]*)$", abc_content, re.MULTILINE)
 
     m = m_match.group(1).strip() if m_match else None
     l = l_match.group(1).strip() if l_match else None
     k = k_match.group(1).strip() if k_match else None
+    q = q_match.group(1).strip() if q_match else None
 
     melody_match = re.search(r"K:[^\n]*\n((?:.*\n)+)", abc_content, re.DOTALL)
 
@@ -18,7 +21,7 @@ def extract_mlk_parts_and_melody(abc_content):
     else:
         melody = None
 
-    return(f"M: {m}\nL: {l}\nK: {k}\n{melody}")
+    return f"M: {m}\nL: {l}\nQ: {q}\nK: {k}\n{melody}"
 
 
 def abc_to_json(abc_content):
@@ -39,6 +42,7 @@ def convert_abc_files_to_json(files):
 
         file_name = os.path.basename(file_path)
         json_data["abcFiles"][file_name] = extract_mlk_parts_and_melody(abc_content)
+        print(file_name)
 
     return json_data
 

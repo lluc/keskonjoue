@@ -11,28 +11,34 @@
             "bourree_nasbinals": {
                 "name": "Bourrée de Nasbinals",
                 "danceId": "bourree_2t",
-                "notation": "bourree_nasbinals.abc"
+                "notation": "bourree_nasbinals.abc",
+                "youtube": "WS0JG_B9wGM"
             },
             "bourree_sans_souci": {
                 "name": "Bourrée Sans-Souci",
                 "danceId": "bourree_3t",
                 "notation": "bourree_sans_souci.abc",
-                "youtube": "https://youtu.be/azjunXwTyqg",
+                "youtube": "azjunXwTyqg",
                 "rights": 1,
                 "authors": "Gian Marco Pietrasanta"
             },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
-                "notation": "poules_gm.abc"
+                "notation": "poules_gm.abc",
+                "danceId": "cercle_circassien"
+
             },
             "grandes_poteries": {
                 "name": "Les grandes poteries",
-                "notation": "grandes_poteries.abc"
+                "notation": "grandes_poteries.abc",
+                "danceId": "bourree_3t",
+                "youtube": "7hqgbkhjFXE&list"
             },
             "bourree_sabotee": {
                 "name": "La Sabotée",
                 "danceId": "bourree_3t",
-                "notation": "bourree_sabotee.abc"
+                "notation": "bourree_sabotee.abc",
+                "youtube": "K0CNLqMpLlY"
             },
             "polka_john_ryan": {
                 "name": "John Ryan's Polka",
@@ -42,11 +48,13 @@
             },
             "polka_kerry_frog": {
                 "name": "Kerry  et Frog's Polkas",
-                "danceId": "polka"
+                "danceId": "polka",
+                "youtube": "K0CNLqMpLlY"
             },
             "polka_mirepoix_pepere": {
                 "name": "Mirepoix et Pepère",
-                "danceId": "polka"
+                "danceId": "polka",
+                "youtube": "n9Bunh3bEH0"
             },
             "polka_russe": {
                 "name": "Polka Russe",
@@ -61,11 +69,12 @@
                 "name": "Les Escholiers de Saint-Genest",
                 "danceId": "mazurka",
                 "notation": "mazurka_ecoliers_de_saint_genest.abc",
-                "youtube": "https://youtu.be/UD1GgTQuzSY?feature=shared"
+                "youtube": "UD1GgTQuzSY"
             },
             "maris_wedding": {
                 "name": "Mari's Wedding",
-                "danceId": "polka"
+                "danceId": "polka",
+                "notation": "maris_wedding.abc"
             },
             "mazurka_mathilde": {
                 "name": "Mazurka à Mathilde",
@@ -75,7 +84,7 @@
                 "name": "Misirlou",
                 "danceId": "klezmer",
                 "notation": "misirlou.abc",
-                "youtube": "https: //youtu.be/ZIU0RMV_II8"
+                "youtube": "ZIU0RMV_II8"
             },
             "spezet": {
                 "name": "Spezet",
@@ -109,6 +118,9 @@
             },
             "branle_noirmoutier": {
                 "name": "Branle de Noirmoutier"
+            },
+            "cercle_circassien": {
+                "name": "Cercle circassien"
             },
             "mazurka": {
                 "name": "Mazurka"
