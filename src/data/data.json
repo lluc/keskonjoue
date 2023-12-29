@@ -178,6 +178,18 @@
             },
             "scottish": {
                 "name": "Scottish"
+            },
+            "branle_couper": {
+                "name": "Branle couper"
+            },
+            "branle-ecosse": {
+                "name": "Branle d'Écosse"
+            },
+            "tricot": {
+                "name": "Tricot"
+            },
+            "suite_landeda": {
+                "name": "Suite de Landeda"
             }
         }
     }
