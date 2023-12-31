@@ -22,6 +22,11 @@
                 "rights": 1,
                 "authors": "Gian Marco Pietrasanta"
             },
+            "branle_cassandre": {
+                "name": "Cassandre",
+                "danceId": "branle_coupe",
+                "youtube": "WABxoSE13yo"
+            },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
                 "notation": "poules_gm.abc",
@@ -179,8 +184,8 @@
             "scottish": {
                 "name": "Scottish"
             },
-            "branle_couper": {
-                "name": "Branle couper"
+            "branle_coupe": {
+                "name": "Branle coupé"
             },
             "branle-ecosse": {
                 "name": "Branle d'Écosse"
