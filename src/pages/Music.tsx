@@ -88,7 +88,6 @@ const Music = () => {
                     </Box>
                     <Box
                         id="paper"
-                        px={2}
                     />
                 </Stack>
             }

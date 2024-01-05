@@ -8,11 +8,13 @@ def extract_mlk_parts_and_melody(abc_content):
     l_match = re.search(r"^L:\s*([^\n]*)$", abc_content, re.MULTILINE)
     k_match = re.search(r"^K:\s*([^\n]*)$", abc_content, re.MULTILINE)
     q_match = re.search(r"^Q:\s*([^\n]*)$", abc_content, re.MULTILINE)
+    w_match = re.search(r"^w:\s*([^\n]*)$", abc_content, re.MULTILINE)
 
     m = m_match.group(1).strip() if m_match else None
     l = l_match.group(1).strip() if l_match else None
     k = k_match.group(1).strip() if k_match else None
     q = q_match.group(1).strip() if q_match else None
+    w = w_match.group(1).strip() if w_match else None
 
     melody_match = re.search(r"K:[^\n]*\n((?:.*\n)+)", abc_content, re.DOTALL)
 
@@ -21,7 +23,7 @@ def extract_mlk_parts_and_melody(abc_content):
     else:
         melody = None
 
-    return f"M: {m}\nL: {l}\nQ: {q}\nK: {k}\n{melody}"
+    return f"M: {m}\nL: {l}\nQ: {q}\nK: {k}\n{melody}\nw: {w}"
 
 
 def abc_to_json(abc_content):

@@ -33,7 +33,6 @@ const DanseListe: FunctionComponent = () => {
      * @param {string} slug - The slug parameter.
      */
     const handleClick = (slug: string) => {
-        console.log(slug)
         navigateTo(`/dance/${slug}`)
     }
 

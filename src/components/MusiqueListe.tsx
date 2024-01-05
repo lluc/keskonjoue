@@ -34,7 +34,6 @@ const MusiqueListe: FunctionComponent<MusiqueListeProps> = (props: MusiqueListeP
 
         setMusics(
             Object.entries(queries.getResultTable('music4dance')).map((row) => {
-                console.log(row)
                 return {
                     id: row[0],
                     name: row[1].name,
