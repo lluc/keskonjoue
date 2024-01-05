@@ -1,6 +1,26 @@
 [
     {
         "music": {
+            "avantdeux_travers": {
+                "name": "Avant-deux de travers",
+                "danceId": "avant_deux",
+                "notation": "avantdeux_travers.abc"
+            },
+            "bal_limousine": {
+                "name": "Bal Limousine",
+                "danceId": "marchoise",
+                "notation": "bal_limousine.abc"
+            },
+            "bourree_aurore_sand": {
+                "name": "Bourrée Aurore Sand",
+                "danceId": "bourree_2t",
+                "notation": "bourree_aurore_sand.abc"
+            },
+            "bourree_chapelotte": {
+              "name": "La Chapelotte",
+              "danceId": "bourree_3t",
+              "notation": "chapelotte.abc"
+            },
             "bourree_dindes": {
                 "name": "Bourrée des dindes",
                 "danceId": "bourree_rond",
@@ -8,11 +28,26 @@
                 "notation": "bourree_dindes.abc",
                 "youtube": "LffnyPxNlz8"
             },
+            "bourree_long_chemin": {
+                "name": "Bourrée le long du chemin",
+                "danceId": "bourree_2t",
+                "notation": "bourre_long_chemin.abc"
+            },
+            "bourree_malochet": {
+                "name": "Bourrée à Malochet",
+                "danceId": "bourree_2t",
+                "notation": "bourree_malochet.abc",
+                "youtube": "klYKgSP9nAk"
+            },
             "bourree_nasbinals": {
                 "name": "Bourrée de Nasbinals",
-                "danceId": "bourree_2t",
+                "danceId": "bourree_3t",
                 "notation": "bourree_nasbinals.abc",
                 "youtube": "WS0JG_B9wGM"
+            },
+            "bourree_planiere": {
+                "name": "La Planière",
+                "danceId": "bourree_3t"
             },
             "bourree_sans_souci": {
                 "name": "Bourrée Sans-Souci",
@@ -22,10 +57,25 @@
                 "rights": 1,
                 "authors": "Gian Marco Pietrasanta"
             },
+            "bourree_valsee_issoudun": {
+                "name": "Bourrée valsée d'Issoudun",
+                "danceId": "bourree_3t",
+                "notation": "bourree_valsee_issoudun.abc",
+                "youtube": "ygxUOwcuQAs"
+            },
+            "brande_ardentes": {
+                "name": "Brande d'Ardentes",
+                "danceId": "bourree_rond",
+                "notation": "brande_ardentes.abc"
+            },
             "branle_cassandre": {
                 "name": "Cassandre",
                 "danceId": "branle_coupe",
                 "youtube": "WABxoSE13yo"
+            },
+            "branle_cosnay": {
+                "name": "Branle de Cosnay",
+                "danceId": "bourree_2t"
             },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
@@ -38,6 +88,16 @@
                 "notation": "grandes_poteries.abc",
                 "danceId": "bourree_3t",
                 "youtube": "7hqgbkhjFXE&list"
+            },
+            "gars_plaimpied": {
+                "name": "Hardi les gars d'Plaimpied",
+                "notation": "gars_plaimpied.abc",
+                "danceId": "bourree_3t"
+            },
+            "bourree_rivarennes": {
+                "name": "Bourrée chaînée de Rivarennes",
+                "danceId": "bourree_2t",
+                "notation": "bourree_rivarennes.abc"
             },
             "bourree_sabotee": {
                 "name": "La Sabotée",
@@ -91,9 +151,18 @@
                 "notation": "misirlou.abc",
                 "youtube": "ZIU0RMV_II8"
             },
+            "sorciers_marloup": {
+                "name": "Les sorciers de Marloup",
+                "danceId": "bourree_3t"
+            },
             "spezet": {
                 "name": "Spezet",
                 "danceId": "andro"
+            },
+            "raves": {
+                "name": "les raves (j'emmerde la moitié du monde)",
+                "danceId": "bourree_3t",
+                "youtube": "K0CNLqMpLlY"
             },
             "scot_bourbon": {
                 "name": "Scottish Bourbonnaise",
@@ -106,6 +175,11 @@
             "scot_crassier": {
                 "name": "Scottish du Crassier",
                 "danceId": "scottish"
+            },
+            "youp_nanette": {
+                "name": "Youp Nanette",
+                "danceId": "bourree_2t",
+                "notation": "youp_nanette.abc"
             }
         },
         "dance": {
@@ -120,6 +194,9 @@
             },
             "bourree_rond": {
                 "name": "Bourrée en rond"
+            },
+            "marchoise": {
+                "name": "Marchoise"
             },
             "branle_noirmoutier": {
                 "name": "Branle de Noirmoutier"
