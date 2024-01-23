@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
-import { Share } from '@mui/icons-material';
+import { Share, Search } from '@mui/icons-material';
 
 const ButtonAppBar: FunctionComponent = () => {
     const navigateTo = useNavigate()
@@ -31,6 +31,10 @@ const ButtonAppBar: FunctionComponent = () => {
         }
     };
 
+    const handleSearch = () => {
+        navigateTo('/search')
+    }
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
@@ -48,6 +52,15 @@ const ButtonAppBar: FunctionComponent = () => {
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
                         Keskonjoue
                     </Typography>
+                    <IconButton
+                        size="large"
+                        edge="end"
+                        color="inherit"
+                        aria-label="search"
+                        onClick={() => { handleSearch() }}
+                    >
+                        <Search />
+                    </IconButton>
                     <IconButton
                         size="large"
                         edge="end"
