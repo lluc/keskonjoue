@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Dance from './pages/Dance'
 import Music from './pages/Music'
+import Search from './pages/Search'
 
 
 const App: FunctionComponent = () => {
@@ -24,6 +25,7 @@ const App: FunctionComponent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dance/:slug" element={<Dance />} />
           <Route path="/music/:slug" element={<Music />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </Box>
       <ScrollToTopButton />
