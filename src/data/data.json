@@ -77,6 +77,19 @@
                 "name": "Branle de Cosnay",
                 "danceId": "bourree_2t"
             },
+            "branle simple": {
+                "name": "Branle simple",
+                "danceId": "branle"
+            },
+            "cercle_galicien": {
+                "name": "Cercle galicien",
+                "danceId": "cercle_circassien"
+            },
+            "Coast_ar_houet": {
+                "name": "Coast ar Houet",
+                "danceId": "coast_ar_hoet",
+                "notation": "coast_ar_houet.abc"
+            },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
                 "notation": "poules_gm.abc",
@@ -180,6 +193,23 @@
                 "name": "Youp Nanette",
                 "danceId": "bourree_2t",
                 "notation": "youp_nanette.abc"
+            },
+            "rond_Landeda": { 
+                "name": "Rond de Landeda",
+                "danceId": "rond_Landeda",
+                "youtube": "8s134J5P3xA"
+            },
+            "echelle_jacob": {
+                "name": "L'Echelle de Jacob",
+                "danceId": "klezmer",
+                "notation": "echelle_jacob.abc",
+                "youtube": "3E__XPoQBBU"
+            },
+            "Tzadik katamar": {
+                "name": "Tzadik Katamar",
+                "danceId": "klezmer",
+                "notation": "tzadik_katamar.abc",
+                "youtube": "F0HDKA3IaKs"
             }
         },
         "dance": {
