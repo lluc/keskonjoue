@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import ABCJS, { TuneObjectArray } from 'abcjs'
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import jsonNotations from "../data/notations.json";
 import Youtube from 'react-youtube';
 
@@ -16,7 +16,7 @@ const Music = () => {
     const [midiBuffer, setMidiBuffer] = useState( new ABCJS.synth.CreateSynth())
     const [visualObj, setVisualObj] = useState<null | TuneObjectArray>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (notations === undefined) {
             return
         }
@@ -30,6 +30,16 @@ const Music = () => {
         setVisualObj(visualObj)
 
     }, [])
+
+    useEffect(() => {
+        return () => {
+            // This will be called when the component is about to unmount
+            // Stop the music
+            midiBuffer.stop();
+
+        };
+    }, []); 
+
 
     const togglePlayMusic = () => {
         if (isPlaying) {
