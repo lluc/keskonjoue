@@ -51,7 +51,7 @@ const SearchPage: FunctionComponent = () => {
         onChange={(e) => setSearchTerm(e.target.value.toLocaleLowerCase())}
         placeholder="Musique ..."
         label="Musique"
-        variant="outlined"
+        inputProps={{ style: { fontSize: "2rem" } }}
       />
       <Button onClick={handleSearch} variant="contained">
         Rechercher
