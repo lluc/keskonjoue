@@ -107,7 +107,7 @@ const Music = () => {
                     <Typography variant="h5">
                         Vidéo
                     </Typography>
-                    <Youtube videoId={data.youtube.valueOf() as string} opts={{ width: '400', height: '300' }} />
+                    <Youtube videoId={data.youtube.valueOf() as string} opts={{ width: '100%', height: '300' }} />
                 </Stack>
             }
         </Stack>
