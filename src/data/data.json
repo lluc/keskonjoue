@@ -1,6 +1,14 @@
 [
     {
         "music": {
+            "alunelul": {
+                "name": "Alunelul",
+                "danceId": "klezmer"
+            },
+            "avantdeux_bourdonneau": {
+                "name": "Avant-deux à Bourdonneau",
+                "danceId": "avant_deux"
+            },
             "avantdeux_travers": {
                 "name": "Avant-deux de travers",
                 "danceId": "avant_deux",
@@ -16,10 +24,18 @@
                 "danceId": "bourree_2t",
                 "notation": "bourree_aurore_sand.abc"
             },
+            "bourree_chambery": {
+                "name": "Bourrée de Chambery",
+                "danceId": "bourree_2t"
+            },
             "bourree_chapelotte": {
               "name": "La Chapelotte",
               "danceId": "bourree_3t",
               "notation": "chapelotte.abc"
+            },
+            "bourree_chaudoux": {
+                "name": "Bourrée de Chaudoux",
+                "danceId": "bourree_3t"
             },
             "bourree_dindes": {
                 "name": "Bourrée des dindes",
@@ -27,6 +43,10 @@
                 "test": "test",
                 "notation": "bourree_dindes.abc",
                 "youtube": "LffnyPxNlz8"
+            },
+            "bourre_julie": {
+                "name": "Bourrée à Julie",
+                "danceId": "bourree_3t"
             },
             "bourree_long_chemin": {
                 "name": "Bourrée le long du chemin",
@@ -77,7 +97,11 @@
                 "name": "Branle de Cosnay",
                 "danceId": "bourree_2t"
             },
-            "branle simple": {
+            "branle_ecosse": {
+                "name": "Branle d'Écosse",
+                "danceId": "branle"
+            },
+            "branle_simple": {
                 "name": "Branle simple",
                 "danceId": "branle"
             },
@@ -85,16 +109,23 @@
                 "name": "Cercle galicien",
                 "danceId": "cercle_circassien"
             },
-            "Coast_ar_houet": {
+            "coast_ar_houet": {
                 "name": "Coast ar Houet",
                 "danceId": "coast_ar_hoet",
                 "notation": "coast_ar_houet.abc"
+            },
+            "colo_srem": {
+                "name": "Colo de Srem",
+                "danceId": "colo"
+            },
+            "pinagay": {
+                "name": "Pinagay",
+                "danceId": "branle_coupe"
             },
             "poules_gm": {
                 "name": "Les poules de ma grand-mère",
                 "notation": "poules_gm.abc",
                 "danceId": "cercle_circassien"
-
             },
             "grandes_poteries": {
                 "name": "Les grandes poteries",
@@ -188,6 +219,13 @@
             "scot_crassier": {
                 "name": "Scottish du Crassier",
                 "danceId": "scottish"
+            },
+            "voici_mois_mai": {
+                "name": "Voici le mois de Mai",
+                "danceId": "rond_barbatre",
+                "youtube": "DrBmlu7Qz0k",
+                "rights": 1,
+                "authors": "Ciac Boum"
             },
             "youp_nanette": {
                 "name": "Youp Nanette",
@@ -293,9 +331,6 @@
             },
             "branle_coupe": {
                 "name": "Branle coupé"
-            },
-            "branle-ecosse": {
-                "name": "Branle d'Écosse"
             },
             "tricot": {
                 "name": "Tricot"
