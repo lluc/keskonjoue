@@ -1,0 +1,23 @@
+X:1
+T:Alunelul
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^Version en Sol""^A" e/^d/ e/f/ e/=d/ c/B/ | A B !breath!c2 | e/^d/ e/f/ e/=d/ c/B/ | A G F2 :|
+|:"^B" A c B c/B/ | A c !breath!e2 | A c B c/B/ | A G F2 :|
+|:[K:D]"^Variante en Do""^A" a/g/ a/b/ a/g/ f/e/ | d e !breath!f2 | a/g/ a/b/ a/g/ f/e/ | d c B2 :|
+|:"^B" d f e2 | d f a2 | d f e2 | d c B2 :|]
+V:2
+[K:G]|: d/^c/ d/e/ d/=c/ B/A/ | G A !breath!B2 | d/^c/ d/e/ d/=c/ B/A/ | G F E2 :|
+|: G B A B/A/ | G B !breath!d2 | G B A B/A/ | G F E2 :|
+|:[K:C] g/f/ g/a/ g/f/ e/d/ | c d !breath!e2 | g/f/ g/a/ g/f/ e/d/ | c B A2 :|
+|: c e d2 | c e g2 | c e d2 | c B A2 :|]

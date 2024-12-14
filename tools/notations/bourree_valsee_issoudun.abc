@@ -1,14 +1,23 @@
-
-
-X:8853
-T:La Bourree Valsee d'Issoudun
-N:abc transcription Simon Wascher
-N:if you find an error in this transcription please inform simon.wascher@chello.at
+X:1
+T:Bourrée valsée d'Issoudun
+C:PLLP
+%%score 1 2
+L:1/4
 M:3/8
-L:1/8
+Q:200
 K:G
-D2|G4F2|G4FG|A2B2G2|A4D2|
-A4B2|A4GF|E2F2E2|D4:|
-|:B2|B2d2B2|A2c2A2|G2GFGA|B2G2B2|
-B2d2B2|A2c2A2|GFE2F2|G4:|
-
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" E/ | A G/ | A G/4A/4 | B/c/A/ | !breath!B E/ |
+ B c/ | B A/4G/4 | F/G/F/ | E3/2 :|
+|:"^B" c/ | c/e/c/ | B/d/B/ | A/A/4G/4A/4B/4 | c/!breath!A/
+ c/ | c/e/c/ | B/d/B/ | A/4G/4F/G/ | A3/2 :|
+V:2
+[K:G]|: D/ | G F/ | G F/4G/4 | A/B/G/ | !breath!A D/ |
+ A B/ | A G/4F/4 | E/F/E/ | D3/2 :|
+|: B/ | B/d/B/ | A/c/A/ | G/G/4F/4G/4A/4 | B/!breath!G/
+ B/ | B/d/B/ | A/c/A/ | G/4F/4E/F/ | G3/2 :|

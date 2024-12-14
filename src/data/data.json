@@ -31,6 +31,9 @@
             "cercle_circassien": {
                 "name": "Cercle circassien"
             },
+            "cochinchine": {
+                "name": "Cochinchine"
+            },
             "colo": {
                 "name": "Colo"
             },
@@ -92,7 +95,13 @@
         "music": {
             "alunelul": {
                 "danceId": "klezmer",
-                "name": "Alunelul"
+                "name": "Alunelul",
+                "notation": "alunelul.abc"
+            },
+            "around_fairy_fort": {
+                "danceId": "hornpipe",
+                "name": "Around the Fairy Fort",
+                "notation": "around_the_fairy_fort.abc"
             },
             "avantdeux_bourdonneau": {
                 "danceId": "avant_deux",
@@ -101,7 +110,7 @@
             "avantdeux_travers": {
                 "danceId": "avant_deux",
                 "name": "Avant-deux de travers",
-                "notation": "avantdeux_travers.abc"
+                "notation": "avant_deux_de_travers.abc"
             },
             "bal_limousine": {
                 "danceId": "marchoise",
@@ -158,6 +167,11 @@
                 "danceId": "bourree_3t",
                 "name": "La Planière"
             },
+            "bourree_reuilly": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée de Reuilly",
+                "notation": "bourree_reuilly.abc"
+            },
             "bourree_rivarennes": {
                 "danceId": "bourree_2t",
                 "name": "Bourrée chaînée de Rivarennes",
@@ -201,6 +215,11 @@
                 "danceId": "branle",
                 "name": "Branle d'Écosse"
             },
+            "branle_parlement": {
+                "danceId": "branle_parlement",
+                "name": "Branle du parlement",
+                "notation": "branle_parlement.abc"
+            },
             "branle_simple": {
                 "danceId": "branle",
                 "name": "Branle simple"
@@ -213,6 +232,11 @@
                 "danceId": "coast_ar_hoet",
                 "name": "Coast ar Houet",
                 "notation": "coast_ar_houet.abc"
+            },
+            "cochinchine": {
+                "danceId": "cochinchine",
+                "name": "Cochinchine",
+                "notation": "cochinchine.abc"
             },
             "colo_srem": {
                 "danceId": "colo",
@@ -302,11 +326,13 @@
             },
             "scot_bourbon": {
                 "danceId": "scottish",
-                "name": "Scottish Bourbonnaise"
+                "name": "Scottish Bourbonnaise",
+                "notation": "scot_bourbonnaise.abc"
             },
             "scot_catineau": {
                 "danceId": "scottish",
-                "name": "Scottish à Catineau"
+                "name": "Scottish à Catineau",
+                "notation": "scot_catineau.abc"
             },
             "scot_crassier": {
                 "danceId": "scottish",

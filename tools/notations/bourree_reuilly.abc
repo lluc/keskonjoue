@@ -1,0 +1,23 @@
+X:1
+T:Bourrée de Reuilly
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/8
+Q:230
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D] E/ |:"^A" A/c/A/4c/4 | e/c/e/ | d/B/d/ | c/!breath!A/ E/|
+ A/c/A/4c/4 | e/c/e/ | d/B/^G/ |1 !breath!A E/ :|2 !breath!A c/4d/4 ||
+|:"^B" e/d/B/4d/4 | c/A/c/ | B/^G/B/ | c/!breath!A/ c/4d/4 |
+ e/d/B/4d/4 | c/A/c/ | B/^G/E/ |1 !breath!A c/4d/4 :|2 A3/2 |]
+V:2
+ [K:G] D/ |: G/B/G/4B/4 | d/B/d/ | c/A/c/ | B/!breath!G/ D/|
+ G/B/G/4B/4 | d/B/d/ | c/A/F/ |1 !breath!G D/ :|2 !breath!G B/4c/4 ||
+|: d/c/A/4c/4 | B/G/B/ | A/F/A/ | B/!breath!G/ B/4c/4 |
+ d/c/A/4c/4 | B/G/B/ | A/F/D/ |1 !breath!G B/4c/4 :|2 G3/2 |]
