@@ -1,0 +1,23 @@
+X:1
+T:Avant-Deux de Travers
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^A simplifié" E/E/ A/A/ | c/c/ B | d/d/ c/c/ |1 B/B/ c/!breath!A/ :|2 B/B/ A ||
+|:"^B simplifié" A/c/ e/e/ | f/f/ e | d/d/ c/c/ |1 B/B/ c/!breath!A/ :|2 B/B/ A ||
+|:"^A complexe" E/C/4E/4 A/E/4A/4 | c/A/4c/4 !breath!B | d/B/4d/4 c/A/4c/4 |1 B/^G/4B/4 c/!breath!A/ :|2 B/^G/4B/4 A ||
+|:"^B complexe" A/4E/4A/4c/4 e/c/4e/4 | f/d/4f/4 !breath!e | d/B/4d/4 c/A/4c/4 |1 B/^G/4B/4 c/!breath!A/ :|2 B/^G/4B/4 A |]
+V:2
+[K:C]|: D/D/ G/G/ | B/B/ A | c/c/ B/B/ |1 A/A/ B/!breath!G/ :|2 A/A/ G ||
+|: G/B/ d/d/ | e/e/ d | c/c/ B/B/ |1 A/A/ B/!breath!G/ :|2 A/A/ G ||
+|: D/B,/4D/4 G/D/4G/4 | B/G/4B/4 !breath!A | c/A/4c/4 B/G/4B/4 |1 A/^F/4A/4 B/!breath!G/ :|2 A/^F/4A/4 G ||
+|: G/4D/4G/4B/4 d/B/4d/4 | e/c/4e/4 !breath!d | c/A/4c/4 B/G/4B/4 |1 A/^F/4A/4 B/!breath!G/ :|2 A/^F/4A/4 G |]

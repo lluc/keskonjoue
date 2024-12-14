@@ -1,256 +1,9 @@
 [
     {
-        "music": {
-            "alunelul": {
-                "name": "Alunelul",
-                "danceId": "klezmer"
-            },
-            "avantdeux_bourdonneau": {
-                "name": "Avant-deux à Bourdonneau",
-                "danceId": "avant_deux"
-            },
-            "avantdeux_travers": {
-                "name": "Avant-deux de travers",
-                "danceId": "avant_deux",
-                "notation": "avantdeux_travers.abc"
-            },
-            "bal_limousine": {
-                "name": "Bal Limousine",
-                "danceId": "marchoise",
-                "notation": "bal_limousine.abc"
-            },
-            "bourree_aurore_sand": {
-                "name": "Bourrée Aurore Sand",
-                "danceId": "bourree_2t",
-                "notation": "bourree_aurore_sand.abc"
-            },
-            "bourree_chambery": {
-                "name": "Bourrée de Chambery",
-                "danceId": "bourree_2t"
-            },
-            "bourree_chapelotte": {
-              "name": "La Chapelotte",
-              "danceId": "bourree_3t",
-              "notation": "chapelotte.abc"
-            },
-            "bourree_chaudoux": {
-                "name": "Bourrée de Chaudoux",
-                "danceId": "bourree_3t"
-            },
-            "bourree_dindes": {
-                "name": "Bourrée des dindes",
-                "danceId": "bourree_rond",
-                "test": "test",
-                "notation": "bourree_dindes.abc",
-                "youtube": "LffnyPxNlz8"
-            },
-            "bourre_julie": {
-                "name": "Bourrée à Julie",
-                "danceId": "bourree_3t"
-            },
-            "bourree_long_chemin": {
-                "name": "Bourrée le long du chemin",
-                "danceId": "bourree_2t",
-                "notation": "bourre_long_chemin.abc"
-            },
-            "bourree_malochet": {
-                "name": "Bourrée à Malochet",
-                "danceId": "bourree_2t",
-                "notation": "bourree_malochet.abc",
-                "youtube": "klYKgSP9nAk"
-            },
-            "bourree_nasbinals": {
-                "name": "Bourrée de Nasbinals",
-                "danceId": "bourree_3t",
-                "notation": "bourree_nasbinals.abc",
-                "youtube": "WS0JG_B9wGM"
-            },
-            "bourree_planiere": {
-                "name": "La Planière",
-                "danceId": "bourree_3t"
-            },
-            "bourree_sans_souci": {
-                "name": "Bourrée Sans-Souci",
-                "danceId": "bourree_3t",
-                "notation": "bourree_sans_souci.abc",
-                "youtube": "azjunXwTyqg",
-                "rights": 1,
-                "authors": "Gian Marco Pietrasanta"
-            },
-            "bourree_valsee_issoudun": {
-                "name": "Bourrée valsée d'Issoudun",
-                "danceId": "bourree_3t",
-                "notation": "bourree_valsee_issoudun.abc",
-                "youtube": "ygxUOwcuQAs"
-            },
-            "brande_ardentes": {
-                "name": "Brande d'Ardentes",
-                "danceId": "bourree_rond",
-                "notation": "brande_ardentes.abc"
-            },
-            "branle_cassandre": {
-                "name": "Cassandre",
-                "danceId": "branle_coupe",
-                "youtube": "WABxoSE13yo"
-            },
-            "branle_cosnay": {
-                "name": "Branle de Cosnay",
-                "danceId": "bourree_2t"
-            },
-            "branle_ecosse": {
-                "name": "Branle d'Écosse",
-                "danceId": "branle"
-            },
-            "branle_simple": {
-                "name": "Branle simple",
-                "danceId": "branle"
-            },
-            "cercle_galicien": {
-                "name": "Cercle galicien",
-                "danceId": "cercle_circassien"
-            },
-            "coast_ar_houet": {
-                "name": "Coast ar Houet",
-                "danceId": "coast_ar_hoet",
-                "notation": "coast_ar_houet.abc"
-            },
-            "colo_srem": {
-                "name": "Colo de Srem",
-                "danceId": "colo"
-            },
-            "pinagay": {
-                "name": "Pinagay",
-                "danceId": "branle_coupe"
-            },
-            "poules_gm": {
-                "name": "Les poules de ma grand-mère",
-                "notation": "poules_gm.abc",
-                "danceId": "cercle_circassien"
-            },
-            "grandes_poteries": {
-                "name": "Les grandes poteries",
-                "notation": "grandes_poteries.abc",
-                "danceId": "bourree_3t",
-                "youtube": "7hqgbkhjFXE&list"
-            },
-            "gars_plaimpied": {
-                "name": "Hardi les gars d'Plaimpied",
-                "notation": "gars_plaimpied.abc",
-                "danceId": "bourree_3t"
-            },
-            "bourree_rivarennes": {
-                "name": "Bourrée chaînée de Rivarennes",
-                "danceId": "bourree_2t",
-                "notation": "bourree_rivarennes.abc"
-            },
-            "bourree_sabotee": {
-                "name": "La Sabotée",
-                "danceId": "bourree_3t",
-                "notation": "bourree_sabotee.abc",
-                "youtube": "K0CNLqMpLlY"
-            },
-            "polka_john_ryan": {
-                "name": "John Ryan's Polka",
-                "danceId": "polka",
-                "notation": "john_ryan_polka.abc",
-                "youtube": "dHdI0eLk4Lw"
-            },
-            "polka_kerry_frog": {
-                "name": "Kerry  et Frog's Polkas",
-                "danceId": "polka",
-                "youtube": "K0CNLqMpLlY"
-            },
-            "polka_mirepoix_pepere": {
-                "name": "Mirepoix et Pepère",
-                "danceId": "polka",
-                "youtube": "n9Bunh3bEH0"
-            },
-            "polka_russe": {
-                "name": "Polka Russe",
-                "danceId": "polka"
-            },
-            "limoise": {
-                "name": "La Limoise",
-                "danceId": "mazurka",
-                "notation": "limoise.abc"
-            },
-            "escholiers": {
-                "name": "Les Escholiers de Saint-Genest",
-                "danceId": "mazurka",
-                "notation": "mazurka_ecoliers_de_saint_genest.abc",
-                "youtube": "UD1GgTQuzSY"
-            },
-            "maris_wedding": {
-                "name": "Mari's Wedding",
-                "danceId": "polka",
-                "notation": "maris_wedding.abc"
-            },
-            "mazurka_mathilde": {
-                "name": "Mazurka à Mathilde",
-                "danceId": "mazurka"
-            },
-            "misirlou": {
-                "name": "Misirlou",
-                "danceId": "klezmer",
-                "notation": "misirlou.abc",
-                "youtube": "ZIU0RMV_II8"
-            },
-            "sorciers_marloup": {
-                "name": "Les sorciers de Marloup",
-                "danceId": "bourree_3t"
-            },
-            "spezet": {
-                "name": "Spezet",
-                "danceId": "andro"
-            },
-            "raves": {
-                "name": "les raves (j'emmerde la moitié du monde)",
-                "danceId": "bourree_3t",
-                "youtube": "K0CNLqMpLlY"
-            },
-            "scot_bourbon": {
-                "name": "Scottish Bourbonnaise",
-                "danceId": "scottish"
-            },
-            "scot_catineau": {
-                "name": "Scottish à Catineau",
-                "danceId": "scottish"
-            },
-            "scot_crassier": {
-                "name": "Scottish du Crassier",
-                "danceId": "scottish"
-            },
-            "voici_mois_mai": {
-                "name": "Voici le mois de Mai",
-                "danceId": "rond_barbatre",
-                "youtube": "DrBmlu7Qz0k",
-                "rights": 1,
-                "authors": "Ciac Boum"
-            },
-            "youp_nanette": {
-                "name": "Youp Nanette",
-                "danceId": "bourree_2t",
-                "notation": "youp_nanette.abc"
-            },
-            "rond_Landeda": { 
-                "name": "Rond de Landeda",
-                "danceId": "rond_Landeda",
-                "youtube": "8s134J5P3xA"
-            },
-            "echelle_jacob": {
-                "name": "L'Echelle de Jacob",
-                "danceId": "klezmer",
-                "notation": "echelle_jacob.abc",
-                "youtube": "3E__XPoQBBU"
-            },
-            "Tzadik katamar": {
-                "name": "Tzadik Katamar",
-                "danceId": "klezmer",
-                "notation": "tzadik_katamar.abc",
-                "youtube": "F0HDKA3IaKs"
-            }
-        },
         "dance": {
+            "andro": {
+                "name": "An dro"
+            },
             "avant_deux": {
                 "name": "Avant-deux"
             },
@@ -263,8 +16,14 @@
             "bourree_rond": {
                 "name": "Bourrée en rond"
             },
-            "marchoise": {
-                "name": "Marchoise"
+            "branle_1": {
+                "name": "Branle simple"
+            },
+            "branle_2": {
+                "name": "Branle double"
+            },
+            "branle_coupe": {
+                "name": "Branle coupé"
             },
             "branle_noirmoutier": {
                 "name": "Branle de Noirmoutier"
@@ -272,14 +31,11 @@
             "cercle_circassien": {
                 "name": "Cercle circassien"
             },
-            "mazurka": {
-                "name": "Mazurka"
+            "cochinchine": {
+                "name": "Cochinchine"
             },
-            "polka": {
-                "name": "Polka"
-            },
-            "andro": {
-                "name": "An dro"
+            "colo": {
+                "name": "Colo"
             },
             "gavotte": {
                 "name": "Gavotte"
@@ -287,26 +43,20 @@
             "hanterdro": {
                 "name": "Hanter-dro"
             },
+            "hornpipe": {
+                "name": "Hornpipe"
+            },
             "klezmer": {
                 "name": "Klezmer"
             },
-            "colo": {
-                "name": "Colo"
+            "marchoise": {
+                "name": "Marchoise"
             },
-            "valse": {
-                "name": "Valse"
+            "mazurka": {
+                "name": "Mazurka"
             },
-            "valse_ecoss": {
-                "name": "Valse écossaise"
-            },
-            "branle_1": {
-                "name": "Branle simple"
-            },
-            "branle_2": {
-                "name": "Branle double"
-            },
-            "hornpipe": {
-                "name": "Hornpipe"
+            "polka": {
+                "name": "Polka"
             },
             "rond_argenton": {
                 "name": "Rond d'Argenton"
@@ -329,14 +79,290 @@
             "scottish": {
                 "name": "Scottish"
             },
-            "branle_coupe": {
-                "name": "Branle coupé"
+            "suite_landeda": {
+                "name": "Suite de Landeda"
             },
             "tricot": {
                 "name": "Tricot"
             },
-            "suite_landeda": {
-                "name": "Suite de Landeda"
+            "valse": {
+                "name": "Valse"
+            },
+            "valse_ecoss": {
+                "name": "Valse écossaise"
+            }
+        },
+        "music": {
+            "alunelul": {
+                "danceId": "klezmer",
+                "name": "Alunelul",
+                "notation": "alunelul.abc"
+            },
+            "around_fairy_fort": {
+                "danceId": "hornpipe",
+                "name": "Around the Fairy Fort",
+                "notation": "around_the_fairy_fort.abc"
+            },
+            "avantdeux_bourdonneau": {
+                "danceId": "avant_deux",
+                "name": "Avant-deux à Bourdonneau"
+            },
+            "avantdeux_travers": {
+                "danceId": "avant_deux",
+                "name": "Avant-deux de travers",
+                "notation": "avant_deux_de_travers.abc"
+            },
+            "bal_limousine": {
+                "danceId": "marchoise",
+                "name": "Bal Limousine",
+                "notation": "bal_limousine.abc"
+            },
+            "bourre_julie": {
+                "danceId": "bourree_3t",
+                "name": "Bourrée à Julie"
+            },
+            "bourree_aurore_sand": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée Aurore Sand",
+                "notation": "bourree_aurore_sand.abc"
+            },
+            "bourree_chambery": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée de Chambery"
+            },
+            "bourree_chapelotte": {
+                "danceId": "bourree_3t",
+                "name": "La Chapelotte",
+                "notation": "chapelotte.abc"
+            },
+            "bourree_chaudoux": {
+                "danceId": "bourree_3t",
+                "name": "Bourrée de Chaudoux"
+            },
+            "bourree_dindes": {
+                "danceId": "bourree_rond",
+                "name": "Bourrée des dindes",
+                "notation": "bourree_dindes.abc",
+                "test": "test",
+                "youtube": "LffnyPxNlz8"
+            },
+            "bourree_long_chemin": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée le long du chemin",
+                "notation": "bourre_long_chemin.abc"
+            },
+            "bourree_malochet": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée à Malochet",
+                "notation": "bourree_malochet.abc",
+                "youtube": "klYKgSP9nAk"
+            },
+            "bourree_nasbinals": {
+                "danceId": "bourree_3t",
+                "name": "Bourrée de Nasbinals",
+                "notation": "bourree_nasbinals.abc",
+                "youtube": "WS0JG_B9wGM"
+            },
+            "bourree_planiere": {
+                "danceId": "bourree_3t",
+                "name": "La Planière"
+            },
+            "bourree_reuilly": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée de Reuilly",
+                "notation": "bourree_reuilly.abc"
+            },
+            "bourree_rivarennes": {
+                "danceId": "bourree_2t",
+                "name": "Bourrée chaînée de Rivarennes",
+                "notation": "bourree_rivarennes.abc"
+            },
+            "bourree_sabotee": {
+                "danceId": "bourree_3t",
+                "name": "La Sabotée",
+                "notation": "bourree_sabotee.abc",
+                "youtube": "K0CNLqMpLlY"
+            },
+            "bourree_sans_souci": {
+                "authors": "Gian Marco Pietrasanta",
+                "danceId": "bourree_3t",
+                "name": "Bourrée Sans-Souci",
+                "notation": "bourree_sans_souci.abc",
+                "rights": 1,
+                "youtube": "azjunXwTyqg"
+            },
+            "bourree_valsee_issoudun": {
+                "danceId": "bourree_3t",
+                "name": "Bourrée valsée d'Issoudun",
+                "notation": "bourree_valsee_issoudun.abc",
+                "youtube": "ygxUOwcuQAs"
+            },
+            "brande_ardentes": {
+                "danceId": "bourree_rond",
+                "name": "Brande d'Ardentes",
+                "notation": "brande_ardentes.abc"
+            },
+            "branle_cassandre": {
+                "danceId": "branle_coupe",
+                "name": "Cassandre",
+                "youtube": "WABxoSE13yo"
+            },
+            "branle_cosnay": {
+                "danceId": "bourree_2t",
+                "name": "Branle de Cosnay"
+            },
+            "branle_ecosse": {
+                "danceId": "branle",
+                "name": "Branle d'Écosse"
+            },
+            "branle_parlement": {
+                "danceId": "branle_parlement",
+                "name": "Branle du parlement",
+                "notation": "branle_parlement.abc"
+            },
+            "branle_simple": {
+                "danceId": "branle",
+                "name": "Branle simple"
+            },
+            "cercle_galicien": {
+                "danceId": "cercle_circassien",
+                "name": "Cercle galicien"
+            },
+            "coast_ar_houet": {
+                "danceId": "coast_ar_hoet",
+                "name": "Coast ar Houet",
+                "notation": "coast_ar_houet.abc"
+            },
+            "cochinchine": {
+                "danceId": "cochinchine",
+                "name": "Cochinchine",
+                "notation": "cochinchine.abc"
+            },
+            "colo_srem": {
+                "danceId": "colo",
+                "name": "Colo de Srem"
+            },
+            "echelle_jacob": {
+                "danceId": "klezmer",
+                "name": "L'Echelle de Jacob",
+                "notation": "echelle_jacob.abc",
+                "youtube": "3E__XPoQBBU"
+            },
+            "escholiers": {
+                "danceId": "mazurka",
+                "name": "Les Escholiers de Saint-Genest",
+                "notation": "mazurka_ecoliers_de_saint_genest.abc",
+                "youtube": "UD1GgTQuzSY"
+            },
+            "gars_plaimpied": {
+                "danceId": "bourree_3t",
+                "name": "Hardi les gars d'Plaimpied",
+                "notation": "gars_plaimpied.abc"
+            },
+            "grandes_poteries": {
+                "danceId": "bourree_3t",
+                "name": "Les grandes poteries",
+                "notation": "grandes_poteries.abc",
+                "youtube": "7hqgbkhjFXE&list"
+            },
+            "limoise": {
+                "danceId": "mazurka",
+                "name": "La Limoise",
+                "notation": "limoise.abc"
+            },
+            "maris_wedding": {
+                "danceId": "polka",
+                "name": "Mari's Wedding",
+                "notation": "maris_wedding.abc"
+            },
+            "mazurka_mathilde": {
+                "danceId": "mazurka",
+                "name": "Mazurka à Mathilde"
+            },
+            "misirlou": {
+                "danceId": "klezmer",
+                "name": "Misirlou",
+                "notation": "misirlou.abc",
+                "youtube": "ZIU0RMV_II8"
+            },
+            "pinagay": {
+                "danceId": "branle_coupe",
+                "name": "Pinagay"
+            },
+            "polka_john_ryan": {
+                "danceId": "polka",
+                "name": "John Ryan's Polka",
+                "notation": "john_ryan_polka.abc",
+                "youtube": "dHdI0eLk4Lw"
+            },
+            "polka_kerry_frog": {
+                "danceId": "polka",
+                "name": "Kerry  et Frog's Polkas",
+                "youtube": "K0CNLqMpLlY"
+            },
+            "polka_mirepoix_pepere": {
+                "danceId": "polka",
+                "name": "Mirepoix et Pepère",
+                "youtube": "n9Bunh3bEH0"
+            },
+            "polka_russe": {
+                "danceId": "polka",
+                "name": "Polka Russe"
+            },
+            "poules_gm": {
+                "danceId": "cercle_circassien",
+                "name": "Les poules de ma grand-mère",
+                "notation": "poules_gm.abc"
+            },
+            "raves": {
+                "danceId": "bourree_3t",
+                "name": "les raves (j'emmerde la moitié du monde)",
+                "youtube": "K0CNLqMpLlY"
+            },
+            "rond_Landeda": {
+                "danceId": "rond_Landeda",
+                "name": "Rond de Landeda",
+                "youtube": "8s134J5P3xA"
+            },
+            "scot_bourbon": {
+                "danceId": "scottish",
+                "name": "Scottish Bourbonnaise",
+                "notation": "scot_bourbonnaise.abc"
+            },
+            "scot_catineau": {
+                "danceId": "scottish",
+                "name": "Scottish à Catineau",
+                "notation": "scot_catineau.abc"
+            },
+            "scot_crassier": {
+                "danceId": "scottish",
+                "name": "Scottish du Crassier"
+            },
+            "sorciers_marloup": {
+                "danceId": "bourree_3t",
+                "name": "Les sorciers de Marloup"
+            },
+            "spezet": {
+                "danceId": "andro",
+                "name": "Spezet"
+            },
+            "Tzadik katamar": {
+                "danceId": "klezmer",
+                "name": "Tzadik Katamar",
+                "notation": "tzadik_katamar.abc",
+                "youtube": "F0HDKA3IaKs"
+            },
+            "voici_mois_mai": {
+                "authors": "Ciac Boum",
+                "danceId": "rond_barbatre",
+                "name": "Voici le mois de Mai",
+                "rights": 1,
+                "youtube": "DrBmlu7Qz0k"
+            },
+            "youp_nanette": {
+                "danceId": "bourree_2t",
+                "name": "Youp Nanette",
+                "notation": "youp_nanette.abc"
             }
         }
     }

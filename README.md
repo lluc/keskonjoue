@@ -9,3 +9,14 @@ Welcome to your new PWA, powered by [Vite](https://vitejs.dev/), [Vite Plugin PW
 ## Powerful PWAs
 
 This starter is only the beginning. [Learn more](https://web.dev/progressive-web-apps/) about how to take this codebase and improve the install experience, create an app-like user experience, make your [offline experience even better](https://web.dev/reliable/). Then, [make it powerful](https://chromeos.dev/en/web/powerful-pwas) by adding new web APIs to supercharge your user experience. You can even [build a checklist of capabilities](https://chromeos.dev/en/web/powerful-pwas#your-pwa-checklist) you want to add, or see checklists for different kinds of apps you may want to build.
+
+## Outils de Keskonjoue
+
+Loalisés dans le répertoire `tools`.
+
+Pour prendre en charge les modifications des fichiers *abc*, utiliser la commande suivante :
+
+```bash
+cd tools
+python abc2json.py
+```

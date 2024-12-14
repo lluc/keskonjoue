@@ -1,0 +1,27 @@
+X:1
+T:Around The Fairy Fort
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:150
+K:D
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:E]"^A" E/F/ |: G G G/F/ E/G/ | B B !breath!B G/B/ | c c c E/F/ | G/F/ F/E/ !breath!F E/F/ |
+| G G G/F/ E/G/ | B B !breath!B G/B/ | e/d/ c/B/ c/B/ G/F/ |1 G E !breath!E E/F/ :|2 G E !breath!E d ||
+|:"^B" e e e d/e/ | f f !breath!f g/f/ | e/f/ g/a/ b/a/ g/f/ | g c !breath!c d |
+| e e e d/e/ | f f !breath!f g/f/ | e/d/ c/B/ c/B/ G/F/ |1 G E !breath!E d :|2 G E !breath!E E/F/ ||
+|:"^C" G E/G/ B G/B/ | c B/c/ !breath!B E/F/ | G E/G/ B G/B/ | c F !breath!F E/F/ |
+| G E/G/ B G/B/ | c B/c/ !breath!B B | e/d/ c/B/ c/B/ G/F/ |1 G E !breath!E E/F/ :|2 G E E2 |]
+V:2
+ [K:D] D/E/ |: F F F/E/ D/F/ | A A !breath!A F/A/ | B B B D/E/ | F/E/ E/D/ !breath!E D/E/ |
+| F F F/E/ D/F/ | A A !breath!A F/A/ | d/c/ B/A/ B/A/ F/E/ |1 F D !breath!D D/E/ :|2 F D !breath!D c ||
+|: d d d c/d/ | e e !breath!e f/e/ | d/e/ f/g/ a/g/ f/e/ | f B !breath!B c |
+| d d d c/d/ | e e !breath!e f/e/ | d/c/ B/A/ B/A/ F/E/ |1 F D !breath!D c :|2 F D !breath!D D/E/ ||
+|: F D/F/ A F/A/ | B A/B/ !breath!A D/E/ | F D/F/ A F/A/ | B E !breath!E D/E/ |
+| F D/F/ A F/A/ | B A/B/ !breath!A A | d/c/ B/A/ B/A/ F/E/ |1 F D !breath!D D/E/ :|2 F D D2 |]
