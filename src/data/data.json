@@ -79,6 +79,10 @@
             "scottish": {
                 "name": "Scottish"
             },
+            "scottish_valse":
+            {
+                "name": "Scottish valse"
+            },
             "suite_landeda": {
                 "name": "Suite de Landeda"
             },
@@ -98,6 +102,14 @@
                 "name": "Alunelul",
                 "notation": "alunelul.abc"
             },
+            "amazone": {
+                "danceId": "ronde_quercy",
+                "name": "Amazone",
+                "notation": "amazone.abc",
+                "youtube": "S_WT2flpM-g",
+                "authors": "Cyrille Brotto",
+                "rights": 1
+            },
             "around_fairy_fort": {
                 "danceId": "hornpipe",
                 "name": "Around the Fairy Fort",
@@ -116,6 +128,11 @@
                 "danceId": "marchoise",
                 "name": "Bal Limousine",
                 "notation": "bal_limousine.abc"
+            },
+            "blue_eyed_stranger": {
+                "danceId": "scottish",
+                "name": "Blue eyed stranger",
+                "notation": "blue_eyed_stranger.abc"
             },
             "bourre_julie": {
                 "danceId": "bourree_3t",
@@ -220,9 +237,18 @@
                 "name": "Branle du parlement",
                 "notation": "branle_parlement.abc"
             },
+            "branle_rat": {
+                "name": "Branle du rat",
+                "notation": "branle_du_rat.abc",
+                "youtube": "_bSHjxZ84ho"
+            },
             "branle_simple": {
                 "danceId": "branle",
                 "name": "Branle simple"
+            },
+            "carriole": {
+                "name": "Carriole",
+                "notation": "carriole.abc"
             },
             "cercle_galicien": {
                 "danceId": "cercle_circassien",
@@ -240,7 +266,27 @@
             },
             "colo_srem": {
                 "danceId": "colo",
-                "name": "Colo de Srem"
+                "name": "Colo de Srem",
+                "notation": "colo_de_srem.abc"
+            },
+            "crouzade": {
+                "danceId": "bourree_3t",
+                "name": "Crouzade",
+                "notation": "crouzade.abc"
+            },
+            "czardash": {
+                "name": "Csárdás",
+                "notation": "czardash.abc"
+            },
+            "danse_ours": {
+                "danceId": "polka",
+                "name": "Danse de l'ours",
+                "notation": "dance_de_l_ours.abc"
+            },
+            "dis_moi_donc_suzon": {
+                "danceId": "scottish_valse",
+                "name": "Dis-moi donc Suzon",
+                "notation": "dis_moi_donc_suzon.abc"
             },
             "echelle_jacob": {
                 "danceId": "klezmer",

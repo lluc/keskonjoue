@@ -1,0 +1,19 @@
+X:1
+T:Amazone
+C:PLLP
+%%score 1 2
+L:1/4
+M:6/8
+Q:250
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^A x2" !^!f !^!f/ !^!f/e/d/ | !breath!d3/2 d/e/f/ | g/f/e/ f/e/d/ |1 c2 d/!breath!e/ :|2 c3 ||
+|:"^B x2" B c d | e3 | f/a/f/ e/d/c/ |1 d !breath!B2 :|2 B3 |]
+V:2
+[K:C]|: !^!e !^!e/ !^!e/d/c/ | !breath!c3/2 c/d/e/ | f/e/d/ e/d/c/ |1 B2 c/!breath!d/ :|2 B3 ||
+|: A B c | d3 | e/g/e/ d/c/B/ |1 c !breath!A2 :|2 A3 |]

@@ -1,0 +1,19 @@
+X:1
+T:Colo de Srem
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:120
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" A/c/ e/c/ | e/e/4c/4 d/!breath!B/ | B/c/ d/B/ |1 e/e/4d/4 c :|2 e/e/4d/4 !breath!c/ d/4e/4 ||
+|:"^B" f/>e/ d/f/ | e/>d/ c/e/ | d/>c/ B/d/ |1 c/4B/4c/4d/4 e/4!breath!c/4 d/4e/4 :|2 c/B/ A |]
+V:2
+[K:G]|: G/B/ d/B/ | d/d/4B/4 c/!breath!A/ | A/B/ c/A/ |1 d/d/4c/4 B :|2 d/d/4c/4 !breath!B/ c/4d/4 ||
+|: e/>d/ c/e/ | d/>c/ B/d/ | c/>B/ A/c/ |1 B/4A/4B/4c/4 d/4!breath!B/4 c/4d/4 :|2 B/A/ G |]

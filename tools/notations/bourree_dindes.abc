@@ -1,13 +1,24 @@
-X: 1
-T:La Bourree des Dindes
-C:traditionell
-Z:abc transcription Simon Wascher
-N:please mail errors to: simon.wascher@chello.at
+X:1
+T:Bourée des dindes
+C:PLLP
+%%score 1 2
+L:1/4
 M:2/4
-L:1/8
-Q:140
+Q:150
 K:G
-D2 EF|G4|A3/2B/2 cB|A3/2G/2 FE|
-D2 EF|G4|A3/2B/2 cB|A4:|
-|:A3/2B/2 cB|A3/2B/2 cB|A3/2G/2 FE|E2 D2|
-A3/2B/2 cB|A3/2B/2 cB|A3/2G/2 FA|G4:|
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" E F/G/ | A A | B/>c/ d/c/ | B/A/ G/!breath!F/ |
+ E F/G/ | A A | B/>c/ d/c/ | B2 :|
+|:"^B" B/>c/ d/c/ | B/>c/ d/c/ | B/A/ G/F/ | F !breath!E |
+ B/>c/ d/c/ | B/>c/ d/c/ | B/A/ G/B/ | A2 :|
+V:2
+[K:G]|: D E/F/ | G G | A/>B/ c/B/ | A/G/ F/!breath!E/ |
+ D E/F/ | G G | A/>B/ c/B/ | A2 :|
+|: A/>B/ c/B/ | A/>B/ c/B/ | A/G/ F/E/ | E !breath!D |
+ A/>B/ c/B/ | A/>B/ c/B/ | A/G/ F/A/ | G2 :|
+

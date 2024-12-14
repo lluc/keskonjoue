@@ -1,0 +1,27 @@
+X:1
+T:Czardash
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:250
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^intro" f f e d | c A A3/2 c/ | e e d c |1 d B B2 :|2 B2 B2 ||
+|:"^A" !^!b !^!b f2 | !^!b !^!b !breath!f2 | B B/c/ d c | B A B2 :|
+|: A2 B c | d2 c d | e2 d e | f2 !breath!f2 |
+ b b a g | f e !breath!d2 | B B/c/ d c | B2 B2 :|
+|:"^B" !^!b !^!b f2 | f/e/ f/^g/ a !breath!f | !^!b !^!b f2 | f/e/ f/^g/ a f :|
+|: !^!e2 !^!e2 | d/c/ d/e/ f d | c e d c |1 B c d !breath!B :|2 B2 B2 |]
+V:2
+[K:C]|: e e d c | B G G3/2 B/ | d d c B |1 c A A2 :|2 A2 A2 ||
+|: !^!a !^!a e2 | !^!a !^!a e2 | A A/B/ c B | A G A2 :|
+|: G2 A B | c2 B c | d2 c d | e2 !breath!e2 |
+ a a g f | e d !breath!c2 | A A/B/ c B | A2 A2 :|
+|: !^!a !^!a e2 | e/d/ e/^f/ g !breath!e | !^!a !^!a e2 | e/d/ e/^f/ g e :|
+|: !^!d2 !^!d2 | c/B/ c/d/ e c | B d c B |1 A B c !breath!A :|2 A2 A2 |]
