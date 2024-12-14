@@ -15,9 +15,14 @@ const DanseListe: FunctionComponent = () => {
      */
     const dancedata = () => {
         return dances.map((row) => {
+            const musicCount = Object.values(store.getTable("music")).filter(
+                (musicRow) => musicRow.danceId === row[0]
+            ).length;
+    
             return {
                 id: row[0],
                 name: row[1].name,
+                musicCount: musicCount,
             }
         })
         .sort((a, b) => a.id.localeCompare(b.id));
@@ -54,7 +59,7 @@ const DanseListe: FunctionComponent = () => {
                                 fontSize: 20,
                             }}
                             onClick={() => handleClick(row.id)}
-                        >{row.name}</Button>
+                        >{row.musicCount > 0 ? `${row.name} - (${row.musicCount})` : row.name}</Button>
                     ))}
                 </ButtonGroup>
             </Stack>
