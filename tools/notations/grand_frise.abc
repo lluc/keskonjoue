@@ -1,0 +1,23 @@
+X:1
+T:Grand Frisé
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:160
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] A/B/ |:"^A" c c/B/ A/c/ | !breath!e2 f/e/ | B B/c/ d/e/ | c !breath!B A/B/ | 
+c c/B/ A/c/ | !breath!e2 f/e/ | g/f/ e/d/ c/B/ |1 !breath!A2 A/B/ :|2 !breath!A c e ||
+|:"^B" a a/g/ f/e/ | !breath!g2 B/c/ | d/c/ d/e/ f/g/ | f !breath!e c/e/ | 
+a a/g/ f/e/ | !breath!g2 B/c/ | d/c/ d/e/ c/B/ |1 !breath!A c e :|2 A2 |]
+V:2
+[K:G] G/A/ |: B B/A/ G/B/ | !breath!d2 e/d/ | A A/B/ c/d/ | B !breath!A G/A/ |
+ B B/A/ G/B/ | !breath!d2 e/d/ | f/e/ d/c/ B/A/ |1 !breath!G2 G/A/ :|2 !breath!G B d ||
+|: g g/f/ e/d/ | !breath!f2 A/B/ | c/B/ c/d/ e/f/ | e !breath!d B/d/ |
+ g g/f/ e/d/ | !breath!f2 A/B/ | c/B/ c/d/ B/A/ |1 !breath!G B d :|2 G2 |]

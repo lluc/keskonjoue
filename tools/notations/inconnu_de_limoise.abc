@@ -1,0 +1,23 @@
+X:1
+T:Inconnu de Limoise
+C:PLLP
+%%score 1 2
+L:1/4
+M:9/8
+Q:350
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^A" E/ A B/ | c3/2- c A/ d B/ | c3/2- !breath!c c/ d e/ | d3/2- d c/ B A/ | E3/2- !breath!E E/ A B/ |
+ c3/2- c A/ d B/ | c3/2- !breath!c c/ d e/ | d3/2- d c/ B A/ | B3/2- !breath!B c/ d e/ ||
+|:"^B" f3/2 a g/ f g/ | e3/2- !breath!e d/ c B/ | A G/ A B/ c A/ | !breath!E3 A G/ |
+ F3/2- F G/ A B/ | A3/2 G3/2 F3/2 | G3/2- G A/ B c/ |1 B3/2- !breath!B c/ d e/ :|2 A3/2- A z2 |]
+V:2
+[K:G] D/ G A/ | B3/2- B G/ c A/ | B3/2- !breath!B B/ c d/ | c3/2- c B/ A G/ | D3/2- !breath!D D/ G A/ |
+ B3/2- B G/ c A/ | B3/2- !breath!B B/ c d/ | c3/2- c B/ A G/ | A3/2- !breath!A B/ c d/ ||
+|: e3/2 g f/ e f/ | d3/2- !breath!d c/ B A/ | G F/ G A/ B G/ | !breath!D3 G F/ |
+ E3/2- E F/ G A/ | G3/2 F3/2 E3/2 | F3/2- F G/ A B/ |1 A3/2- !breath!A B/ c d/ :|2 G3/2- G z2 |]

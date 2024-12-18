@@ -1,0 +1,23 @@
+X:1
+T:En avant Blonde
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:180
+K:D
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:E]|:"^A" c e f | g2 g | B d e | !breath!f3 |
+ f e d | c2 e | d2 B | c3 :|
+|:"^B" g g/f/ e/f/ | g e c | f f/e/ d/e/ | f d !breath!B |
+ g g/f/ e/f/ | g e c | f d B | c2 c :|
+V:2
+[K:D]|: B d e | f2 f | A c d | !breath!e3 |
+ e d c | B2 d | c2 A | B3 :|
+|: f f/e/ d/e/ | f d B | e e/d/ c/d/ | e c !breath!A |
+ f f/e/ d/e/ | f d B | e c A | B2 B :|

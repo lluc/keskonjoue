@@ -1,0 +1,23 @@
+X:1
+T:Danse de L'Ours
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" B/d/ B/d/ | c/A/ !breath!A | B/d/ B/d/ | !breath!e3/2 d/4e/4 |
+ f/f/ e/e/ | d/d/ !breath!c | B/4c/4d/ c/A/ | B2 :|
+|:"^B" f/B/ B/>e/ | f/B/ B/>c/ | d/d/ c/d/ | !breath!e d/e/ |
+ f/B/ f/B/ | f/B/ B/>c/ | d/d/ c/A/ | B2 :|
+V:2
+[K:C]|: A/4B/4c/ A/4B/4c/ | B/G/ !breath!G | A/4B/4c/ A/4B/4c/ | d/d/ !breath!d/c/4d/4 |
+ e/e/ d/d/ | c/c/ !breath!B | A/4B/4c/ B/G/ | A A :|
+|: e/A/ A/4B/4c/4d/4 | e/A/ A/>B/ | c/c/ B/c/ | d/!breath!d/ c/d/ |
+ e/A/ e/A/ | e/A/ A/>B/ | c/c/ B/G/ | A A :|

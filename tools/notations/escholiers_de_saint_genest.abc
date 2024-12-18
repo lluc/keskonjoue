@@ -1,0 +1,23 @@
+X:1
+T:Escholiers de Saint Genest
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] F/ G/F/ |:"^A" c c/d/ e/f/ | c- c d/c/ | B c/B/ A/G/ | A/G/ !breath!F/F/ G/F/ |
+ c c/d/ e/f/ | c- c d/c/ | B c/B/ A/G/ |1 F3/2 !breath!F/ G/F/ :|2 !breath!F2 f/e/ ||
+|:"^B" d d/c/ d/e/ | f- !breath!f e/d/ | c c/B/ c/d/ | !breath!c2 f/e/ 
+| d d/c/ d/e/ | f- f e/d/ | c B/A/ G/A/ |1 !breath!G2 f/e/ :|2 !breath!F3/2 F/ G/F/ |]
+V:2
+[K:G] E/ F/E/ |: B B/c/ d/e/ | B- B c/B/ | A B/A/ G/F/ | G/F/ !breath!E/E/ F/E/ |
+ B B/c/ d/e/ | B- B c/B/ | A B/A/ G/F/ |1 E3/2 !breath!E/ F/E/ :|2 !breath!E2 e/d/ ||
+|: c c/B/ c/d/ | e- !breath!e d/c/ | B B/A/ B/c/ | !breath!B2 e/d/ |
+ c c/B/ c/d/ | e- e d/c/ | B A/G/ F/G/ |1 !breath!F2 e/d/ :|2 !breath!E3/2 E/ F/E/ |]

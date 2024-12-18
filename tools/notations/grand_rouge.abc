@@ -1,0 +1,23 @@
+X:1
+T:Grand Rouge
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" e/e/ e/e/ | e/4f/4e/4d/4 c | A/4B/4c/ A/4B/4c/ | d/B/ !breath!B |
+ d/d/ d/d/ | d/4e/4d/4c/4 B | G/4A/4B/ G/4A/4B/ | c/A/ A ::
+"^B" E/A/ c/>d/ | c/A/ c/>d/ | c/A/ B/>c/ | B/G/ A/G/4!breath!F/4 |
+ E/A/ c/>d/ | c/A/ c/>d/ | c/A/ B/>c/ | B/G/ A :|
+V:2
+[K:G]|: d/d/ d/d/ | d/4e/4d/4c/4 B | G/4A/4B/ G/4A/4B/ | c/A/ !breath!A |
+ c/c/ c/c/ | c/4d/4c/4B/4 A | F/4G/4A/ F/4G/4A/ | B/G/ G ::
+ D/G/ B/>c/ | B/G/ B/>c/ | B/G/ A/>B/ | A/F/ G/F/4!breath!E/4 |
+ D/G/ B/>c/ | B/G/ B/>c/ | B/G/ A/>B/ | A/F/ G :|
