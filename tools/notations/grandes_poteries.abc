@@ -1,0 +1,23 @@
+X:1
+T:Grandes Poteries
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/8
+Q:250
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] c/4d/4 |:"^A" e/c/e/ | !breath!e c/4d/4 | e/c/e/ | !breath!e B/4c/4 |
+ d/B/B/ | !breath!B A/4B/4 | c/A/A/ |1 !breath!A c/4d/4 :|2 !breath!A/ G/F/ ||
+|:"^B" E F/ | E F/ | E/A/B/ | !breath!c c/ |
+ B/A/B/ | A/G/F/ |1 E/A/B/ | !breath!c F/ :|2 E/c/B/ | !breath!A c/4d/4 |]
+V:2
+[K:G] B/4c/4 |: d/B/d/ | !breath!d B/4c/4 | d/B/d/ | !breath!d A/4B/4 |
+ c/A/A/ | !breath!A G/4A/4 | B/G/G/ |1 !breath!G B/4c/4 :|2 !breath!G/ F/E/ ||
+|: D E/ | D E/ | D/G/A/ | !breath!B B/ |
+ A/G/A/ | G/F/E/ |1 D/G/A/ | !breath!B E/ :|2 D/B/A/ | !breath!G B/4c/4 |]

@@ -1,0 +1,31 @@
+X:1
+T:En Passant Par La Rivière + Le Ruban Bleu
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] E/ |:"^A" A/>B/ c/d/ | e !breath!e | f/>g/ a/f/ | e/>d/ c/B/ |
+ A/>B/ c/d/ | e !breath!e | f/>g/ a/f/ |1 e z/ E/ :|2 e z/ e/ ||
+|:"^B" c/>A/ c/e/ | d/>c/ B/c/ | d/>c/ d/f/ | e/>d/ c/!breath!e/ |
+ c/>A/ c/e/ | d/>c/ B/c/ | d/e/ f/g/ |1 a z/ e/ :|2 a z/ E/ |]
+|:"^Le Ruban Bleu""^A" e c/A/ | G/>A/ B/c/ | d B/G/ | A/>B/ c/!breath!d/ |
+ e c/A/ | G/>A/ B/c/ | d B/G/ | A2 :|
+|:"^B" G/>B/ G/B/ | A/>c/ A/c/ | B/>d/ B/d/ | c !breath!A |
+ G/>B/ G/B/ | A/>c/ A/c/ |1 e/d/ c/d/ | e2 :|2 e/d/ c/B/ | A2 |]
+V:2
+[K:G] D/ |: G/>A/ B/c/ | d !breath!d | e/>f/ g/e/ | d/>c/ B/A/ |
+ G/>A/ B/c/ | d !breath!d | e/>f/ g/e/ |1 d z/ D/ :|2 d z/ d/ ||
+|: B/>G/ B/d/ | c/>B/ A/B/ | c/>B/ c/e/ | d/>c/ B/!breath!d/ |
+ B/>G/ B/d/ | c/>B/ A/B/ | c/d/ e/f/ |1 g z/ d/ :|2 g z/ D/ |]
+|: d B/G/ | F/>G/ A/B/ | c A/F/ | G/>A/ B/!breath!c/ |
+ d B/G/ | F/>G/ A/B/ | c A/F/ | G2 :|
+|: F/>A/ F/A/ | G/>B/ G/B/ | A/>c/ A/c/ | B !breath!G |
+ F/>A/ F/A/ | G/>B/ G/B/ |1 d/c/ B/c/ | d2 :|2 d/c/ B/A/ | G2 |]

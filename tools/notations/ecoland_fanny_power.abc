@@ -1,0 +1,23 @@
+X:1
+T:Ecoland (Fanny Power)
+C:PLLP
+%%score 1 2
+L:1/4
+M:12/8
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] E/ |:"^A" A E/ A/B/c/ d c/ !breath!B A/ | A/G/F/ E A/ G A/ B c/4d/4 |
+ c/>B/A/ c/d/e/ f B/ !breath!B A/ |1 A/G/F/ E/A/G/ A3/2 !breath!A E/ :|2 A/G/F/ E/A/G/ A3/2 A3/2 |] 
+e/ ||:"^B" e/c/4d/4e/ e/c/4d/4e/ A A/ !breath!A f/ | f/d/4e/4f/ f/d/4e/4f/ B B/ !breath!B/d/B/ |
+ c/c/4d/4e/4c/4 f/f/4g/4a/4f/4 g/g/4a/4b/4g/4 !breath!e d/ |1 c/>B/A/ d G/ A3/2 !breath!A e/ :|2 c/>B/A/ d G/ A3/2 !breath!A E/ |]
+V:2
+[K:G] D/ |: G D/ G/A/B/ c B/ !breath!A G/ | G/F/E/ D G/ F G/ A B/4c/4 |
+ B/>A/G/ B/c/d/ e A/ !breath!A G/ |1 G/F/E/ D/G/F/ G3/2 !breath!G D/ :|2 G/F/E/ D/G/F/ G3/2 G3/2 |]
+ d/ ||: d/B/4c/4d/ d/B/4c/4d/ G G/ !breath!G e/ | e/c/4d/4e/ e/c/4d/4e/ A A/ !breath!A/c/A/ |
+ B/B/4c/4d/4B/4 e/e/4f/4g/4e/4 f/f/4g/4a/4f/4 !breath!d c/ |1 B/>A/G/ c F/ G3/2 !breath!G d/ :|2 B/>A/G/ c F/ G3/2 !breath!G D/ |]

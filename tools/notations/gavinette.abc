@@ -1,0 +1,19 @@
+X:1
+T:Gavinette
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A x2" c/B/ c/e/ A c | B e/c/ !breath!A B/c/ | d B/d/ c A/c/ |1 B A/B/ c A :|2 B A/B/ A2 |]
+|:"^B x2" A A G E/G/ | B B !breath!A B/c/ | d B/d/ c A/c/ |1 B A/B/ c A :|2 B A/B/ A2 |]
+V:2
+[K:G]|: B/A/ B/d/ G B | A d/B/ !breath!G A/B/ | c A/c/ B G/B/ |1 A G/A/ B G :|2 A G/A/ G2 |]
+|: G G F D/F/ | A A !breath!G A/B/ | c A/c/ B G/B/ |1 A G/A/ B G :|2 A G/A/ G2 |]

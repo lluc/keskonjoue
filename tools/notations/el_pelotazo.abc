@@ -1,0 +1,23 @@
+X:1
+T:El Pelotazo
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="C." snm="C."
+%%MIDI program 71
+V:2 treble nm="V." snm="V."
+%%MIDI program 40
+V:1
+[K:A] A/4B/4 |:"^A" c/A/ c/e/ | f f | e/c/ B/A/ | !breath!B3/2 A/4B/4 |
+ c/A/ c/e/ | f f | e/c/ B/c/ |1 !breath!A3/2 A/4B/4 :|2 !breath!A3/2 e/ ||
+|:"^B" a/e/ e/e/ | !breath!f3/2 e/ | a/e/ e/c/ | !breath!B3/2 e/ |
+ a/e/ e/e/ | f f | e/c/ B/c/ |1 !breath!A3/2 e/ :|2 !breath!A3/2 A/4B/4 |]
+V:2
+[K:G] G/4A/4 |: B/G/ B/d/ | e e | d/B/ A/G/ | !breath!A3/2 G/4A/4 |
+ B/G/ B/d/ | e e | d/B/ A/B/ |1 !breath!G3/2 G/4A/4 :|2 !breath!G3/2 d/ ||
+|: g/d/ d/d/ | !breath!e3/2 d/ | g/d/ d/B/ | !breath!A3/2 !breath!d/ |
+ g/d/ d/d/ | e e | d/B/ A/B/ |1 !breath!G3/2 d/ :|2 !breath!G3/2 G/4A/4 |]

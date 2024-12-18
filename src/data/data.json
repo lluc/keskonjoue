@@ -294,10 +294,30 @@
                 "notation": "echelle_jacob.abc",
                 "youtube": "3E__XPoQBBU"
             },
+            "ecoland": {
+                "danceId": "valse_ecoss",
+                "name": "Ecoland (Fanny Power)",
+                "notation": "ecoland_fanny_power.abc"
+            },
+            "el_pelotazo": {
+                "danceId": "cercle_circassien",
+                "name": "El Pelotazo",
+                "notation": "el_pelotazo.abc"
+            },
+            "en_avant_blonde": {
+                "danceId": "valse",
+                "name": "En Avant Blonde",
+                "notation": "en_avant_blonde.abc"
+            },
+            "en_passant_rivière": {
+                "danceId": "bourree_2t",
+                "name": "En passant la rivière / Ton ruban bleu",
+                "notation": "en_passant_par_la_riviere_et_le_ruban_bleu.abc"
+            },
             "escholiers": {
                 "danceId": "mazurka",
                 "name": "Les Escholiers de Saint-Genest",
-                "notation": "mazurka_ecoliers_de_saint_genest.abc",
+                "notation": "escholiers_de_saint_genest.abc",
                 "youtube": "UD1GgTQuzSY"
             },
             "gars_plaimpied": {
@@ -305,16 +325,31 @@
                 "name": "Hardi les gars d'Plaimpied",
                 "notation": "gars_plaimpied.abc"
             },
+            "gavinette": {
+                "danceId": "scottish",
+                "name": "Gavinette",
+                "notation": "gavinette.abc"
+            },
+            "grand_frise": {
+                "danceId": "mazurka",
+                "name": "Grand frisé",
+                "notation": "grand_frise.abc"
+            },
             "grandes_poteries": {
                 "danceId": "bourree_3t",
                 "name": "Les grandes poteries",
                 "notation": "grandes_poteries.abc",
                 "youtube": "7hqgbkhjFXE&list"
             },
+            "grand_rouge": {
+                "danceId": "mazurka",
+                "name": "Grand Rouge",
+                "notation": "grand_rouge.abc"
+            },
             "limoise": {
                 "danceId": "mazurka",
                 "name": "La Limoise",
-                "notation": "limoise.abc"
+                "notation": "inconnu_de_limoise.abc"
             },
             "maris_wedding": {
                 "danceId": "polka",
@@ -390,7 +425,8 @@
             },
             "spezet": {
                 "danceId": "andro",
-                "name": "Spezet"
+                "name": "Spezet",
+                "notation": "pardon_spezed.abc"
             },
             "Tzadik katamar": {
                 "danceId": "klezmer",

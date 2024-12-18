@@ -1,0 +1,23 @@
+X:1
+T:E Pardon Spezed
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^jouer A-B-A-B+C et reprise""^A" F/ |: B c d3/2 B/ | A F !breath!B3/2 F/ | B c d3/2 B/ |1 A F !breath!B3/2 F/ :|2 A F !breath!B3/2 d/ ||
+|"^Transition" d d c3/2 B/ | c d B2 ||
+|:"^B" B/A/B/c/ d !breath!B | B/A/B/c/ d !breath!B | B/A/B/c/ d3/2 B/ | B A B2 :|
+"^C" F/ |: B c d3/2 d/ | e d !breath!c3/2 c/ | d c B3/2 B/ |1 B A !breath!F3/2 F/ :|2"^renchainer\nsur A" B A !breath!B3/2 F/ |]
+V:2
+[K:G] E/ |: A B c3/2 A/ | G E !breath!A3/2 E/ | A B c3/2 A/ |1 G E !breath!A3/2 E/ :|2 G E !breath!A3/2 c/ ||
+| c c B3/2 A/ | B c A2 ||
+|: A/G/A/B/ c !breath!A | A/G/A/B/ c !breath!A | A/G/A/B/ c3/2 A/ | A G A2 :|
+ E/ |: A B c3/2 c/ | d c !breath!B3/2 B/ | c B A3/2 A/ |1 A G !breath!E3/2 E/ :|2 A G !breath!A3/2 E/ |]
