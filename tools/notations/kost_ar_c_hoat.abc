@@ -1,0 +1,19 @@
+X:1
+T:Kost Ar C'Hoat
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:180
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^A" B/d/4d/4 d/c/ B/d/ !breath!f | d c/B/ !^!c !^!!breath!c | B/d/4d/4 d/c/ B/d/ !breath!f | e/c/ e/d/ c B :|
+|:"^B" B/f/4f/4 f/d/ e/f/ g/f/ | !breath!e c d/e/ f | !breath!d B c/d/ e/d/ | c/e/ d/c/ !^!B !^!B :|
+V:2
+[K:C]|: A/c/4c/4 c/B/ A/c/ e | c B/A/ !^!B !^!!breath!B | A/c/4c/4 c/B/ A/c/ e | d/B/ d/c/ B A :|
+|: A/e/4e/4 e/c/ d/e/ f/e/ | d B c/d/ e | c A B/c/ d/c/ | B/d/ c/B/ !^!A !^!A :|

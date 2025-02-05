@@ -1,0 +1,19 @@
+X:1
+T:Porcher
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:100
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^A" a/e/ e/4d/4c/4e/4 | a/e/ e/4d/4c/ | (3B/d/d/ (3c/e/!breath!e/ | a/e/ e/4d/4c/4e/4 | a/e/ e/4d/4c/ | (3B/d/d/ c |
+|:"^B" B/d/ c/e/ | (3f/e/d/ (3e/d/!breath!c/ | B/d/ c/e/ | (3f/e/d/ c :|
+V:2
+[K:G] g/d/ d/4c/4B/4d/4 | g/d/ d/4c/4B/ | (3A/c/c/ (3B/d/!breath!d/ | g/d/ d/4c/4B/4d/4 | g/d/ d/4c/4B/ | (3A/c/c/ !breath!B |
+|: A/c/ B/d/ | (3e/d/c/ (3d/c/!breath!B/ | A/c/ B/d/ | (3e/d/c/ B :|

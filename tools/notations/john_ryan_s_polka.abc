@@ -1,0 +1,23 @@
+X:1
+T:John Ryan's Polka
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:120
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" c/A/ A/B/4c/4 | d/c/ B/A/4B/4 | c/A/ E/A/ | c/>d/ e/>!breath!d/ |
+ c/A/ A/B/4c/4 | d/c/ B/A/4B/4 | c/A/ B/G/ | A A ::
+"^B" a/a/ f/4g/4a/4f/4 | e/c/ !breath!e | a/a/ f/4g/4a/4f/4 | e/c/ !breath!B |
+ a/a/ f/4g/4a/4f/4 | e/c/ !breath!e/A/4B/4 | c/A/ B/G/ | A A :|
+V:2
+[K:G]|: B/G/ G/A/4B/4 | c/B/ A/G/4A/4 | B/G/ D/G/ | B/>c/ d/>!breath!c/ |
+ B/G/ G/A/4B/4 | c/B/ A/G/4A/4 | B/G/ A/F/ | G G ::
+ g/g/ e/4f/4g/4e/4 | d/B/ !breath!d | g/g/ e/4f/4g/4e/4 | d/B/ !breath!A |
+ g/g/ e/4f/4g/4e/4 | d/B/ !breath!d/G/4A/4 | B/G/ A/F/ | G G :|

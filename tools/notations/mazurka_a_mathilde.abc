@@ -1,0 +1,23 @@
+X:1
+T:Mazurka à Mathilde
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:180
+K:Bb
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:C] A/c/ |:"^A" e e d/c/ | e !breath!e A/c/ | e e f/g/ | !breath!f2 e/d/ |
+ c3/2 c/ B/A/ | ^G/A/ B e | d/c/ B ^G |1 !breath!A2 A/c/ :|2 !breath!A2 e ||
+|:"^B" a a b | a g e | g g ^f | !breath!d2 c/B/ |
+ A/B/ c/d/ e/^f/ | g e d | B e ^d |1 !breath!e2 e :|2 e2 |]
+V:2
+ [K:Bb]G/B/ |: d d c/B/ | d !breath!d G/B/ | d d e/f/ | !breath!e2 d/c/ |
+ B3/2 B/ A/G/ | ^F/G/ A d | c/B/ A ^F |1 !breath!G2 G/B/ :|2 !breath!G2 d ||
+|: g g a | g f d | f f =e | !breath!c2 B/A/ |
+ G/A/ B/c/ d/=e/ | f d c | A d ^c |1 !breath!d2 d :|2 d2 |]

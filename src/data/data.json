@@ -40,6 +40,9 @@
             "gavotte": {
                 "name": "Gavotte"
             },
+            "gigue": {
+                "name": "Gigue"
+            },
             "hanterdro": {
                 "name": "Hanter-dro"
             },
@@ -48,6 +51,9 @@
             },
             "klezmer": {
                 "name": "Klezmer"
+            },
+            "koast_ar_hoat": {
+                "name": "Koast ar Hoat"
             },
             "marchoise": {
                 "name": "Marchoise"
@@ -94,6 +100,9 @@
             },
             "valse_ecoss": {
                 "name": "Valse écossaise"
+            },
+            "n_c": {
+                "name": "N.C. : non classées"
             }
         },
         "music": {
@@ -346,6 +355,21 @@
                 "name": "Grand Rouge",
                 "notation": "grand_rouge.abc"
             },
+            "Josefin_waltz": {
+                "danceId": "valse",
+                "name": "Josefin Waltz",
+                "notation": "josefin_s_waltz.abc"
+            },
+            "koast_ar_hoat": {
+                "danceId": "kost_ar_hoat",
+                "name": "Koast ar Hoat",
+                "notation": "koast_ar_c_hoat.abc"
+            },
+            "lilting_banshee": {
+                "danceId": "gigue",
+                "name": "Lilting Banshee",
+                "notation": "lilting_banshee.abc"
+            },
             "limoise": {
                 "danceId": "mazurka",
                 "name": "La Limoise",
@@ -358,13 +382,34 @@
             },
             "mazurka_mathilde": {
                 "danceId": "mazurka",
-                "name": "Mazurka à Mathilde"
+                "name": "Mazurka à Mathilde",
+                "notation": "mazurka_a_mathilde.abc"
+            },
+            "mazurka_italienne": {
+                "danceId": "mazurka",
+                "name": "Mazurka italienne",
+                "notation": "mazurka_italienne.abc"
             },
             "misirlou": {
                 "danceId": "klezmer",
                 "name": "Misirlou",
                 "notation": "misirlou.abc",
                 "youtube": "ZIU0RMV_II8"
+            },
+            "montagnarde": {
+                "danceId": "bourree_2t",
+                "name": "La Montagnarde",
+                "notation": "montagnarde.abc"
+            },
+            "pas_du_loup": {
+                "danceId": "n_c",
+                "name": "Pas du Loup",
+                "notation": "pas_du_loup.abc"
+            },
+            "pieternelle": {
+                "danceId": "n_c",
+                "name": "La Pieternelle",
+                "notation": "pieternelle.abc"
             },
             "pinagay": {
                 "danceId": "branle_coupe",
@@ -373,36 +418,46 @@
             "polka_john_ryan": {
                 "danceId": "polka",
                 "name": "John Ryan's Polka",
-                "notation": "john_ryan_polka.abc",
+                "notation": "john_ryan_s_polka.abc",
                 "youtube": "dHdI0eLk4Lw"
             },
             "polka_kerry_frog": {
                 "danceId": "polka",
                 "name": "Kerry  et Frog's Polkas",
+                "notation": "polka_kerry_et_frogs.abc",
                 "youtube": "K0CNLqMpLlY"
             },
             "polka_mirepoix_pepere": {
                 "danceId": "polka",
                 "name": "Mirepoix et Pepère",
+                "notation": "polka_de_mirepoix_et_polka_a_pepere.abc",
                 "youtube": "n9Bunh3bEH0"
             },
             "polka_russe": {
                 "danceId": "polka",
-                "name": "Polka Russe"
+                "name": "Polka Russe",
+                "notation": "polka_russe.abc"
+            },
+            "porcher": {
+                "danceId": "n_c",
+                "name": "Le Porcher",
+                "notation": "porcher.abc"
             },
             "poules_gm": {
                 "danceId": "cercle_circassien",
                 "name": "Les poules de ma grand-mère",
-                "notation": "poules_gm.abc"
+                "notation": "poules_de_ma_grand_mere.abc"
             },
             "raves": {
                 "danceId": "bourree_3t",
                 "name": "les raves (j'emmerde la moitié du monde)",
+                "notation": "sabotee_raves.abc",
                 "youtube": "K0CNLqMpLlY"
             },
             "rond_Landeda": {
                 "danceId": "rond_Landeda",
                 "name": "Rond de Landeda",
+                "notation": "rond_de_landeda_1_et_2.abc",
                 "youtube": "8s134J5P3xA"
             },
             "scot_bourbon": {
@@ -413,11 +468,22 @@
             "scot_catineau": {
                 "danceId": "scottish",
                 "name": "Scottish à Catineau",
-                "notation": "scot_catineau.abc"
+                "notation": "scottish_a_catineaux.abc"
             },
             "scot_crassier": {
                 "danceId": "scottish",
-                "name": "Scottish du Crassier"
+                "name": "Scottish du Crassier",
+                "notation": "scottish_du_crassier.abc"
+            },
+            "scot_grand_sud":{
+                "danceId": "scottish",
+                "name": "Scottish du Grand Sud",
+                "notation": "scottish_du_grand_sud.abc"
+            },
+            "Sejna": {
+                "danceId": "klezmer",
+                "name": "Sejna",
+                "notation": "sejna.abc"
             },
             "sorciers_marloup": {
                 "danceId": "bourree_3t",

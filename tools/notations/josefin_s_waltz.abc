@@ -1,0 +1,25 @@
+X:1
+T:Josefin's Waltz
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar" snm="C"
+%%MIDI program 71
+V:2 treble nm="Vln" snm="V"
+%%MIDI program 40
+V:1
+[K:A]"^A" E A B | c e d | c B A | E2 F | !breath!D2 D/D/ | F A G | F3 | !breath!E3 |
+ E A B | c e d | c B A | E2 F | !breath!D2 D/D/ | E G A |1 B3- | !breath!B3 :|2 !breath!B3- |"^B" B c d ||
+|: e c e | a2 g | f3 | !breath!e3 | d f e | d c B | c3/2 d/ !breath!c | B c d |
+ e c e | a2 g | f3 | !breath!e3 | d f e | d c B | c3/2 d/ !breath!c | B c d |
+ c B A | G2 A | !breath!A3 | D E D | C E A | G F G |1 !breath!A3 | B c d :|2 A3- | A3 |]
+V:2
+ [K:G]D G A | B d c | B A G | D2 !breath!E | !breath!C2 C/C/ | E G F | E3 | !breath!D3 |
+ D G A | B d c | B A G | D2 !breath!E | !breath!C2 C/C/ | D F G |1 A3- | !breath!A3 :|2 !breath!A3- | A B c ||
+|: d B d | g2 f | e3 | !breath!d3 | c e d | c B A | B3/2 c/ !breath!B | A B c |
+ d B d | g2 f | e3 | !breath!d3 | c e d | c B A | B3/2 c/ !breath!B | A B c |
+ B A G | F2 G | !breath!G3 | C D C | B, D G | F E F |1 !breath!G3 | A B c :|2 G3- | G3 |]

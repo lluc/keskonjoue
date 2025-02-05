@@ -1,0 +1,19 @@
+X:1
+T:Lilting Banshee
+C:PLLP
+%%score 1 2
+L:1/4
+M:6/8
+Q:250
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" F/B/B/ F/B/B/ | c/B/c/ !breath!A B/ | c/f/f/ f/e/c/ |1 e/c/B/ A/F/E/ :|2 e/c/B/ B3/2 |] 
+e/ |:"^B" f/b/b/ b/a/f/ | e/c/B/ !breath!A B/ | c/f/f/ f/e/c/ |1 e/f/g/ a/g/a/ :|2 e/c/B/ B3/2 |]
+V:2
+[K:G]|: E/A/A/ E/A/A/ | B/A/B/ !breath!G A/ | B/e/e/ e/d/B/ |1 d/B/A/ G/E/D/ :|2 d/B/A/ A3/2 |] 
+d/ |: e/a/a/ a/g/e/ | d/B/A/ !breath!G A/ | B/e/e/ e/d/B/ |1 d/e/f/ g/f/g/ :|2 d/B/A/ A3/2 |]
