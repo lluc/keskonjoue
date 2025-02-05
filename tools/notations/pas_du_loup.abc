@@ -1,0 +1,27 @@
+X:1
+T:Pas du Loup
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:200
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^Version en Do : 3x A1-B""^A1" d e/f/ d e/f/ | g/a/ g/f/ e/f/ e/!breath!c/ | d e/f/ d e/f/ |1 g/a/ g/f/ e2 :|2 g/a/ g/f/ !breath!e3/2 f/ ||
+|:"^B" g/e/ f/d/ c !breath!A/e/ | e/d/ c/d/ !breath!e3/2 f/ | g/e/ f/d/ c !breath!A/e/ |1  e/d/ c/e/ !breath!d3/2 f/ :|2 e/d/ c/e/ d2 |]
+|:"^variation A2" a f/g/ a a | b/a/ g/f/ e/f/ g/!breath!e/ |  a f/g/ a a |1 b/a/ g/f/ !breath!e2 :|2 b/a/ g/f/ !breath!e3/2 f/ |]
+|:[K:A]"^C1""^Version en Sol : 2x C1-D puis 1x C2-D" A B/c/ A B/c/ | d/e/ d/c/ B/c/ B/!breath!G/ | A B/c/ A B/c/ |1 d/e/ d/c/ B2 :|2 d/e/ d/c/ !breath!B3/2 c/ ||
+|:"^D" d/B/ c/A/ G !breath!E/B/ | B/A/ G/A/ !breath!B3/2 c/ | d/B/ c/A/ G !breath!E/B/ |1 B/A/ G/B/ !breath!A3/2 c/ :|2 B/A/ G/B/ A2 |]
+|:"^variation C2 puis D" e c/d/ e e | f/e/ d/c/ B/c/ d/!breath!B/ | e c/d/ e e |1 f/e/ d/c/ !breath!B2 :|2 f/e/ d/c/ !breath!B3/2 c/ |]
+V:2
+[K:C]|: c d/e/ c d/e/ | f/g/ f/e/ d/e/ d/!breath!B/ | c d/e/ c d/e/ |1 f/g/ f/e/ d2 :|2  f/g/ f/e/ !breath!d3/2 e/ ||
+|: f/d/ e/c/ B !breath!G/d/ | d/c/ B/c/ !breath!d3/2 e/ | f/d/ e/c/ B !breath!G/d/ |1  d/c/ B/d/ !breath!c3/2 e/ :|2 d/c/ B/d/ c2 |]
+|: g e/f/ g g | a/g/ f/e/ d/e/ f/!breath!d/ | g e/f/ g g |1 a/g/ f/e/ !breath!d2 :|2 a/g/ f/e/ !breath!d3/2 e/ |]
+|:[K:G] G A/B/ G A/B/ | c/d/ c/B/ A/B/ A/!breath!F/ | G A/B/ G A/B/ |1 c/d/ c/B/ A2 :|2 c/d/ c/B/ !breath!A3/2 B/ ||
+|: c/A/ B/G/ F !breath!D/A/ | A/G/ F/G/ !breath!A3/2 B/ | c/A/ B/G/ F !breath!D/A/ |1 A/G/ F/A/ !breath!G3/2 B/ :|2 A/G/ F/A/ G2 |]
+|: d B/c/ d d | e/d/ c/B/ A/B/ c/!breath!A/ | d B/c/ d d |1 e/d/ c/B/ !breath!A2 :|2 e/d/ c/B/ !breath!A3/2 B/ |]

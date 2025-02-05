@@ -1,0 +1,26 @@
+X:1
+T:Montagnarde
+C:PLLP
+O:France
+A:Auvergne
+I:https://www.ligue-auvergnate.com/groupes-folkloriques/recueil-de-danses/index/9-lamc/387-la-montagnarde
+%%score 1 2
+L:1/4
+M:3/8
+Q:180
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" A/4B/4c/c/ | A/4B/4c/c/ | A/4c/4e/d/ | c/ !breath!B |
+ A/4B/4c/c/ | A/4B/4c/c/ | A/4c/4e/d/ | B3/2 :|
+|:"^B" A G/ | F/G/A/ | B d/ | c/ !breath!B |
+ A G/ | F/G/A/ | B/c/B/ | A3/2 :|
+V:2
+[K:G]|: G/4A/4B/B/ | G/4A/4B/B/ | G/4B/4d/c/ | B/ !breath!A |
+ G/4A/4B/B/ | G/4A/4B/B/ | G/4B/4d/c/ | A3/2 :|
+|: G F/ | E/F/G/ | A c/ | B/ !breath!A |
+ G F/ | E/F/G/ | A/B/A/ | G3/2 :|

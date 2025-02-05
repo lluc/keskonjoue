@@ -1,0 +1,23 @@
+X:1
+T:Polka Kerry + Frogs
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A x2" c/E/ F/E/ | c/E/ F/E/ | A B/>c/ |1 B/A/ F/E/ :|2 B/A/ A ||
+|:"^B x2 " c/e/ c/B/ | B/A/ F/E/ | A B/>c/ |1 B/A/ F/E/ :|2 B/A/ A |]
+|:"^Polka Frogs""^C x2" c/e/ A/>B/ | c/e/ A/c/ | B/c/4B/4 G/B/ |1 A/f/ f/e/ :|2 A A/>B/ ||
+|:"^D x2" c/4d/4e/ f/g/ | a/b/4a/4 g/a/ | f/e/ f/g/ |1 f/e/ c/B/ :|2 f e |]
+V:2
+[K:G]|: B/D/ E/D/ | B/D/ E/D/ | G A/>B/ |1 A/G/ E/D/ :|2 A/G/ G ||
+|: B/d/ B/A/ | A/G/ E/D/ | G A/>B/ |1 A/G/ E/D/ :|2 A/G/ G |]
+|: B/d/ G/>A/ | B/d/ G/B/ | A/B/4A/4 F/A/ |1 G/e/ e/d/ :|2 G G/>A/ ||
+|: B/4c/4d/ e/f/ | g/a/4g/4 f/g/ | e/d/ e/f/ |1 e/d/ B/A/ :|2 e d |]

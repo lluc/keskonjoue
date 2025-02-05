@@ -1,0 +1,23 @@
+X:1
+T:Scottish du Crassier
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:180
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] E |:"^A" A/G/A/B/ c d | e/d/e/f/ !breath!e a | g/f/e/d/ c B/c/ | d/e/d/c/ !breath!B E |
+ A/G/A/B/ c d | e/d/e/f/ !breath!e a | g/f/e/d/ c B/c/ |1 d/B/G/E/ !breath!A E :|2 d/B/G/E/ !breath!A c/d/ |]
+|:"^B" e e/d/ e/a/g/a/ | e e/d/ !breath!c B/c/ | d d/c/ B B/c/ | d/e/d/c/ !breath!B c/d/ |
+ e e/d/ e/a/g/a/ | e e/d/ !breath!c B/c/ | d d/c/ B B/c/ |1 d/B/G/E/ !breath!A c/d/ :|2 d/B/G/E/ !breath!A E |]
+V:2
+[K:G] D |: G/F/G/A/ B c | d/c/d/e/ !breath!d g | f/e/d/c/ B A/B/ | c/d/c/B/ !breath!A D |
+ G/F/G/A/ B c | d/c/d/e/ !breath!d g | f/e/d/c/ B A/B/ |1 c/A/F/D/ !breath!G D :|2 c/A/F/D/ !breath!G B/c/ |]
+|: d d/c/ d/g/f/g/ | d d/c/ !breath!B A/B/ | c c/B/ A A/B/ | c/d/c/B/ !breath!A B/c/ |
+ d d/c/ d/g/f/g/ | d d/c/ !breath!B A/B/ | c c/B/ A A/B/ |1 c/A/F/D/ !breath!G B/c/ :|2 c/A/F/D/ !breath!G D |]

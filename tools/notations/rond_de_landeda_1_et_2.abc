@@ -1,0 +1,23 @@
+X:1
+T:Rond de Landéda 1+2
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:150
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^Rond de Landéda 1""^A"{cd} c/B/ A A | B/d/ c B |{cd} c/B/ A A | B/d/ c B :|
+|:"^B" c c/B/ B/!breath!A/ | B/c/4d/4 c/B/ c/!breath!A/ | c c/B/ B/!breath!A/ |1 B/c/4d/4 c/B/ A :|2  B/c/4d/4 c/B/ !breath!A/E/ |]
+|:"^Rond de Landéda 2""^C" A/B/ c/d/ e/c/ | e d/c/ !breath!B/E/ | A/B/ c/d/ e/c/ |1 e d/c/ !breath!B/E/ :|2 e d/c/ !breath!B |]
+|:"^D" e d/c/ B | B/B/ B/c/4d/4 !breath!c/A/ | e d/c/ B |1 A/c/ B/B/ A :|2 A/c/ B/B/ !breath!A/E/ |]
+V:2
+[K:C]|:"^Rond de Landéda 1""^A"{Bc} B/A/ G G | A/c/ B A |{Bc} B/A/ G G | A/c/ B A :|
+|:"^B" B B/A/ A/!breath!G/ | A/B/4c/4 B/A/ B/!breath!G/ | B B/A/ A/!breath!G/ |1 A/B/4c/4 B/A/ G :|2  A/B/4c/4 B/A/ !breath!G/D/ |]
+|:"^Rond de Landéda 2""^C" G/A/ B/c/ d/B/ | d c/B/ !breath!A/D/ | G/A/ B/c/ d/B/ |1 d c/B/ !breath!A/D/ :|2 d c/B/ !breath!A |]
+|:"^D" d c/B/ A | A/A/ A/B/4c/4 !breath!B/G/ | d c/B/ A |1 G/B/ A/A/ G :|2 G/B/ A/A/ !breath!G/D/ |]

@@ -1,0 +1,27 @@
+X:1
+T:Sabotée + Raves
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" c/d/ e | e/f/ e/d/ | c !breath!A | c/d/ e | e f | !breath!e2 |
+ c/d/ e | e/f/ e/d/ | c !breath!A | B/c/ d | B G | A2 :|
+|:"^B" c c | B/c/ d/c/ | !breath!B2 | B B | A B | c !breath!A |
+ c c | B/c/ d/c/ | !breath!B2 | c/d/ e | c B | A2 :|
+|:"^Mon père a planté des raves""^A"E A | A/B/ c/d/ | e c | c d |1 B B | c !breath!A :|2 B G | A2 ||
+|:"^B" c e | c A | G2 | B/c/ d |1 B d | c !breath!A :|2 B G | A2 |]
+V:2
+[K:G]|: B/c/ d | d/e/ d/c/ | B !breath!G | B/c/ d | d e | !breath!d2 |
+ B/c/ d | d/e/ d/c/ | B !breath!G | A/B/ c | A F | G2 :|
+|: B B | A/B/ c/B/ | !breath!A2 | A A | G A | B !breath!G |
+ B B | A/B/ c/B/ | !breath!A2 | B/c/ d | B A | G2 :|
+|: D G | G/A/ B/c/ | d B | B c |1 A A | B !breath!G :|2 A F | G2 ||
+|: B d | B G | F2 | A/B/ c |1 A c | B !breath!G :|2 A F | G2 |]

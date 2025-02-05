@@ -1,0 +1,23 @@
+X:1
+T:Scottish à Catinaux
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:180
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A x2" c/d/ c/B/ A/E/ A/c/ | e/d/ c/d/ !breath!B2 |
+ E/F/ G/A/ B B/c/ |1 d c/B/ c !breath!A :|2 d c/B/ A2 ||
+|:"^B x2" c e F G/A/ | B/A/ G/F/ !breath!E2 |
+ E/F/ G/A/ B B/c/ |1 d c/B/ c !breath!A :|2 d c/B/ A2 |]
+V:2
+[K:G]|: B/c/ B/A/ G/D/ G/B/ | d/c/ B/c/ !breath!A2 |
+ D/E/ F/G/ A A/B/ |1 c B/A/ B !breath!G :|2 c B/A/ G2 ||
+|: B d E F/G/ | A/G/ F/E/ !breath!D2 |
+ D/E/ F/G/ A A/B/ |1 c B/A/ B !breath!G :|2 c B/A/ G2 |]
