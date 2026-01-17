@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import { Slider } from "@mui/material";
 import ABCJS, { TuneObjectArray } from 'abcjs'
 import { useEffect, useLayoutEffect, useState } from "react";
 import jsonNotations from "../data/notations.json";
-import Youtube from 'react-youtube';
 
 
 const Music = () => {
@@ -15,6 +15,8 @@ const Music = () => {
     const notations = jsonNotations["abcFiles"][data.notation as keyof typeof jsonNotations["abcFiles"]] as string;
     const [midiBuffer, setMidiBuffer] = useState( new ABCJS.synth.CreateSynth())
     const [visualObj, setVisualObj] = useState<null | TuneObjectArray>(null);
+    // State for the tempo
+    const [tempo, setTempo] = useState(visualObj ? visualObj[0].getBpm() : 120);
 
     useLayoutEffect(() => {
         if (notations === undefined) {
@@ -77,6 +79,17 @@ const Music = () => {
         setIsPlaying(!isPlaying);
     }
 
+    // Handler for tempo change
+    const handleTempoChange = (event: Event, newValue: number | number[]) => {
+        if (Array.isArray(newValue)) return;
+        setTempo(newValue);
+        /*
+        if (visualObj) {
+            visualObj[0].setBpm(newValue);
+        }
+        */
+    };
+
     return (
         <Stack spacing={2}>
             <Typography variant="h3">
@@ -96,6 +109,19 @@ const Music = () => {
                         </Button>
 
                     </Box>
+                    <Box>
+                        <Typography id="tempo-slider" gutterBottom>
+                            Tempo: {tempo} BPM
+                        </Typography>
+                        <Slider
+                            value={tempo}
+                            onChange={handleTempoChange}
+                            aria-labelledby="tempo-slider"
+                            min={30}
+                            max={240}
+                        />
+                    </Box>
+
                     <Box
                         id="paper"
                     />
@@ -107,7 +133,16 @@ const Music = () => {
                     <Typography variant="h5">
                         Vidéo
                     </Typography>
-                    <Youtube videoId={data.youtube.valueOf() as string} opts={{ width: '100%', height: '300' }} />
+                    <Box
+                        component="iframe"
+                        src={`https://www.youtube-nocookie.com/embed/${data.youtube}`}
+                        width="100%"
+                        height={300}
+                        sx={{ border: 0 }}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        loading="lazy"
+                    />
                 </Stack>
             }
         </Stack>
