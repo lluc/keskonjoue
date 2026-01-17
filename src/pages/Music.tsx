@@ -3,20 +3,19 @@ import { store } from "../service/store.service"
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import { Slider } from "@mui/material";
 import ABCJS, { TuneObjectArray } from 'abcjs'
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import jsonNotations from "../data/notations.json";
 
 
 const Music = () => {
     const { slug } = useParams();
     const data = store.getRow('music', slug || '')
-    // Ajouter un nouvel état pour le bouton à bascule
     const [isPlaying, setIsPlaying] = useState(false);
     const notations = jsonNotations["abcFiles"][data.notation as keyof typeof jsonNotations["abcFiles"]] as string;
-    const [midiBuffer, setMidiBuffer] = useState( new ABCJS.synth.CreateSynth())
+    const midiBufferRef = useRef(new ABCJS.synth.CreateSynth());
     const [visualObj, setVisualObj] = useState<null | TuneObjectArray>(null);
-    // State for the tempo
-    const [tempo, setTempo] = useState(visualObj ? visualObj[0].getBpm() : 120);
+    const [warp, setWarp] = useState(100); // Pourcentage du tempo (100 = normal)
+    const warpRef = useRef(warp); // Ref pour accéder à la valeur actuelle dans les callbacks
 
     useLayoutEffect(() => {
         if (notations === undefined) {
@@ -35,59 +34,55 @@ const Music = () => {
 
     useEffect(() => {
         return () => {
-            // This will be called when the component is about to unmount
-            // Stop the music
-            midiBuffer.stop();
-
+            midiBufferRef.current.stop();
         };
-    }, []); 
+    }, []);
 
+    // Synchroniser warpRef avec warp
+    useEffect(() => {
+        warpRef.current = warp;
+    }, [warp]);
+
+    const startPlayback = () => {
+        if (visualObj === null) return;
+
+        const midiBuffer = midiBufferRef.current;
+        midiBuffer.init({
+            audioContext: new AudioContext(),
+            visualObj: visualObj[0],
+            millisecondsPerMeasure: visualObj[0].millisecondsPerMeasure() * (100 / warpRef.current),
+            options: {}
+        }).then(() => {
+            return midiBuffer.prime();
+        }).then(() => {
+            midiBuffer.start();
+            setIsPlaying(true);
+        }).catch((error) => {
+            console.warn("Audio problem:", error);
+        });
+    };
 
     const togglePlayMusic = () => {
         if (isPlaying) {
-            midiBuffer.stop();
+            midiBufferRef.current.stop();
+            setIsPlaying(false);
         } else {
-
-            if (visualObj === null) {
-                return
-            }
-
-            midiBuffer.init({
-                audioContext: new AudioContext(),
-                visualObj: visualObj[0],
-                //sequence: [],
-                millisecondsPerMeasure: visualObj[0].millisecondsPerMeasure(),
-                // debugCallback: function(message) { console.log(message) },
-                options: {
-                    // soundFontUrl: "https://paulrosen.github.io/midi-js-soundfonts/FluidR3_GM/" ,
-                    // sequenceCallback: function(noteMapTracks, callbackContext) { return noteMapTracks; },
-                    // callbackContext: this,
-                    // onEnded: function(callbackContext),
-                    // pan: [ -0.5, 0.5 ]
-                }
-            }).then(function (response) {
-                return midiBuffer.prime();
-            }).then(function (response) {
-                midiBuffer.start();
-                return Promise.resolve();
-            }).catch(function (error) {
-                console.warn("Audio problem:", error);
-            })
+            startPlayback();
         }
+    };
 
-        // Mettre à jour l'état du bouton à bascule
-        setIsPlaying(!isPlaying);
-    }
-
-    // Handler for tempo change
-    const handleTempoChange = (event: Event, newValue: number | number[]) => {
+    // Handler for tempo/warp change - redémarre la lecture si en cours
+    const handleWarpChange = (_event: Event, newValue: number | number[]) => {
         if (Array.isArray(newValue)) return;
-        setTempo(newValue);
-        /*
-        if (visualObj) {
-            visualObj[0].setBpm(newValue);
+        setWarp(newValue);
+        warpRef.current = newValue;
+
+        // Si en lecture, redémarrer avec le nouveau tempo
+        if (isPlaying) {
+            midiBufferRef.current.stop();
+            // Petit délai pour permettre l'arrêt complet
+            setTimeout(() => startPlayback(), 50);
         }
-        */
     };
 
     return (
@@ -110,15 +105,21 @@ const Music = () => {
 
                     </Box>
                     <Box>
-                        <Typography id="tempo-slider" gutterBottom>
-                            Tempo: {tempo} BPM
+                        <Typography id="warp-slider" gutterBottom>
+                            Vitesse: {warp}%
                         </Typography>
                         <Slider
-                            value={tempo}
-                            onChange={handleTempoChange}
-                            aria-labelledby="tempo-slider"
-                            min={30}
-                            max={240}
+                            value={warp}
+                            onChange={handleWarpChange}
+                            aria-labelledby="warp-slider"
+                            min={25}
+                            max={200}
+                            step={5}
+                            marks={[
+                                { value: 50, label: '50%' },
+                                { value: 100, label: '100%' },
+                                { value: 150, label: '150%' },
+                            ]}
                         />
                     </Box>
 
