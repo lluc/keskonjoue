@@ -2,9 +2,10 @@ import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import { Slider } from "@mui/material";
-import ABCJS, { TuneObjectArray } from 'abcjs'
+import ABCJS, { TuneObjectArray, SynthObjectController } from 'abcjs'
 import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import jsonNotations from "../data/notations.json";
+import 'abcjs/abcjs-audio.css';
 
 
 const Music = () => {
@@ -12,76 +13,72 @@ const Music = () => {
     const data = store.getRow('music', slug || '')
     const [isPlaying, setIsPlaying] = useState(false);
     const notations = jsonNotations["abcFiles"][data.notation as keyof typeof jsonNotations["abcFiles"]] as string;
-    const midiBufferRef = useRef(new ABCJS.synth.CreateSynth());
+    const synthControlRef = useRef<SynthObjectController | null>(null);
     const [visualObj, setVisualObj] = useState<null | TuneObjectArray>(null);
-    const [warp, setWarp] = useState(100); // Pourcentage du tempo (100 = normal)
-    const warpRef = useRef(warp); // Ref pour accéder à la valeur actuelle dans les callbacks
+    const [warp, setWarp] = useState(100);
+    const [isReady, setIsReady] = useState(false);
 
     useLayoutEffect(() => {
         if (notations === undefined) {
             return
         }
 
-        const visualObj = ( ABCJS.renderAbc("paper", notations, {
+        const visualObj = ABCJS.renderAbc("paper", notations, {
             responsive: "resize",
-            scrollHorizontal: true,   
-        }
-        ))
+            scrollHorizontal: true,
+        });
 
-        setVisualObj(visualObj)
+        setVisualObj(visualObj);
 
     }, [])
 
     useEffect(() => {
-        return () => {
-            midiBufferRef.current.stop();
-        };
-    }, []);
+        if (visualObj === null || notations === undefined) return;
 
-    // Synchroniser warpRef avec warp
-    useEffect(() => {
-        warpRef.current = warp;
-    }, [warp]);
+        const synthControl = new ABCJS.synth.SynthController();
+        synthControlRef.current = synthControl;
 
-    const startPlayback = () => {
-        if (visualObj === null) return;
+        synthControl.load("#audio-control", null, {
+            displayLoop: false,
+            displayRestart: false,
+            displayPlay: false,
+            displayProgress: false,
+            displayWarp: true,
+        });
 
-        const midiBuffer = midiBufferRef.current;
-        midiBuffer.init({
-            audioContext: new AudioContext(),
-            visualObj: visualObj[0],
-            millisecondsPerMeasure: visualObj[0].millisecondsPerMeasure() * (100 / warpRef.current),
-            options: {}
+        synthControl.setTune(visualObj[0], false, {
+            qpm: visualObj[0].getBpm?.() || 120,
         }).then(() => {
-            return midiBuffer.prime();
-        }).then(() => {
-            midiBuffer.start();
-            setIsPlaying(true);
-        }).catch((error) => {
+            setIsReady(true);
+        }).catch((error: Error) => {
             console.warn("Audio problem:", error);
         });
-    };
+
+        return () => {
+            if (synthControlRef.current) {
+                synthControlRef.current.pause();
+            }
+        };
+    }, [visualObj, notations]);
 
     const togglePlayMusic = () => {
+        if (!synthControlRef.current || !isReady) return;
+
         if (isPlaying) {
-            midiBufferRef.current.stop();
+            synthControlRef.current.pause();
             setIsPlaying(false);
         } else {
-            startPlayback();
+            synthControlRef.current.play();
+            setIsPlaying(true);
         }
     };
 
-    // Handler for tempo/warp change - redémarre la lecture si en cours
     const handleWarpChange = (_event: Event, newValue: number | number[]) => {
         if (Array.isArray(newValue)) return;
         setWarp(newValue);
-        warpRef.current = newValue;
 
-        // Si en lecture, redémarrer avec le nouveau tempo
-        if (isPlaying) {
-            midiBufferRef.current.stop();
-            // Petit délai pour permettre l'arrêt complet
-            setTimeout(() => startPlayback(), 50);
+        if (synthControlRef.current) {
+            synthControlRef.current.setWarp(newValue);
         }
     };
 
@@ -98,9 +95,10 @@ const Music = () => {
             </Typography>
             {notations &&
                 <Stack>
+                    <Box id="audio-control" sx={{ display: 'none' }} />
                     <Box>
-                        <Button variant="contained" onClick={togglePlayMusic}>
-                            {isPlaying ? 'Arrêter' : 'Jouer'}
+                        <Button variant="contained" onClick={togglePlayMusic} disabled={!isReady}>
+                            {isPlaying ? 'Pause' : 'Jouer'}
                         </Button>
 
                     </Box>
