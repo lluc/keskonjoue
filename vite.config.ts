@@ -12,7 +12,17 @@ export default defineConfig({
       srcDir: "",
       filename: "service-worker.js",
       manifest,
-      registerType: 'autoUpdate' 
+      registerType: 'autoUpdate'
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'abcjs': ['abcjs'],
+          'mui': ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled'],
+        }
+      }
+    }
+  }
 });

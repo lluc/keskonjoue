@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react"
+import { FunctionComponent, useEffect } from "react"
 import { store } from "../service/store.service"
 import Stack from "@mui/material/Stack"
 import { Button, ButtonGroup} from "@mui/material"
@@ -6,6 +6,11 @@ import { useNavigate } from "react-router-dom"
 
 
 const DanseListe: FunctionComponent = () => {
+    // Prefetch des pages Dance et Music pour une navigation fluide
+    useEffect(() => {
+        import('../pages/Dance')
+        import('../pages/Music')
+    }, [])
     const dances = Object.entries(store.getTable("dance")) // Liste des dances
 
     /**
