@@ -1,0 +1,31 @@
+X:1
+T:Valse Ecossaise
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:250
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] E |"^refrain 1" c2 B | A2 G | F G A | !breath!E2"^A" E |
+ c2 B | A2 G | F G A | B c !breath!d |
+"^refrain 1" c2 B | A2 G | F G A | !breath!E2"^B" E |
+ F B A | G F G | A c B | !breath!A2 E |
+"^refrain 2" c2 E | c2 E | c e c | !breath!A2"^C" E |
+ B2 E | B2 E | B A B | c !breath!A E |
+"^refrain 2" c2 E | c2 E | c e c | !breath!A2"^D" E |
+ F B A | G F G | A c B | A3 |]
+V:2
+[K:G] D | B2 A | G2 F | E F G | !breath!D2 D |
+ B2 A | G2 F | E F G | A B !breath!c |
+ B2 A | G2 F | E F G | !breath!D2 D |
+ E A G | F E F | G B A | !breath!G2 D |
+ B2 D | B2 D | B d B | !breath!G2 D |
+ A2 D | A2 D | A G A | B !breath!G D |
+ B2 D | B2 D | B d B | !breath!G2 D |
+ E A G | F E F | G B A | G3 |]

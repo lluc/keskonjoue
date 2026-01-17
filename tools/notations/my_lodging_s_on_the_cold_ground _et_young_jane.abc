@@ -1,0 +1,31 @@
+X:1
+T:My Lodging's On The Cold Ground + Young Jane
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^A" c/B/ |: A3/2 B/ A | A c e | d f a | !breath!a2"^B" g/f/ | e3/2 d/ c | B A B | c e c |
+ !breath!B2"^A" c/B/ | A3/2 B/ A | A c e | d f a | !breath!a2"^C" g/f/ | e a c | B3/2 A/ B | A3- |
+ !breath!A2"^D" e/d/ | c e a | a2 e | f d a | !breath!a2"^B" g/f/ | e3/2 d/ c | B A B | c e c |
+ !breath!B2"^A" c/B/ | A3/2 B/ A | A c e | d f a | !breath!a2"^C" g/f/ | e a c | B3/2 A/ B | A3- | A2 c/B/ :|]
+"^Young Jane""^E" (3E/F/G/ |: A3/2 B/ c | B c e | f2 f | e3/2 c/ B | A3/2 B/ c | B2 A | F3 |
+ !breath!E2"^F" (3E/F/G/ | A3/2 B/ c | B c e | f2 f | e2 f | A3/2 B/ c | B3/2 A/ B | A3- |
+ !breath!A2"^G" c/d/ | e c e | a3/2 g/ a | f2 f | B2 c | d3/2 e/ f | e c B | A3 |
+ !breath!G2"^F" (3E/F/G/ | A3/2 B/ c | B c e | f2 f | e2 f | A3/2 B/ c | B3/2 A/ B | A3- | A2 (3E/F/G/ :|
+V:2
+[K:G] B/A/ |: G3/2 A/ G | G B d | c e g | !breath!g2 f/e/ | d3/2 c/ B | A G A | B d B |
+ !breath!A2 B/A/ | G3/2 A/ G | G B d | c e g | !breath!g2 f/e/ | d g B | A3/2 G/ A | G3- |
+ !breath!G2 d/c/ | B d g | g2 d | e c g | !breath!g2 f/e/ | d3/2 c/ B | A G A | B d B |
+ !breath!A2 B/A/ | G3/2 A/ G | G B d | c e g | !breath!g2 f/e/ | d g B | A3/2 G/ A | G3- | G2 B/A/ :|]
+ (3D/E/F/ |: G3/2 A/ B | A B d | e2 e | d3/2 B/ A | G3/2 A/ B | A2 G | E3 |
+ !breath!D2 (3D/E/F/ | G3/2 A/ B | A B d | e2 e | d2 e | G3/2 A/ B | A3/2 G/ A | G3- |
+ !breath!G2 B/c/ | d B d | g3/2 f/ g | e2 e | A2 B | c3/2 d/ e | d B A | G3 |
+ !breath!F2 (3D/E/F/ | G3/2 A/ B | A B d | e2 e | d2 e | G3/2 A/ B | A3/2 G/ A | G3- | G2 (3D/E/F/ :|

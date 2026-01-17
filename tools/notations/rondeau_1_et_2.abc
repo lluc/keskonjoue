@@ -1,0 +1,23 @@
+X:1
+T:Rondeau 1+2
+C:PLLP
+%%score 1 2
+L:1/4
+M:6/8
+Q:300
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^Rondeau 1""^A" c d/ B B/ | c A/ B !breath!B/ | c d/ B B/ | c A/ B3/2 :|
+|:"^B" B c/ d/c/d/ | f e/ !breath!c3/2 | e/d/c/ B/A/B/ |1 c c/ A F/ :|2 c d/ B3/2 |]
+|:"^Rondeau 2""^C" e c/ e f/ | e/d/c/ !breath!B A/ | d/c/B/ c A/ |1 B c/ d/c/B/ :|2 B3/2 B3/2 ||
+|:"^D" e/d/c/ B A/ | d B/ c A/ | !breath!B d/ c/B/A/ |1 B c/ d/c/B/ :|2 B3/2 B3/2 |]
+V:2
+[K:C]|: B c/ A A/ | B G/ A !breath!A/ | B c/ A A/ | B G/ A3/2 :|
+|: A B/ c/B/c/ | e d/ !breath!B3/2 | d/c/B/ A/G/A/ |1 B B/ G E/ :|2 B c/ A3/2 |]
+|: d B/ d e/ | d/c/B/ !breath!A G/ | c/B/A/ B G/ |1 A B/ c/B/A/ :|2 A3/2 A3/2 ||
+|: d/c/B/ A G/ | c A/ B G/ | !breath!A c/ B/A/G/ |1 A B/ c/B/A/ :|2 A3/2 A3/2 |]

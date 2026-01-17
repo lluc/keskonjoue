@@ -1,0 +1,23 @@
+X:1
+T:Mary's Wedding
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar. 1" snm="Clar. 1"
+%%MIDI program 71
+V:2 treble nm="Vln. 1" snm="Vln. 1"
+%%MIDI program 40
+V:1
+[K:A]|:"^A" E/>F/ E/F/ | A/B/ c | B/A/ F/A/ | c/B/ c/<!breath!e/ |
+ E/>F/ E/F/ | A/B/ c | B/A/ F/D/ | E E :|
+|:"^B" e/>e/ e/f/ | e/d/ c | B/A/ F/A/ | c/B/ c/<!breath!e/ |
+ e/>e/ e/f/ | e/d/ c | B/A/ F/D/ | E E :|
+V:2
+[K:G]|: D/>E/ D/E/ | G/A/ B | A/G/ E/G/ | B/A/ B/<!breath!d/ |
+ D/>E/ D/E/ | G/A/ B | A/G/ E/C/ | D D :|
+|: d/>d/ d/e/ | d/c/ B | A/G/ E/G/ | B/A/ B/<!breath!d/ |
+ d/>d/ d/e/ | d/c/ B | A/G/ E/C/ | D D :|

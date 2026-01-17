@@ -1,0 +1,23 @@
+X:1
+T:Two-Step de la Liberté
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:100
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" c/E/ c/E/ | c/4d/4c/4B/4 !breath!A/B/4c/4 | d/F/ d/F/ | d/4e/4d/4c/4 B/A/4!breath!B/4 |
+ c/E/ c/E/ | c/4d/4c/4B/4 !breath!A/B/4c/4 | d/4c/4B/4A/4 G/4E/4F/4G/4 | A/A/4G/4 A :|
+|:"^B" e/e/4f/4 e/4d/4c/4B/4 | A/4B/4c/4d/4 !breath!e/c/ | e/e/4f/4 e/4d/4c/ | B/>c/ d/4e/4f/ |
+ e/e/4f/4 e/4d/4c/4B/4 | A/4B/4c/4d/4 !breath!e/B/4c/4 | d/4c/4B/4A/4 G/4E/4F/4G/4 | A/A/4G/4 A :|
+V:2
+[K:G]|: B/D/ B/D/ | B/4c/4B/4A/4 !breath!G/A/4B/4 | c/E/ c/E/ | c/4d/4c/4B/4 A/G/4!breath!A/4 |
+ B/D/ B/D/ | B/4c/4B/4A/4 !breath!G/A/4B/4 | c/4B/4A/4G/4 F/4D/4E/4F/4 | G/G/4F/4 G :|
+|: d/d/4e/4 d/4c/4B/4A/4 | G/4A/4B/4c/4 !breath!d/B/ | d/d/4e/4 d/4c/4B/ | A/>B/ c/4d/4e/ |
+ d/d/4e/4 d/4c/4B/4A/4 | G/4A/4B/4c/4 !breath!d/A/4B/4 | c/4B/4A/4G/4 F/4D/4E/4F/4 | G/G/4F/4 G :|

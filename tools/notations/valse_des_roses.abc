@@ -1,0 +1,31 @@
+X:1
+T:Valse des Roses
+C:PLLP
+%%score 1 2
+L:1/4
+M:3/4
+Q:200
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" E A c | A G !breath!B | E A c | A !breath!B2 ||
+"^refrain 1" E A c | A !breath!d2 | c B A | G A2 :|
+|:"^B" E c c/d/ | e B B/c/ | d c c/d/ | e !breath!B2 ||
+"^refrain 1" E A c | A !breath!d2 | c B A | G A2 :|
+|:"^C" a2 e | c3/2 d/ e | a2 e | c3/2 d/ !breath!e ||
+"^refrain 2" f2 e | d2 c | B3 | A3 :|
+|:"^D" c3/2 d/ e | f2 e | c3/2 d/ e | f2 !breath!e ||
+"^refrain 2" f2 e | d2 c | B3 | A3 :|
+V:2
+[K:G]|: D G B | G F !breath!A | D G B | G !breath!A2 ||
+ D G B | G !breath!c2 | B A G | F G2 :|
+|: D B B/c/ | d A A/B/ | c B B/c/ | d !breath!A2 ||
+ D G B | G !breath!c2 | B A G | F G2 :|
+|: g2 d | B3/2 c/ d | g2 d | B3/2 c/ !breath!d ||
+ e2 d | c2 B | A3 | G3 :|
+|: B3/2 c/ d | e2 d | B3/2 c/ d | e2 !breath!d ||
+ e2 d | c2 B | A3 | G3 :|

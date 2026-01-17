@@ -1,0 +1,47 @@
+X:1
+T:La Carriole _ contre-chant de La Roulotte
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar.\nCarriole" snm="Clar.\nCarriole"
+%%MIDI program 71
+V:2 treble nm="Vln.\nCarriole" snm="Vln.\nCarriole"
+%%MIDI program 40
+V:1
+[K:D]"^A" f/f/4e/4 d/f/ | e/e/4d/4 c/e/ | d/d/4c/4 B/d/ | c !breath!F |
+ f/f/4e/4 d/f/ | e/e/4d/4 c/e/ | d/d/4c/4 B/d/ | c !breath!f ||
+ "^B" e/e/4d/4 c/B/ | c/F/ !breath!F | e/e/4d/4 c/B/ | c !breath!F |
+ e/e/4d/4 c/B/ | c/F/ !breath!F | F ^A | c f |]
+V:2
+[K:C] e/e/4d/4 c/e/ | d/d/4c/4 B/d/ | c/c/4B/4 A/c/ | B !breath!E |
+ e/e/4d/4 c/e/ | d/d/4c/4 B/d/ | c/c/4B/4 A/c/ | B !breath!e ||
+ d/d/4c/4 B/A/ | B/E/ !breath!E | d/d/4c/4 B/A/ | B !breath!E |
+ d/d/4c/4 B/A/ | B/E/ !breath!E | E ^G | B e |]
+
+X:1
+T:La Roulotte
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:150
+K:C
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]"^A" B/c/ d/B/ | c/d/ e/c/ | B/c/ d/B/ | c !breath!c |
+ B/c/ d/B/ | c/d/ e/c/ | B/c/ d/e/ | f !breath!f ||
+"^B" g/f/ e/b/ | f/e/ !breath!f | g/f/ e/b/ | f !breath!f |
+ g/f/ e/b/ | f/e/ !breath!f | f e | d c |]
+V:2
+[K:C] A/B/ c/A/ | B/c/ d/B/ | A/B/ c/A/ | B !breath!B |
+ A/B/ c/A/ | B/c/ d/B/ | A/B/ c/d/ | e !breath!e ||
+ f/e/ d/a/ | e/d/ !breath!e | f/e/ d/a/ | e !breath!e |
+ f/e/ d/a/ | e/d/ !breath!e | e d | c B |]

@@ -1,0 +1,23 @@
+X:1
+T:Scottish d'Echiré
+C:PLLP
+%%score 1 2
+L:1/4
+M:4/4
+Q:150
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] e/d/ |:"^A" c e/d/ c e | f/e/ d/c/ !breath!B c/d/ | c e A c | B F !breath!G2 |
+ A A/B/ c c/e/ | d/e/ d/c/ !breath!B c/d/ |1 c e A c | B G !breath!A e/d/ :|2 c e A c | B G !breath!A e/e/ ||
+|:"^B" e e f3/2 e/ | d/c/ B/d/ c A/e/ |
+|1 e e f/e/ d/c/ | B/A/ F/G/ !breath!A e/e/ :|2 e e f/e/ d/c/ | B/A/ F/G/ A2 |]
+V:2
+[K:G] d/c/ |: B d/c/ B d | e/d/ c/B/ !breath!A B/c/ | B d G B | A E !breath!F2 |
+ G G/A/ B B/d/ | c/d/ c/B/ !breath!A B/c/ |1 B d G B | A F !breath!G d/c/ :|2 B d G B | A F !breath!G d/d/ ||
+|: d d e3/2 d/ | c/B/ A/c/ B G/d/ |
+|1 d d e/d/ c/B/ | A/G/ E/F/ !breath!G d/d/ :|2 d d e/d/ c/B/ | A/G/ E/F/ G2 |]

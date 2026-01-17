@@ -1,0 +1,21 @@
+X:1
+T:Sèt Sauts
+C:PLLP
+%%score 1 2
+L:1/4
+M:2/4
+Q:120
+K:G
+%%stretchlast 1.0
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^1 saut" e a |]:"^A" e/e/4d/4 c/c/ | B/4c/4d/4B/4 c/!breath!A/ | e/e/4d/4 c/c/ | B/4c/4d/4B/4 A :|
+|:"^B" B/B/4B/4 B/c/4d/4 | e/4d/4c/4B/4 c/!breath!A/ | B/B/4B/4 B/c/4d/4 | e/4d/4c/4B/4 A :|
+||:"^2 à 7 sauts""_x1 à x6" (e !breath!c :| e a) |]
+V:2
+[K:G] d g|]: d/d/4c/4 B/B/ | A/4B/4c/4A/4 B/!breath!G/ | d/d/4c/4 B/B/ | A/4B/4c/4A/4 G :|
+|: A/A/4A/4 A/B/4c/4 | d/4c/4B/4A/4 B/!breath!G/ | A/A/4A/4 A/B/4c/4 | d/4c/4B/4A/4 G :|
+ ||:(d !breath!B :| d g) |]
