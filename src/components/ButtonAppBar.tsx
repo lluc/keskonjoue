@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,10 +7,12 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
-import { Share, Search } from '@mui/icons-material';
+import { Share, Search, Info } from '@mui/icons-material';
+import AboutDialog from './AboutDialog';
 
 const ButtonAppBar: FunctionComponent = () => {
     const navigateTo = useNavigate()
+    const [aboutOpen, setAboutOpen] = useState(false);
 
     const handleShare = async () => {
         const shareData = {
@@ -70,9 +72,18 @@ const ButtonAppBar: FunctionComponent = () => {
                     >
                         <Share />
                     </IconButton>
-                   
+                    <IconButton
+                        size="large"
+                        edge="end"
+                        color="inherit"
+                        aria-label="about"
+                        onClick={() => setAboutOpen(true)}
+                    >
+                        <Info />
+                    </IconButton>
                 </Toolbar>
             </AppBar>
+            <AboutDialog open={aboutOpen} onClose={() => setAboutOpen(false)} />
         </Box>
     );
 }
