@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Surlignage des notes jouées dans ABCJS */
+.abcjs-note-playing {
+  fill: #2196f3 !important;
+  filter: drop-shadow(0 0 3px #2196f3) drop-shadow(0 0 6px #2196f3);
+}

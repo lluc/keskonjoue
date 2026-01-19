@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import { Slider } from "@mui/material";
-import ABCJS, { TuneObjectArray, SynthObjectController } from 'abcjs'
+import ABCJS, { TuneObjectArray, SynthObjectController, CursorControl, NoteTimingEvent } from 'abcjs'
 import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import jsonNotations from "../data/notations.json";
 import 'abcjs/abcjs-audio.css';
@@ -38,7 +38,30 @@ const Music = () => {
         const synthControl = new ABCJS.synth.SynthController();
         synthControlRef.current = synthControl;
 
-        synthControl.load("#audio-control", null, {
+        const cursorControl: CursorControl = {
+            onEvent: (event: NoteTimingEvent) => {
+                // Retirer le surlignage des notes précédentes
+                const highlighted = document.querySelectorAll('.abcjs-note-playing');
+                highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
+
+                // Surligner les notes actuelles
+                if (event.elements) {
+                    event.elements.forEach(elementArray => {
+                        elementArray.forEach(el => {
+                            el.classList.add('abcjs-note-playing');
+                        });
+                    });
+                }
+            },
+            onFinished: () => {
+                // Retirer tout surlignage à la fin
+                const highlighted = document.querySelectorAll('.abcjs-note-playing');
+                highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
+                setIsPlaying(false);
+            }
+        };
+
+        synthControl.load("#audio-control", cursorControl, {
             displayLoop: false,
             displayRestart: false,
             displayPlay: false,
@@ -58,6 +81,9 @@ const Music = () => {
             if (synthControlRef.current) {
                 synthControlRef.current.pause();
             }
+            // Nettoyer le surlignage au démontage
+            const highlighted = document.querySelectorAll('.abcjs-note-playing');
+            highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
         };
     }, [visualObj, notations]);
 
