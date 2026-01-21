@@ -1,31 +1,27 @@
 /**
- * Copyright 2021 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Service Worker pour Keskonjoue PWA
+ * Active le mode offline complet avec lecture musicale
  */
 
-import { offlineFallback } from "workbox-recipes";
-import { setDefaultHandler } from "workbox-routing";
-import { NetworkOnly } from "workbox-strategies";
+import { precacheAndRoute, cleanupOutdatedCaches, createHandlerBoundToURL } from "workbox-precaching";
+import { registerRoute, NavigationRoute } from "workbox-routing";
 
-// Asset hashes to see if content has changed.
-const assetHashes = self.__WB_MANIFEST;
-console.log(assetHashes);
+// Précache tous les assets du build Vite (HTML, JS, CSS, images, soundfonts)
+precacheAndRoute(self.__WB_MANIFEST);
 
-// Sets a default Network Only handler, but consider writing your own handlers, too!
-setDefaultHandler(new NetworkOnly());
+// Gère la navigation SPA - toutes les routes retournent index.html
+const handler = createHandlerBoundToURL('/index.html');
+const navigationRoute = new NavigationRoute(handler);
+registerRoute(navigationRoute);
 
-// HTML to serve when the site is offline
-offlineFallback({
-  pageFallback: "/offline.html",
+// Nettoie les anciens caches lors des mises à jour
+cleanupOutdatedCaches();
+
+// Active immédiatement le nouveau service worker
+self.addEventListener("install", () => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(clients.claim());
 });

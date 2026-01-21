@@ -71,6 +71,7 @@ const Music = () => {
 
         synthControl.setTune(visualObj[0], false, {
             qpm: visualObj[0].getBpm?.() || 120,
+            soundFontUrl: '/soundfonts/FluidR3_GM',
         }).then(() => {
             setIsReady(true);
         }).catch((error: Error) => {

@@ -16,7 +16,13 @@ export default defineConfig({
       srcDir: "",
       filename: "service-worker.js",
       manifest,
-      registerType: 'autoUpdate'
+      registerType: 'autoUpdate',
+      injectManifest: {
+        globPatterns: [
+          '**/*.{js,css,html,svg,png,ico,woff,woff2}',
+          'soundfonts/**/*.mp3'
+        ]
+      }
     }),
   ],
   build: {
