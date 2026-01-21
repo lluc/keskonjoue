@@ -3,6 +3,7 @@ import './App.css'
 import { Box, CircularProgress } from '@mui/material'
 import ScrollToTopButton from './components/ScrollToTopButton'
 import ButtonAppBar from './components/ButtonAppBar'
+import OfflineStatus from './components/OfflineStatus'
 import { Routes, Route } from 'react-router-dom'
 
 const Home = lazy(() => import('./pages/Home'))
@@ -31,6 +32,7 @@ const App: FunctionComponent = () => {
         </Suspense>
       </Box>
       <ScrollToTopButton />
+      <OfflineStatus />
     </Box>
   )
 }
