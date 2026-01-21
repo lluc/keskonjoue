@@ -3,15 +3,20 @@
  * Active le mode offline complet avec lecture musicale
  */
 
-import { precacheAndRoute, cleanupOutdatedCaches, createHandlerBoundToURL } from "workbox-precaching";
-import { registerRoute, NavigationRoute } from "workbox-routing";
+import { precacheAndRoute, cleanupOutdatedCaches, matchPrecache } from "workbox-precaching";
+import { registerRoute, NavigationRoute, Route } from "workbox-routing";
 
 // Précache tous les assets du build Vite (HTML, JS, CSS, images, soundfonts)
 precacheAndRoute(self.__WB_MANIFEST);
 
-// Gère la navigation SPA - toutes les routes retournent index.html
-const handler = createHandlerBoundToURL('/index.html');
-const navigationRoute = new NavigationRoute(handler);
+// Gère la navigation SPA avec stratégie Cache First
+// Retourne index.html depuis le cache sans attendre le réseau
+const navigationHandler = async () => {
+  const cachedResponse = await matchPrecache('/index.html');
+  return cachedResponse || fetch('/index.html');
+};
+
+const navigationRoute = new NavigationRoute(navigationHandler);
 registerRoute(navigationRoute);
 
 // Nettoie les anciens caches lors des mises à jour
