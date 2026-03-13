@@ -26,15 +26,6 @@ def extract_mlk_parts_and_melody(abc_content):
     return f"M: {m}\nL: {l}\nQ: {q}\nK: {k}\n{melody}\nw: {w}"
 
 
-def abc_to_json(abc_content):
-    # Échapper les caractères spéciaux JavaScript
-    js_escaped_content = abc_content.replace("\n", "\\n").replace('"', '\\"')
-
-    return js_escaped_content
-    mlk_parts = re.findall(r"^(M|L|K):.*$", abc_content, re.MULTILINE)
-    return " ".join(mlk_parts)
-
-
 def convert_abc_files_to_json(files):
     json_data = {"abcFiles": {}}
 
