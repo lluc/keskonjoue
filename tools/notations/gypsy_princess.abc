@@ -1,0 +1,23 @@
+X:1
+T:Gypsy Princess
+%%score 1 2
+L:1/4
+M:4/4
+Q:1/2=100
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^Gypsy Princess""^A" c3/2 c/ c c | B/c/ B/A/ F E/F/ | A c e c/e/ | f e/c/ B A/B/ |
+c3/2 c/ c c | B/c/ B/A/ F E/F/ | A c e/f/ e/c/ |1 B A A B :|2  B A A/B/ c/d/ |:
+"^B" e3/2 e/ e e | B/c/ c/B/ A/B/ c/e/ | f3/2 f/ f f |  B/c/ c/B/ A/B/ c/d/ |
+e3/2 e/ e e | B/c/ c/B/ A/B/ c/e/ | a f e/c/ A/c/ |1  B A A/B/ c/d/ :|2 B A A2 |]
+V:2
+[K:G]
+|: B3/2 B/ B B | A/B/ A/G/ E D/E/ | G B d B/d/ | e d/B/ A G/A/ |
+B3/2 B/ B B | A/B/ A/G/ E D/E/ | G B d/e/ d/B/ |1 A G G A :|2  A G G/A/ B/c/ |:
+d3/2 d/ d d | A/B/ B/A/ G/A/ B/d/ | e3/2 e/ e e |  A/B/ B/A/ G/A/ B/c/ |
+d3/2 d/ d d | A/B/ B/A/ G/A/ B/d/ | g e d/B/ G/B/ |1  A G G/A/ B/c/ :|2 A G G2 |]

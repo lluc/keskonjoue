@@ -1,0 +1,23 @@
+X:1
+T:Joe Bane's Barndance
+%%score 1 2
+L:1/4
+M:4/4
+Q:1/2=100
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^Joe Bane's""^A" a/f/ e A/B/ c | B/A/ e A !breath!A | a/f/ e A/B/ c | B/A/ c B !breath!B |
+c/d/ e A/B/ c | B/A/ c e !breath!a | a/f/ e e/f/ e/c/ | B/d/ c A A :|
+|:"^B" e a a/g/ a/f/ | e/a/ f f/e/ f/g/ | a/f/ e e/f/ e/c/ | A/B/ c B !breath!B |
+e a a/g/ a/f/ | e/a/ f f/e/ f/g/ | a/f/ e e/f/ e/c/ | A/B/ c A A :|
+V:2
+[K:G]
+|: g/e/ d G/A/ B | A/G/ d G !breath!G | g/e/ d G/A/ B | A/G/ B A !breath!A |
+B/c/ d G/A/ B | A/G/ B d !breath!g | g/e/ d d/e/ d/B/ | A/c/ B G G :|
+|:d g g/f/ g/e/ | d/g/ e e/d/ e/f/ | g/e/ d d/e/ d/B/ | G/A/ B A !breath!A |
+d g g/f/ g/e/ | d/g/ e e/d/ e/f/ | g/e/ d d/e/ d/B/ | G/A/ B G G :|

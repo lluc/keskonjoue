@@ -1,0 +1,30 @@
+X:1
+T:Ieva's Polka
+%%score [ [ 1 | 2 ] | [ 3 | 4 ] ]
+L:1/4
+M:2/4
+Q:1/4=100
+K:C
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble transpose=-2 nm="C2" snm="C2"
+%%MIDI program 71
+V:3 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:4 treble nm="V2" snm="V2"
+%%MIDI program 40
+V:1
+[K:D]"^A" F/B/ B/B/4c/4 | d/B/ B/d/ | c/A/ A/c/ | d/B/ !breath!B |  F/B/ B/B/4c/4 | d/B/ B/B/4d/4 | f/f/4e/4 d/c/ | c/B/ B/B/4!breath!d/4 ||
+"^B" f/f/ e/d/ | c/A/ A/c/ | e/e/ d/c/ | d/B/ B/!breath!d/ |  f/4f/4f/4f/4 e/d/ | c/A/ A/c/ | e/e/ d/c/ | d/B/ B |]
+V:2
+[K:D] B,/F/ D/F/ | B,/F/ D/F/ | F,/C/ A,/C/ | B,/F/ D/!breath!F/ |  B,/F/ D/F/ | B,/F/ D/F/ | F,/^G,/ ^A,/F,/ | B,/4C/4D/4C/4 B,/ z/ ||
+D/A/ F/A/ | A,/E/ C/E/ | F,/C/ ^A,/C/ | B,/F/ D/!breath!F/ |  D/A/ G/A/ | A,/E/ C/E/ | F,/C/ ^A,/C/ | F/4E/4D/4C/4 B, |]
+V:3
+[K:C]
+"^A" E/A/ A/A/4B/4 | c/A/ A/c/ | B/G/ G/B/ | c/A/ !breath!A |  E/A/ A/A/4B/4 | c/A/ A/A/4c/4 | e/e/4d/4 c/B/ | B/A/ A/A/4!breath!c/4 ||
+"^B" e/e/ d/c/ | B/G/ G/B/ | d/d/ c/B/ | c/A/ A/!breath!c/ |  e/4e/4e/4e/4 d/c/ | B/G/ G/B/ | d/d/ c/B/ | c/A/ A |]
+V:4
+[K:C]
+A/e/ c/e/ | A/e/ c/e/ | E/B/ E/G/ | A/e/ c/!breath!e/ |  A/e/ c/e/ | A/e/ c/e/ | E/^F/ ^G/E/ | A/4B/4c/4B/4 A/ z/ ||
+c/g/ e/g/ | G/d/ B/d/ | E/B/ ^G/B/ | A/e/ c/!breath!e/ |  c/g/ f/g/ | G/d/ B/d/ | E/B/ ^G/B/ | E/4D/4C/4B,/4 A, |]

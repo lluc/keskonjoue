@@ -7,6 +7,9 @@
             "avant_deux": {
                 "name": "Avant-deux"
             },
+            "barndance": {
+                "name": "Barndance irlandais"
+            },
             "bourree_2t": {
                 "name": "Bourrée à 2 temps"
             },
@@ -36,6 +39,9 @@
             },
             "colo": {
                 "name": "Colo"
+            },
+            "congo": {
+                "name": "Congo"
             },
             "gavotte": {
                 "name": "Gavotte"
@@ -78,6 +84,9 @@
             },
             "rond_saint_vincent": {
                 "name": "Rond de Saint-Vincent"
+            },
+            "rondeau": {
+                "name": "Rondeau"
             },
             "ronde_quercy": {
                 "name": "Ronde du Quercy"
@@ -163,7 +172,8 @@
             },
             "bourree_chaudoux": {
                 "danceId": "bourree_3t",
-                "name": "Bourrée de Chaudoux"
+                "name": "Bourrée de Chaudoux",
+                "notation": "bourree_de_chaudoux.abc"
             },
             "bourree_dindes": {
                 "danceId": "bourree_rond",
@@ -511,6 +521,91 @@
                 "danceId": "bourree_2t",
                 "name": "Youp Nanette",
                 "notation": "youp_nanette.abc"
+            },
+            "congo_captieux": {
+                "danceId": "congo",
+                "name": "Congo de Captieux",
+                "notation": "congo_de_captieux.abc"
+            },
+            "dejos_lo_pont_de_lion": {
+                "danceId": "ronde_quercy",
+                "name": "Dejos lo pont de lion + Dessùs la grava de Bordèu",
+                "notation": "dejos_lo_pont_de_lion.abc"
+            },
+            "dessous_rosier_blanc": {
+                "danceId": "hanterdro",
+                "name": "Dessous le rosier blanc",
+                "notation": "dessous_le_rosier_blanc.abc"
+            },
+            "gypsy_princess": {
+                "danceId": "barndance",
+                "name": "Gypsy Princess",
+                "notation": "gypsy_princess.abc"
+            },
+            "ievas_polka": {
+                "danceId": "polka",
+                "name": "Ieva's Polka",
+                "notation": "ievas_polka.abc"
+            },
+            "joe_banes_barndance": {
+                "danceId": "barndance",
+                "name": "Joe Bane's Barndance",
+                "notation": "joe_banes_barndance.abc"
+            },
+            "la_pometa": {
+                "danceId": "bourree_2t",
+                "name": "La Pometa",
+                "notation": "la_pometa.abc"
+            },
+            "marchoise_blanzay": {
+                "danceId": "marchoise",
+                "name": "Marchoise ronde de Blanzay",
+                "notation": "marchoise_ronde_de_blanzay.abc"
+            },
+            "malheureux_qua_une_femme": {
+                "danceId": "bourree_3t",
+                "name": "Malheureux qu'a une femme",
+                "notation": "malheureux_qua_une_femme.abc"
+            },
+            "polka_loustik": {
+                "danceId": "polka",
+                "name": "Polka Loustik",
+                "notation": "polka_loustik.abc"
+            },
+            "rondeau_blaireau": {
+                "danceId": "rondeau",
+                "name": "Rondeau du blaireau",
+                "notation": "rondeau_du_blaireau.abc"
+            },
+            "ronde_etournias": {
+                "danceId": "ronde_quercy",
+                "name": "Ronde des étournias",
+                "notation": "ronde_des_etournias.abc"
+            },
+            "scot_clementine": {
+                "danceId": "scottish",
+                "name": "Scottish à Clémentine",
+                "notation": "scottish_a_clementine.abc"
+            },
+            "tres_plen_plats": {
+                "danceId": "scottish_valse",
+                "name": "Tres Plen Plats + Dis-moi donc Suzon",
+                "notation": "tres_plen_plats_et_dis_moi_donc_suzon.abc"
+            },
+            "valse_a_cadet": {
+                "danceId": "valse",
+                "name": "Valse à Cadet",
+                "notation": "valse_a_cadet.abc"
+            },
+            "valse_de_suren": {
+                "danceId": "valse",
+                "name": "Valse de Suren - les flots du Danube",
+                "notation": "valse_de_suren.abc"
+            },
+            "valse_inisher": {
+                "danceId": "valse",
+                "name": "Inisher Valse",
+                "notation": "valse_inisher.abc"
             }
         }
     }

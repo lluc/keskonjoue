@@ -1,0 +1,22 @@
+X:1
+T:Tres Plen Plats + Dis-moi donc Suzon
+%%score 1 2
+L:1/4
+M:2/4
+Q:1/4=180
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^Tres Plen Plats""^A" c B | A3/2 B/ | c/B/ c/d/ | c !breath!B |  c B | A3/2 B/ | c e | B2 :|
+|:[M:6/8]"^B" e/e/d/ c/B/c/ | d/e/d/ c !breath!B/ | e/e/d/ c/B/c/ | d/B/G/ A3/2 :|
+|:[M:2/4]"^Dis-moi donc Suzon""^Alterner A/B, +B à la fin""^A" c/B/ A/G/ | A B/c/ | d e/d/ | c !breath!A |  c/B/ A/G/ | A B/c/ | d B/G/ | A2 :|
+|:[M:6/8]"^B" e/f/e/ d/B/c/ | d/e/d/ c !breath!A/ | c/d/c/ B/G/A/ |1 B/c/d/ !breath!e3/2 :|2  B/c/B/ A3/2 |]
+V:2
+[K:G]|: B A | G3/2 A/ | B/A/ B/c/ | B !breath!A |  B A | G3/2 A/ | B d | A2 :|
+|:[M:6/8] d/d/c/ B/A/B/ | c/d/c/ B !breath!A/ | d/d/c/ B/A/B/ | c/A/F/ G3/2 :|
+|:[M:2/4] B/A/ G/F/ | G A/B/ | c d/c/ | B !breath!G |  B/A/ G/F/ | G A/B/ | c A/F/ | G2 :|
+|:[M:6/8] d/e/d/ c/A/B/ | c/d/c/ B !breath!G/ | B/c/B/ A/F/G/ |1 A/B/c/ !breath!d3/2 :|2  A/B/A/ G3/2 |]

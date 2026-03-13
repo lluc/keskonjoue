@@ -1,0 +1,26 @@
+X:1
+T:Valse à Cadet
+T: Berry
+%%score 1 2
+L:1/4
+M:3/4
+Q:1/4=180
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] E |:"^A" A E c | A2 E | A E c |  B2 B/c/ | d c B | A G F | E F G |  F !breath!E E |
+A E c | A2 E | A E c |  B2 B/c/ | d c B | A G F | E F G |1  !breath!A2 E :|2 !breath!A2 G/A/ |:
+"^B" B/G/ B/d/ c/B/ | c/A/ c/e/ d/c/ |  B/G/ B/d/ c/B/ | c !breath!A G/A/ |
+B/G/ B/d/ c/B/ | c/A/ c/e/ d/c/ |  B/G/ B/d/ c/B/ |1 !breath!A2 G/!breath!A/ :|2 !breath!A2 E |:
+"^C" c2 d |  e f e | B2 c | d e c | A2 B |  c d c |1 B2 A | !breath!B3 :|2 B G/B/ G/B/ |  !breath!A2 E |]
+V:2
+[K:G]
+D |: "G" G D B | "G" G2 D | "G" G D B |  "D" A2 A/B/ | "D" c B A | "G" G F E | "G" D E F |  "D" E !breath!D D |
+"G" G D B | "G" G2 D | "G" G D B |  "D" A2 A/B/ | "D" c B A | "G" G F E | "G" D E F |  "G" !breath!G2 D :| "G" !breath!G2 F/G/ |:
+"D" A/F/ A/c/ B/A/ | "G" B/G/ B/d/ c/B/ |  "D" A/F/ A/c/ B/A/ | "G" B !breath!G F/G/ |
+"D" A/F/ A/c/ B/A/ | "G" B/G/ B/d/ c/B/ |  "D" A/F/ A/c/ B/A/ | "G" !breath!G2 F/G/ :| "G" !breath!G2 D |:
+"G" B2 c |  "G" d e d | "D" A2 B | "D" c d B | "G" G2 A |  "G" B c B | "D" A2 G | "D" !breath!A3 :| "D" A F/A/ F/A/ |  "G" !breath!G2 D |]

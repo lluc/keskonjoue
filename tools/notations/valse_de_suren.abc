@@ -1,0 +1,22 @@
+X:1
+T:Valse de Suren = les flots du Danube
+%%score 1 2
+L:1/4
+M:4/4
+Q:1/2=150
+K:F
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:G] B, |:[M:3/4]"^A" (B,3- | B, _E =E) | (F3- |  F _E B,) | (G3- | G F E) | B3- |  B z B |
+(c3- | c B A) | (B3- |  B A G) | (F3- | F{/A} G F) |1 E3- |  E z B, :|2 E3 | F/G/A/B/c/d/ ||
+|:"^B" e/ z/ e/ z/ e/ z/ | [I:repeat 1 1]"^B" e/ z/ e/ z/ e/ z/ | (e d3/2 ^c/) | d3 | c/ z/ c/ z/ c/ z/ | [I:repeat 1 1] c/ z/ c/ z/ c/ z/ | (c B3/2 _B/) | B3 |
+A/ z/ A/ z/ A/ z/ | [I:repeat 1 1] A/ z/ A/ z/ A/ z/ | (A G3/2 F/) | E2 e | (c A F) | ({/A} G2 F) |1 E3 | F/G/A/B/c/d/ :|2 E3- |  E z B, |]
+V:2
+[K:F]A, |:[M:3/4] (A,3- | A, _D =D) | (E3- |  E _D A,) | (F3- | F E D) | A3- |  A z A |
+(B3- | B A G) | (A3- |  A G F) | (E3- | E{/G} F E) |1 D3- |  D z A, :|2 D3 | E/F/G/A/B/c/ ||
+|:d/ z/ d/ z/ d/ z/ | [I:repeat 1 1] d/ z/ d/ z/ d/ z/ | (d c3/2 =B/) | c3 | B/ z/ B/ z/ B/ z/ | [I:repeat 1 1] B/ z/ B/ z/ B/ z/ | (B A3/2 _A/) | A3 |
+G/ z/ G/ z/ G/ z/ | [I:repeat 1 1] G/ z/ G/ z/ G/ z/ | (G F3/2 E/) | D2 d | (B G E) | ({/G} F2 E) |1 D3 | E/F/G/A/B/c/ :|2 D3- |  D z A, |]

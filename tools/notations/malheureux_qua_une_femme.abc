@@ -1,0 +1,20 @@
+X:1
+T:Malheureux qu'a une femme, malheureux qu'en a pas
+%%score 1 2
+L:1/4
+M:3/4
+Q:1/4=200
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^A" c/B/ A A | B c !breath!A | c/d/ e e | d/c/ B2 :|
+|:"^B" c/d/ e e | d c A | B/c/ d d | c !breath!B2 |
+c/d/ e e | d c A | B/c/ d B | G A2 :|
+V:2
+[K:G]|: B/A/ G G | A B !breath!G | B/c/ d d | c/B/ A2 :|
+|:B/c/ d d | c B G | A/B/ c c | B !breath!A2 |
+B/c/ d d | c B G | A/B/ c A | F G2 :|

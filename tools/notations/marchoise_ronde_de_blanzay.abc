@@ -1,0 +1,18 @@
+X:1
+T:Marchoise ronde de Blanzay
+%%score 1 2
+L:1/4
+M:3/8
+Q:3/8=100
+K:C
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D] d/ |:"^A" e/a/g/ | a g/ | e/4f/4g/f/ |  e/!breath!f/d/ | e/a/g/ | a g/ | e/4f/4g/f/ |  !breath!e d/ :|
+|:"^B" e a/ | g f/ | e/4f/4e/d/ |  c/4B/4!breath!A/d/ | e a/ | g f/ | e/4f/4e/c/ |  !breath!d d/ :|
+V:2
+[K:C]c/ |: d/g/f/ | g f/ | d/4e/4f/e/ |  d/!breath!e/c/ | d/g/f/ | g f/ | d/4e/4f/e/ |  !breath!d c/ :|
+|:d g/ | f e/ | d/4e/4d/c/ |  B/4A/4!breath!G/c/ | d g/ | f e/ | d/4e/4d/B/ |  !breath!c c/ :|

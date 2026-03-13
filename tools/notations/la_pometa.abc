@@ -1,0 +1,20 @@
+X:1
+T:La Pometa
+%%score 1 2
+L:1/4
+M:2/4
+Q:1/4=200
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A] A/B/ |:"^A" c/c/4c/4 c/B/ | c3/2 A/ | B/c/ B |1  !breath!A A/B/ :|2 A A/c/ |:
+"^B" B/>A/ G/A/ | B G/A/ |  B/B/4B/4 B/c/ | B/!breath!A/ A/c/ |
+B/>A/ G/A/ | B A/B/ |  c B |1 !breath!A A/c/ :|2 !breath!A A/B/ |]
+V:2
+[K:G]G/A/ |: B/B/4B/4 B/A/ | B3/2 G/ | A/B/ A |1  !breath!G G/A/ :|2 G G/B/ |:
+A/>G/ F/G/ | A F/G/ |  A/A/4A/4 A/B/ | A/!breath!G/ G/B/ |
+A/>G/ F/G/ | A G/A/ |  B A |1 !breath!G G/B/ :|2 !breath!G G/A/ |]

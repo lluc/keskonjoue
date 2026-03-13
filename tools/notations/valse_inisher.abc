@@ -1,0 +1,46 @@
+X:1
+T:Inisher Valse
+%%score [ [ 1 2 ] [ 3 4 ] ]
+L:1/4
+M:3/4
+Q:1/4=150
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble transpose=-2 nm="C2" snm="C2"
+%%MIDI program 71
+V:3 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:4 treble nm="V2" snm="V2"
+%%MIDI program 40
+V:1
+[K:A] E |:"^A" c3/2 B/ c/e/ | c3/2 B/ c/e/ | F3/2 c/ B/c/ |  E3/2 c/ B/A/ |
+c c/B/ c/e/ | c3/2 B/ c/e/ | A3/2 c/ B/4A/4G/ |1  A2 E :|2 A3/2 B/ c/e/ ||
+"^B" f f/g/ f/e/ | c3/2 B/ c/e/ |  f/g/ f/e/ c/4d/4e/ | f3/2 B/ c/e/ |
+f f/g/ f/e/ | c3/2 B/ c/e/ |  A3/2 c/ B/4A/4G/ | A3/2 B/ c/e/ |
+f f/g/ f/e/ | c3/2 B/ c/e/ |  a/g/ f/e/ c/4d/4e/ | f2 c/e/ |
+f f/g/ f/e/ | c3/2 B/ c/e/ |  E3/2 c/ B/4A/4G/ | A3 |]
+V:2
+[K:A] z |: A,/E/ A/G/- G | C/E/ G2 | D/A,/ D/C/- C |  E/B,/ E/F/- F |
+A,/E/ A/G/- G | C/E/ G2 | D/A,/ D/E/- E |1  C/E/ A2 :|2 C/E/ A2 ||
+D/A/ d/e/ f | A/c/ e2 |  D A/e/ d | F c/g/ a |
+D/A/ d/e/ f | A/c/ e2 |  D/A/ d/c/- c | A,/E/ A/G/- G |
+D/A/ d/e/ f | A/c/ e2 |  D A/e/ d | F c/g/ a |
+D/A/ d/e/ f | A/c/ e2 |  E/B,/ E/F/ G | C/E/ A2 |]
+V:3
+[K:G]
+D |:"^A" B3/2 A/ B/d/ | B3/2 A/ B/d/ | E3/2 B/ A/B/ |  D3/2 B/ A/G/ |
+B B/A/ B/d/ | B3/2 A/ B/d/ | G3/2 B/ A/4G/4F/ |1  G2 D :|2 G3/2 A/ B/d/ ||
+"^B" e e/f/ e/d/ | B3/2 A/ B/d/ |  e/f/ e/d/ B/4c/4d/ | e3/2 A/ B/d/ |
+e e/f/ e/d/ | B3/2 A/ B/d/ |  G3/2 B/ A/4G/4F/ | G3/2 A/ B/d/ |
+e e/f/ e/d/ | B3/2 A/ B/d/ |  g/f/ e/d/ B/4c/4d/ | e2 B/d/ |
+e e/f/ e/d/ | B3/2 A/ B/d/ |  D3/2 B/ A/4G/4F/ | G3 |]
+V:4
+[K:G]
+z |: G,/D/ G/F/- F | B,/D/ F2 | C/G,/ C/B,/- B, |  D/A,/ D/E/- E |
+G,/D/ G/F/- F | B,/D/ F2 | C/G,/ C/D/- D |1  B,/D/ G2 :|2 B,/D/ G2 ||
+C/G/ c/d/ e | G/B/ d2 |  C G/d/ c | E B/f/ g |
+C/G/ c/d/ e | G/B/ d2 |  C/G/ c/B/- B | G,/D/ G/F/- F |
+C/G/ c/d/ e | G/B/ d2 |  C G/d/ c | E B/f/ g |
+C/G/ c/d/ e | G/B/ d2 |  D/A,/ D/E/ F | B,/D/ G2 |]

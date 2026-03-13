@@ -1,0 +1,18 @@
+X:1
+T:Dessous le rosier blanc
+%%score 1 2
+L:1/4
+M:2/4
+Q:1/4=200
+K:C
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^A" B d/c/ | B A | B2 | d c/d/ |  e c | d c ::"^B" B c/d/ | e c |  d B |1 d c/B/ | A B | c2 :|2  d/d/ c/B/ | c d | B2 :|
+|:"^C x5" f e/d/ |  c f | f e :|"^C' le 6e" f e/d/ | c f |  f2 |:"^D" B c/d/ | e c | f2 |  f e/d/ | c d |1 B A :|2 B2 :|
+V:2
+[K:C]|: A c/B/ | A G | A2 | c B/c/ |  d B | c B :: A B/c/ | d B |  c A |1 c B/A/ | G A | B2 :|2  c/c/ B/A/ | B c | A2 :|
+|:e d/c/ |  B e | e d :| e d/c/ | B e |  e2 |: A B/c/ | d B | e2 |  e d/c/ | B c |1 A G :|2 A2 :|

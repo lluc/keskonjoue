@@ -1,0 +1,35 @@
+X:1
+T:Congo de Captieux
+C:Traditionnel
+Z:D___
+%%score 1 2
+L:1/4
+M:2/4
+Q:1/4=180
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]|:"^Congo à Mama""^A" c/A/ E/A/ | G/B/ B/!breath!A/ | c/A/ E/A/ | G/B/ A :|
+"^B" c/d/ e/>B/ | B/B/ B | c/d/ e/>B/ | A/A/ !breath!A |  c/d/ e/>B/ | B/B/ B | c/>d/ c/A/ | B/G/ A |]
+|:"^Marin Congo""^A" A/B/ c/B/4A/4 | B/B/ !breath!E | A/B/ c/e/ |1 e/4d/4c/4B/4 c/A/ :|2  e/4d/4c/4B/4 A ||
+|:"^B" e/e/4d/4 c/c/4d/4 | e/f/ e | A/B/ c/e/ |1  e/4d/4c/4B/4 c/A/ :|2 e/4d/4c/4B/4 A |]
+|:"^Congo de Captieux 1""^A" c/A/ A/B/4c/4 | d/c/ B/!breath!B/ |  c/A/ A/B/4c/4 | d/c/ B :|
+|:"^B" e/c/ e/c/ | d/e/ f/>e/ |  d/c/ B/c/4d/4 |1 c/B/ c/A/ :|2 c/B/ A |]
+|:"^Congo de Captieux 2""^A" a/4g/4f/4g/4 a/e/ |  f/4e/4f/4g/4 a/!breath!e/ | a/4g/4f/4g/4 a/e/ | f/g/ a :|
+"^B1" c/c/ c/4B/8B/8c/4d/4 |  e/e/ B | A/4B/4c/4d/4 c/B/ | A/4B/4c/4d/4 f/!breath!e/ |
+"^B2" c/c/ c/4B/4c/4d/4 |  e/e/ B | A/4B/4c/4d/4 f/e/ | e/4d/4c/4B/4 A |]
+V:2
+[K:G]
+|: "G" B/G/ "G" D/G/ | "D" F/A/ "D" A/!breath!G/ | "G" B/G/ "G" D/G/ | "D" F/A/ "G" G :|
+"G" B/c/ "G" d/>A/ | "D" A/A/ "D" A | "D7" B/c/ "G" d/>A/ | "G" G/G/ "G" !breath!G |  "G" B/c/ "G" d/>A/ | "D" A/A/ "D" A | "D7" B/>c/ "G" B/G/ | "D" A/F/ "G" G |]
+|:G/A/ "G" B/A/4G/4 | "C" A/A/ "D" D | "G" G/A/ "G" B/d/ |1 "D" d/4c/4 "D7"B/4A/4 "G" B/G/ :| 2 "D" d/4c/4 "D7"B/4A/4 "G" G ||
+|:"G" d/d/4c/4 "G" B/B/4c/4 | "G" d/ "C"e/ "G" d | "C" G/ "D"A/ "G" B/d/ |1  "D" d/4c/4 "D7"B/4A/4 "G" B/G/ :|2 "D" d/4c/4 "D7"B/4A/4 "G" G |]
+|:B/G/ G/A/4B/4 | c/B/ A/A/ |  B/G/ G/A/4B/4 | c/B/ A :|
+|:d/B/ d/B/ | c/d/ e/>d/ |  c/B/ A/B/4c/4 |1 B/A/ B/G/ :|2 B/A/ G |]
+|:g/4f/4e/4f/4 g/d/ |  e/4d/4e/4f/4 g/!breath!d/ | g/4f/4e/4f/4 g/d/ | e/f/ g :|
+B/B/ B/4A/8A/8B/4c/4 |  d/d/ A | G/4A/4B/4c/4 B/A/ | G/4A/4B/4c/4 e/!breath!d/ |
+B/B/ B/4A/4B/4c/4 |  d/d/ A | G/4A/4B/4c/4 e/d/ | d/4c/4B/4A/4 G |]

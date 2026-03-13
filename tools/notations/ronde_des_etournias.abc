@@ -1,0 +1,19 @@
+X:1
+T:Ronde des étournias
+Z:D___
+%%score 1 2
+L:1/4
+M:6/8
+Q:3/8=130
+K:C
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:D]|:"^A" B c/ d e/ | d c/ !breath!B3/2 | f g/ f e/ | f3/2 !breath!d3/2 |  B c/ d e/ | f g/ !breath!f3/2 | a a/ e3/2 | f d/ B3/2 :|
+|:"^B" B B/ f3/2 | B B/ d3/2 | B e/ g b/ | !breath!f3 |  B B/ f3/2 | B B/ d3/2 |1 f e d/e/ | c3 :|2  c e3/2 d/4c/4 | B3 |]
+V:2
+[K:C]|: "Am" A B/ c d/ | "Am" c B/ A3/2 | "Am" e f/ e d/ | "Em" e3/2 !breath!c3/2 |  "Am" A B/ c d/ | "Am" e f/ e3/2 | "G" g g/ d3/2 | "Am" e c/ A3/2 :|
+|:"Am" A A/ e3/2 | "Am" A A/ c3/2 | "Dm" A d/ f a/ | "Am" !breath!e3 |  "Am" A A/ e3/2 | "Am" A A/ c3/2 |1 "Am" e d c/d/ | "E" B3 :|2  "Em" B d3/2 c/4B/4 | "Am" A3 |]
