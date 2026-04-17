@@ -98,11 +98,20 @@
             {
                 "name": "Scottish valse"
             },
+            "sept_sauts": {
+                "name": "Sèt sauts"
+            },
             "suite_landeda": {
                 "name": "Suite de Landeda"
             },
+            "tarentelle": {
+                "name": "Tarentelle"
+            },
             "tricot": {
                 "name": "Tricot"
+            },
+            "two_step": {
+                "name": "Two-step"
             },
             "valse": {
                 "name": "Valse"
@@ -248,35 +257,32 @@
                 "name": "Branle de Cosnay"
             },
             "branle_ecosse": {
-                "danceId": "branle",
+                "danceId": "branle_coupe",
                 "name": "Branle d'Écosse"
             },
             "branle_parlement": {
-                "danceId": "branle_parlement",
+                "danceId": "branle_coupe",
                 "name": "Branle du parlement",
                 "notation": "branle_parlement.abc"
             },
             "branle_rat": {
+                "danceId": "n_c",
                 "name": "Branle du rat",
                 "notation": "branle_du_rat.abc",
                 "youtube": "_bSHjxZ84ho"
             },
             "branle_simple": {
-                "danceId": "branle",
+                "danceId": "branle_1",
                 "name": "Branle simple"
             },
             "carriole": {
+                "danceId": "n_c",
                 "name": "Carriole",
                 "notation": "carriole.abc"
             },
             "cercle_galicien": {
                 "danceId": "cercle_circassien",
                 "name": "Cercle galicien"
-            },
-            "coast_ar_houet": {
-                "danceId": "coast_ar_hoet",
-                "name": "Coast ar Houet",
-                "notation": "coast_ar_houet.abc"
             },
             "cochinchine": {
                 "danceId": "cochinchine",
@@ -294,13 +300,14 @@
                 "notation": "crouzade.abc"
             },
             "czardash": {
+                "danceId": "klezmer",
                 "name": "Csárdás",
                 "notation": "czardash.abc"
             },
             "danse_ours": {
                 "danceId": "polka",
                 "name": "Danse de l'ours",
-                "notation": "dance_de_l_ours.abc"
+                "notation": "danse_de_l_ours.abc"
             },
             "dis_moi_donc_suzon": {
                 "danceId": "scottish_valse",
@@ -371,9 +378,9 @@
                 "notation": "josefin_s_waltz.abc"
             },
             "koast_ar_hoat": {
-                "danceId": "kost_ar_hoat",
-                "name": "Koast ar Hoat",
-                "notation": "koast_ar_c_hoat.abc"
+                "danceId": "koast_ar_hoat",
+                "name": "Kost ar C'Hoat",
+                "notation": "kost_ar_c_hoat.abc"
             },
             "lilting_banshee": {
                 "danceId": "gigue",
@@ -477,13 +484,18 @@
             },
             "scot_catineau": {
                 "danceId": "scottish",
-                "name": "Scottish à Catineau",
-                "notation": "scottish_a_catineaux.abc"
+                "name": "Scottish à Catinaux",
+                "notation": "scottish_a_catinaux.abc"
             },
             "scot_crassier": {
                 "danceId": "scottish",
                 "name": "Scottish du Crassier",
                 "notation": "scottish_du_crassier.abc"
+            },
+            "scot_echire": {
+                "danceId": "scottish",
+                "name": "Scottish d'Echiré",
+                "notation": "scottish_d_echire.abc"
             },
             "scot_grand_sud":{
                 "danceId": "scottish",
@@ -606,6 +618,56 @@
                 "danceId": "valse",
                 "name": "Inisher Valse",
                 "notation": "valse_inisher.abc"
+            },
+            "my_lodging": {
+                "danceId": "valse",
+                "name": "My Lodging's On The Cold Ground",
+                "notation": "my_lodging.abc"
+            },
+            "young_jane": {
+                "danceId": "valse",
+                "name": "Young Jane",
+                "notation": "young_jane.abc"
+            },
+            "roulotte_carriole": {
+                "danceId": "n_c",
+                "name": "La Roulotte + La Carriole",
+                "notation": "roulotte_et_carriole.abc"
+            },
+            "sept_sauts": {
+                "danceId": "sept_sauts",
+                "name": "Sèt Sauts",
+                "notation": "set_sauts.abc"
+            },
+            "tarentelle": {
+                "danceId": "tarentelle",
+                "name": "La Tarentelle",
+                "notation": "tarentelle.abc"
+            },
+            "zelda": {
+                "danceId": "cercle_circassien",
+                "name": "Zelda",
+                "notation": "zelda.abc"
+            },
+            "two_step_liberte": {
+                "danceId": "two_step",
+                "name": "Two-Step de la Liberté",
+                "notation": "two_step_de_la_liberte.abc"
+            },
+            "rondeaux_1_2": {
+                "danceId": "rondeau",
+                "name": "Rondeaux 1+2",
+                "notation": "rondeau_1_et_2.abc"
+            },
+            "valse_des_roses": {
+                "danceId": "valse",
+                "name": "Valse des Roses",
+                "notation": "valse_des_roses.abc"
+            },
+            "valse_ecossaise": {
+                "danceId": "valse_ecoss",
+                "name": "Valse Écossaise",
+                "notation": "valse_ecossaise.abc"
             }
         }
     }

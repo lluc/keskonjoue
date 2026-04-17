@@ -1,0 +1,23 @@
+X:1
+T:Young Jane
+%%score 1 2
+L:1/4
+M:3/4
+Q:1/4=250
+K:G
+%%stretchlast true
+V:1 treble transpose=-2 nm="Clar." snm="Clar."
+%%MIDI program 71
+V:2 treble nm="Vln." snm="Vln."
+%%MIDI program 40
+V:1
+[K:A]"^A" (3E/F/G/ |: A3/2 B/ c | B c e | f2 f |  e3/2 c/ B | A3/2 B/ c | B2 A | F3 |
+!breath!E2"^B" (3E/F/G/ | A3/2 B/ c | B c e | f2 f |  e2 f | A3/2 B/ c | B3/2 A/ B | A3- |
+!breath!A2"^C" c/d/ | e c e | a3/2 g/ a | f2 f |  B2 c | d3/2 e/ f | e c B | A3 |
+!breath!G2"^D" (3E/F/G/ | A3/2 B/ c | B c e | f2 f |  e2 f | A3/2 B/ c | B3/2 A/ B | A3- |  !breath!A2 (3E/F/G/ :|
+V:2
+[K:G]
+(3D/E/F/ |: G3/2 A/ B | A B d | e2 e |  d3/2 B/ A | G3/2 A/ B | A2 G | E3 |
+!breath!D2 (3D/E/F/ | G3/2 A/ B | A B d | e2 e |  d2 e | G3/2 A/ B | A3/2 G/ A | G3- |
+!breath!G2 B/c/ | d B d | g3/2 f/ g | e2 e |  A2 B | c3/2 d/ e | d B A | G3 |
+!breath!F2 (3D/E/F/ | G3/2 A/ B | A B d | e2 e |  d2 e | G3/2 A/ B | A3/2 G/ A | G3- |  !breath!G2 (3D/E/F/ :|
