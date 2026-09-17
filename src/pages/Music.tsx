@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Stack, Tab, Tabs, Typography } from "@mui/material";
 import { Slider } from "@mui/material";
 import ABCJS, { TuneObjectArray, SynthObjectController, CursorControl, NoteTimingEvent } from 'abcjs'
 import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import jsonNotations from "../data/notations.json";
+import FluteTablature, { FluteKey } from "../components/FluteTablature";
 import 'abcjs/abcjs-audio.css';
 
 
@@ -17,6 +18,8 @@ const Music = () => {
     const [visualObj, setVisualObj] = useState<null | TuneObjectArray>(null);
     const [warp, setWarp] = useState(100);
     const [isReady, setIsReady] = useState(false);
+    const [activeTab, setActiveTab] = useState(0);
+    const [fluteKey, setFluteKey] = useState<FluteKey>("D");
 
     useLayoutEffect(() => {
         if (notations === undefined) {
@@ -43,6 +46,8 @@ const Music = () => {
                 // Retirer le surlignage des notes précédentes
                 const highlighted = document.querySelectorAll('.abcjs-note-playing');
                 highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
+                const tabHighlighted = document.querySelectorAll('.flute-tab-note-playing');
+                tabHighlighted.forEach(el => el.classList.remove('flute-tab-note-playing'));
 
                 // Surligner les notes actuelles
                 if (event.elements) {
@@ -52,11 +57,21 @@ const Music = () => {
                         });
                     });
                 }
+
+                // Surligner le doigté correspondant dans la tablature flûte
+                const startChars = event.startCharArray || (event.startChar !== undefined ? [event.startChar] : []);
+                const endChars = event.endCharArray || (event.endChar !== undefined ? [event.endChar] : []);
+                startChars.forEach((startChar, i) => {
+                    const el = document.querySelector(`[data-note-key="${startChar}-${endChars[i]}"]`);
+                    el?.classList.add('flute-tab-note-playing');
+                });
             },
             onFinished: () => {
                 // Retirer tout surlignage à la fin
                 const highlighted = document.querySelectorAll('.abcjs-note-playing');
                 highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
+                const tabHighlighted = document.querySelectorAll('.flute-tab-note-playing');
+                tabHighlighted.forEach(el => el.classList.remove('flute-tab-note-playing'));
                 setIsPlaying(false);
             }
         };
@@ -85,6 +100,8 @@ const Music = () => {
             // Nettoyer le surlignage au démontage
             const highlighted = document.querySelectorAll('.abcjs-note-playing');
             highlighted.forEach(el => el.classList.remove('abcjs-note-playing'));
+            const tabHighlighted = document.querySelectorAll('.flute-tab-note-playing');
+            tabHighlighted.forEach(el => el.classList.remove('flute-tab-note-playing'));
         };
     }, [visualObj, notations]);
 
@@ -148,9 +165,23 @@ const Music = () => {
                         />
                     </Box>
 
-                    <Box
-                        id="paper"
-                    />
+                    <Tabs value={activeTab} onChange={(_event, newValue) => setActiveTab(newValue)}>
+                        <Tab label="Partition" />
+                        <Tab label="Tablature flûte irlandaise" />
+                    </Tabs>
+
+                    <Box sx={{ display: activeTab === 0 ? 'block' : 'none' }}>
+                        <Box id="paper" />
+                    </Box>
+
+                    {activeTab === 1 && visualObj &&
+                        <FluteTablature
+                            visualObj={visualObj}
+                            abcSource={notations}
+                            fluteKey={fluteKey}
+                            onFluteKeyChange={setFluteKey}
+                        />
+                    }
                 </Stack>
             }
             {data.youtube &&
