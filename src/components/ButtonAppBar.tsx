@@ -5,9 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
-import { Share, Search, Info } from '@mui/icons-material';
+import { Share, Search, Info, Home } from '@mui/icons-material';
 import AboutDialog from './AboutDialog';
 
 const ButtonAppBar: FunctionComponent = () => {
@@ -45,11 +44,11 @@ const ButtonAppBar: FunctionComponent = () => {
                         size="large"
                         edge="start"
                         color="inherit"
-                        aria-label="menu"
+                        aria-label="accueil"
                         sx={{ mr: 2 }}
                         onClick={() => { navigateTo('/') }}
                     >
-                        <MenuIcon />
+                        <Home />
                     </IconButton>
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
                         Keskonjoue
