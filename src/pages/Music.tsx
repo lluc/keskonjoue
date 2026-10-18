@@ -1,11 +1,14 @@
 import { useParams } from "react-router-dom";
 import { store } from "../service/store.service"
-import { Box, Button, Divider, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Button, Divider, Stack, Tab, Tabs, TextField, Typography } from "@mui/material";
 import { Slider } from "@mui/material";
 import ABCJS, { TuneObjectArray, SynthObjectController, CursorControl, NoteTimingEvent } from 'abcjs'
 import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import jsonNotations from "../data/notations.json";
 import FluteTablature, { FluteKey } from "../components/FluteTablature";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import AirIcon from "@mui/icons-material/Air";
+import SchoolIcon from "@mui/icons-material/School";
 import 'abcjs/abcjs-audio.css';
 
 
@@ -20,6 +23,14 @@ const Music = () => {
     const [isReady, setIsReady] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
     const [fluteKey, setFluteKey] = useState<FluteKey>("D");
+    const [learnRange, setLearnRange] = useState<[number, number]>([1, 1]);
+    const [totalMeasures, setTotalMeasures] = useState(0);
+    const measureStartsRef = useRef<number[]>([]); // ms du début de chaque mesure, indexé par numéro de mesure
+    const loopInfoRef = useRef<{ enabled: boolean; startPercent: number; endMeasure: number }>({
+        enabled: false,
+        startPercent: 0,
+        endMeasure: Infinity,
+    });
 
     useLayoutEffect(() => {
         if (notations === undefined) {
@@ -32,6 +43,23 @@ const Music = () => {
         });
 
         setVisualObj(visualObj);
+
+        // Numéro et ms de début de chaque mesure, pour la boucle d'apprentissage.
+        // setTiming() n'a besoin que du rendu (pas de lecture audio) pour fonctionner.
+        visualObj[0].setTiming(visualObj[0].getBpm());
+        const timings = (visualObj[0] as unknown as { noteTimings?: NoteTimingEvent[] }).noteTimings || [];
+        const starts: number[] = [];
+        let total = 0;
+        timings.forEach((t) => {
+            if (t.measureNumber === undefined || t.milliseconds === undefined) return;
+            if (starts[t.measureNumber] === undefined || t.milliseconds < starts[t.measureNumber]) {
+                starts[t.measureNumber] = t.milliseconds;
+            }
+            if (t.measureNumber > total) total = t.measureNumber;
+        });
+        measureStartsRef.current = starts;
+        setTotalMeasures(total);
+        setLearnRange([1, Math.max(1, total)]);
 
     }, [])
 
@@ -65,6 +93,12 @@ const Music = () => {
                     const el = document.querySelector(`[data-note-key="${startChar}-${endChars[i]}"]`);
                     el?.classList.add('flute-tab-note-playing');
                 });
+
+                // Boucle d'apprentissage : revenir au début de l'extrait sélectionné
+                const loop = loopInfoRef.current;
+                if (loop.enabled && event.measureNumber !== undefined && event.measureNumber > loop.endMeasure) {
+                    seekTo(loop.startPercent);
+                }
             },
             onFinished: () => {
                 // Retirer tout surlignage à la fin
@@ -108,22 +142,56 @@ const Music = () => {
     const togglePlayMusic = () => {
         if (!synthControlRef.current || !isReady) return;
 
-        if (isPlaying) {
-            synthControlRef.current.pause();
-            setIsPlaying(false);
-        } else {
-            synthControlRef.current.play();
-            setIsPlaying(true);
-        }
+        // synthControl.play() bascule déjà lecture/pause en interne (self.isStarted).
+        // Appeler .pause() séparément désynchronisait cet état interne du nôtre : au bout
+        // de quelques allers-retours, "Jouer" retombait sur la branche pause sans jouer de son.
+        synthControlRef.current.play();
+        setIsPlaying(!isPlaying);
     };
 
     const handleWarpChange = (_event: Event, newValue: number | number[]) => {
         if (Array.isArray(newValue)) return;
         setWarp(newValue);
+    };
 
+    const handleWarpCommitted = (_event: React.SyntheticEvent | Event, newValue: number | number[]) => {
+        if (Array.isArray(newValue)) return;
+        // setWarp() reconstruit le moteur audio d'abcjs : ne l'appeler qu'une fois au
+        // relâchement, sinon chaque pixel glissé déclenche une reconstruction qui se
+        // chevauche avec la précédente (lecture qui s'emballe pendant le glissement).
         if (synthControlRef.current) {
             synthControlRef.current.setWarp(newValue);
         }
+    };
+
+    const seekTo = (percent: number) => {
+        (synthControlRef.current as unknown as { seek?: (percent: number) => void })?.seek?.(percent);
+    };
+
+    const updateLoopInfo = (enabled: boolean, range: [number, number]) => {
+        const totalTimeMs = (visualObj?.[0].getTotalTime() || 0) * 1000;
+        const startMs = measureStartsRef.current[range[0]] || 0;
+        loopInfoRef.current = {
+            enabled,
+            startPercent: totalTimeMs > 0 ? startMs / totalTimeMs : 0,
+            endMeasure: range[1],
+        };
+        if (enabled) seekTo(loopInfoRef.current.startPercent);
+    };
+
+    const handleRangeCommitted = (range: [number, number]) => {
+        setLearnRange(range);
+        const isSubRange = range[0] > 1 || range[1] < totalMeasures;
+        updateLoopInfo(isSubRange, range);
+    };
+
+    const handleMeasureFieldChange = (which: 0 | 1, value: number) => {
+        if (!Number.isFinite(value)) return;
+        const clamped = Math.min(Math.max(Math.round(value), 1), Math.max(totalMeasures, 1));
+        const range: [number, number] = which === 0
+            ? [clamped, Math.max(clamped, learnRange[1])]
+            : [Math.min(learnRange[0], clamped), clamped];
+        handleRangeCommitted(range);
     };
 
     return (
@@ -153,6 +221,7 @@ const Music = () => {
                         <Slider
                             value={warp}
                             onChange={handleWarpChange}
+                            onChangeCommitted={handleWarpCommitted}
                             aria-labelledby="warp-slider"
                             min={25}
                             max={200}
@@ -165,9 +234,16 @@ const Music = () => {
                         />
                     </Box>
 
-                    <Tabs value={activeTab} onChange={(_event, newValue) => setActiveTab(newValue)}>
-                        <Tab label="Partition" />
-                        <Tab label="Tablature flûte irlandaise" />
+                    <Tabs
+                        value={activeTab}
+                        onChange={(_event, newValue) => setActiveTab(newValue)}
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        allowScrollButtonsMobile
+                    >
+                        <Tab icon={<MusicNoteIcon />} iconPosition="start" label="Partition" />
+                        <Tab icon={<AirIcon />} iconPosition="start" label="Tablature flûte irlandaise" />
+                        <Tab icon={<SchoolIcon />} iconPosition="start" label="Apprentissage" />
                     </Tabs>
 
                     <Box sx={{ display: activeTab === 0 ? 'block' : 'none' }}>
@@ -181,6 +257,55 @@ const Music = () => {
                             fluteKey={fluteKey}
                             onFluteKeyChange={setFluteKey}
                         />
+                    }
+
+                    {activeTab === 2 &&
+                        <Stack spacing={2} sx={{ py: 1 }}>
+                            <Box>
+                                <Typography gutterBottom>
+                                    Mesures {learnRange[0]} à {learnRange[1]}{totalMeasures ? ` (sur ${totalMeasures})` : ''}
+                                </Typography>
+                                <Slider
+                                    value={learnRange}
+                                    onChange={(_e, v) => Array.isArray(v) && setLearnRange(v as [number, number])}
+                                    onChangeCommitted={(_e, v) => handleRangeCommitted(v as [number, number])}
+                                    min={1}
+                                    max={Math.max(totalMeasures, 1)}
+                                    step={1}
+                                    valueLabelDisplay="auto"
+                                    disabled={totalMeasures === 0}
+                                />
+                            </Box>
+                            <Stack direction="row" spacing={2}>
+                                <TextField
+                                    label="Mesure de début"
+                                    type="number"
+                                    size="small"
+                                    value={learnRange[0]}
+                                    onChange={(e) => handleMeasureFieldChange(0, Number(e.target.value))}
+                                    disabled={totalMeasures === 0}
+                                    inputProps={{ min: 1, max: Math.max(totalMeasures, 1) }}
+                                    sx={{ width: 150 }}
+                                />
+                                <TextField
+                                    label="Mesure de fin"
+                                    type="number"
+                                    size="small"
+                                    value={learnRange[1]}
+                                    onChange={(e) => handleMeasureFieldChange(1, Number(e.target.value))}
+                                    disabled={totalMeasures === 0}
+                                    inputProps={{ min: 1, max: Math.max(totalMeasures, 1) }}
+                                    sx={{ width: 150 }}
+                                />
+                            </Stack>
+                            <Typography variant="caption" color="text.secondary">
+                                {totalMeasures === 0
+                                    ? "Chargement du morceau..."
+                                    : learnRange[0] > 1 || learnRange[1] < totalMeasures
+                                        ? "Cet extrait est joué en boucle : utilisez le bouton Jouer ci-dessus."
+                                        : "Réduisez la plage pour boucler un extrait, puis utilisez le bouton Jouer ci-dessus."}
+                            </Typography>
+                        </Stack>
                     }
                 </Stack>
             }

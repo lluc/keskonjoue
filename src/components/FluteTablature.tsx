@@ -65,7 +65,8 @@ function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
 }
 
 interface TabNote {
-    key: string;
+    key: string; // identifiant React (unique, même pour une note rejouée via un signe de reprise)
+    domKey: string; // startChar-endChar : utilisé par Music.tsx pour cibler la note en cours de lecture
     label: string;
     pattern: HoleState[];
     newMeasure: boolean;
@@ -95,8 +96,11 @@ function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchC
         const pitch = Math.round(e.pitch);
         const newMeasure = notes.length > 0 && /\|/.test(abcSource.slice(prevEndChar, e.startChar));
         prevEndChar = e.endChar;
+        const domKey = `${e.startChar}-${e.endChar}`;
         notes.push({
-            key: `${e.startChar}-${e.endChar}`,
+            // domKey seul n'est pas unique : un signe de reprise rejoue les mêmes startChar/endChar.
+            key: `${domKey}#${notes.length}`,
+            domKey,
             label: ABCJS.synth.pitchToNoteName[pitch] || String(pitch),
             pattern: fingeringFor(pitch - tonicPitchClass),
             newMeasure,
@@ -140,7 +144,7 @@ const FluteTablature = ({ visualObj, abcSource, fluteKey, onFluteKeyChange }: Fl
                         key={note.key}
                         sx={note.newMeasure ? { borderLeft: "1px solid", borderColor: "divider", pl: 1.5 } : undefined}
                     >
-                        <Stack alignItems="center" spacing={0.5} data-note-key={note.key}>
+                        <Stack alignItems="center" spacing={0.5} data-note-key={note.domKey}>
                             <FingeringDiagram pattern={note.pattern} />
                             <Typography variant="caption">{note.label}</Typography>
                         </Stack>

@@ -21,7 +21,7 @@ const App: FunctionComponent = () => {
 
     >
       <ButtonAppBar />
-      <Box mt={"16px"} mb={"64px"} textAlign={'center'}>
+      <Box mt={"16px"} mb={"64px"} px={2} textAlign={'center'}>
         <Suspense fallback={<CircularProgress sx={{ mt: 4 }} />}>
           <Routes>
             <Route path="/" element={<Home />} />
