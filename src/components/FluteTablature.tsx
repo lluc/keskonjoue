@@ -16,21 +16,51 @@ type HoleState = "closed" | "half" | "open";
 
 // Doigté traditionnel flûte/tin whistle : les 6 trous se ferment de haut en bas pour la
 // tonique, puis s'ouvrent un par un en partant du bas à mesure que la gamme majeure monte.
+// Vérifié contre https://www.tinwhistletab.com/fr/finger-chart (doigtés en Ré).
 const DIATONIC_CLOSED_HOLES: Record<number, number> = { 0: 6, 2: 5, 4: 4, 5: 3, 7: 2, 9: 1, 11: 0 };
 
-function fingeringFor(semitoneFromTonic: number): HoleState[] {
+const HAUT_OUVERT: HoleState[] = ["open", "closed", "closed", "closed", "closed", "closed"];
+
+// Les deux altérations hors gamme les plus courantes ont un doigté réel non-adjacent
+// (croisé ou demi-trou), vérifié sur tinwhistletab.com - pas dérivable d'une formule.
+const CHROMATIC_FINGERINGS: Record<number, HoleState[]> = {
+    3: ["closed", "closed", "closed", "closed", "half", "open"], // fa naturel, demi-trou
+    10: ["open", "closed", "closed", "open", "open", "open"], // do naturel, doigté croisé
+};
+
+function closedCountPattern(closed: number): HoleState[] {
+    return Array.from({ length: 6 }, (_, i) => (i < closed ? "closed" : "open"));
+}
+
+function fingeringFor(semitoneFromTonic: number, octave: number): HoleState[] {
     const s = ((semitoneFromTonic % 12) + 12) % 12;
+    // Le ré aigu (octave 2+ de la tonique) n'est pas le même doigté que le ré grave :
+    // on entrouvre le trou du haut au lieu de garder les six trous fermés.
+    if (s === 0 && octave >= 1) return HAUT_OUVERT;
     const closed = DIATONIC_CLOSED_HOLES[s];
-    if (closed !== undefined) {
-        return Array.from({ length: 6 }, (_, i) => (i < closed ? "closed" : "open"));
-    }
-    // ponytail: note chromatique hors gamme -> approximée par un demi-trou entre les deux
-    // degrés voisins (convention générale du "half-holing"), pas un doigté croisé spécifique.
+    if (closed !== undefined) return closedCountPattern(closed);
+    if (CHROMATIC_FINGERINGS[s]) return CHROMATIC_FINGERINGS[s];
+    // ponytail: pour les altérations plus rares (ré#, sol#, la#), le doigté croisé réel
+    // varie selon le whistle et ne fait pas consensus -> approximation par demi-trou.
     const lowerDegree = Math.max(
         ...Object.keys(DIATONIC_CLOSED_HOLES).map(Number).filter((d) => d < s)
     );
     const k = DIATONIC_CLOSED_HOLES[lowerDegree];
     return Array.from({ length: 6 }, (_, i) => (i < k - 1 ? "closed" : i === k - 1 ? "half" : "open"));
+}
+
+// Octave 1 = doigtés de base (pas de marque), octave 2 = "+", octave 3 = "++" (souffle plus
+// soutenu, même doigté). Ancré sur l'octave du whistle en Ré (fondamentale Ré4) ; pour les
+// autres tonalités on rapproche la fondamentale du même registre (même famille d'instrument).
+function fundamentalMidi(tonicPitchClass: number): number {
+    let f = 60 + tonicPitchClass;
+    if (f - 62 > 6) f -= 12;
+    return f;
+}
+
+function breathMarker(octave: number): string {
+    if (octave <= 0) return "";
+    return octave === 1 ? "+" : "++";
 }
 
 function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
@@ -97,12 +127,14 @@ function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchC
         const newMeasure = notes.length > 0 && /\|/.test(abcSource.slice(prevEndChar, e.startChar));
         prevEndChar = e.endChar;
         const domKey = `${e.startChar}-${e.endChar}`;
+        const octave = Math.floor((pitch - fundamentalMidi(tonicPitchClass)) / 12);
+        const baseLabel = ABCJS.synth.pitchToNoteName[pitch] || String(pitch);
         notes.push({
             // domKey seul n'est pas unique : un signe de reprise rejoue les mêmes startChar/endChar.
             key: `${domKey}#${notes.length}`,
             domKey,
-            label: ABCJS.synth.pitchToNoteName[pitch] || String(pitch),
-            pattern: fingeringFor(pitch - tonicPitchClass),
+            label: `${baseLabel}${breathMarker(octave)}`,
+            pattern: fingeringFor(pitch - tonicPitchClass, octave),
             newMeasure,
         });
     });
@@ -153,7 +185,7 @@ const FluteTablature = ({ visualObj, abcSource, fluteKey, onFluteKeyChange }: Fl
             </Stack>
 
             <Typography variant="caption" color="text.secondary">
-                ● trou fermé · ○ trou ouvert · ◐ demi-trou (note chromatique, doigté approximatif)
+                ● trou fermé · ○ trou ouvert · ◐ demi-trou · + / ++ seconde/troisième octave (même doigté, souffle plus soutenu)
             </Typography>
         </Stack>
     );
