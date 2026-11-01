@@ -1,4 +1,4 @@
-import { useId, useMemo } from "react";
+import { useId } from "react";
 import { Box, MenuItem, Select, SelectChangeEvent, Stack, Typography } from "@mui/material";
 import ABCJS, { TuneObjectArray } from "abcjs";
 
@@ -12,7 +12,7 @@ export const FLUTE_KEYS: { value: FluteKey; label: string; pitchClass: number }[
     { value: "A", label: "La", pitchClass: 9 },
 ];
 
-type HoleState = "closed" | "half" | "open";
+export type HoleState = "closed" | "half" | "open";
 
 // Doigté traditionnel flûte/tin whistle : les 6 trous se ferment de haut en bas pour la
 // tonique, puis s'ouvrent un par un en partant du bas à mesure que la gamme majeure monte.
@@ -32,7 +32,7 @@ function closedCountPattern(closed: number): HoleState[] {
     return Array.from({ length: 6 }, (_, i) => (i < closed ? "closed" : "open"));
 }
 
-function fingeringFor(semitoneFromTonic: number, octave: number): HoleState[] {
+export function fingeringFor(semitoneFromTonic: number, octave: number): HoleState[] {
     const s = ((semitoneFromTonic % 12) + 12) % 12;
     // Le ré aigu (octave 2+ de la tonique) n'est pas le même doigté que le ré grave :
     // on entrouvre le trou du haut au lieu de garder les six trous fermés.
@@ -52,13 +52,13 @@ function fingeringFor(semitoneFromTonic: number, octave: number): HoleState[] {
 // Octave 1 = doigtés de base (pas de marque), octave 2 = "+", octave 3 = "++" (souffle plus
 // soutenu, même doigté). Ancré sur l'octave du whistle en Ré (fondamentale Ré4) ; pour les
 // autres tonalités on rapproche la fondamentale du même registre (même famille d'instrument).
-function fundamentalMidi(tonicPitchClass: number): number {
+export function fundamentalMidi(tonicPitchClass: number): number {
     let f = 60 + tonicPitchClass;
     if (f - 62 > 6) f -= 12;
     return f;
 }
 
-function breathMarker(octave: number): string {
+export function breathMarker(octave: number): string {
     if (octave <= 0) return "";
     return octave === 1 ? "+" : "++";
 }
@@ -68,8 +68,12 @@ const SOLFEGE: Record<string, string> = {
     Gb: "Solb", G: "Sol", Ab: "Lab", A: "La", Bb: "Sib", B: "Si",
 };
 
-function toSolfege(baseLabel: string): string {
+export function toSolfege(baseLabel: string): string {
     return SOLFEGE[baseLabel.replace(/\d+$/, "")] ?? baseLabel;
+}
+
+export function pitchClassForFluteKey(key: FluteKey): number {
+    return FLUTE_KEYS.find((k) => k.value === key)?.pitchClass ?? 2;
 }
 
 function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
@@ -103,14 +107,33 @@ function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
     );
 }
 
-interface TabNote {
+export interface TabNote {
     key: string; // identifiant React (unique, même pour une note rejouée via un signe de reprise)
-    domKey: string; // startChar-endChar : utilisé par Music.tsx pour cibler la note en cours de lecture
+    domKey: string; // identifiant utilisé par le lecteur pour cibler la note en cours de lecture
     label: string;
     solfegeLabel: string;
     pattern: HoleState[];
     newMeasure: boolean;
     highOctave: boolean; // octave 2+ (marqueur +/++) : mise en couleur pour repérage rapide
+    midiPitch: number;
+    startMs?: number; // lecture pilotée par minuterie (import MIDI) plutôt que par le cursorControl abcjs
+    endMs?: number;
+}
+
+function buildTabNote(pitch: number, tonicPitchClass: number, domKey: string, index: number, newMeasure: boolean): TabNote {
+    const octave = Math.floor((pitch - fundamentalMidi(tonicPitchClass)) / 12);
+    const baseLabel = ABCJS.synth.pitchToNoteName[pitch] || String(pitch);
+    return {
+        // domKey seul n'est pas toujours unique (ex. reprise ABC qui rejoue les mêmes startChar/endChar).
+        key: `${domKey}#${index}`,
+        domKey,
+        label: `${baseLabel}${breathMarker(octave)}`,
+        solfegeLabel: `${toSolfege(baseLabel)}${breathMarker(octave)}`,
+        pattern: fingeringFor(pitch - tonicPitchClass, octave),
+        newMeasure,
+        highOctave: octave > 0,
+        midiPitch: pitch,
+    };
 }
 
 // setUpAudio() n'est pas exposé par les types abcjs au-delà de sa signature ; on relit
@@ -124,7 +147,7 @@ interface AudioNoteEvent {
     endChar: number;
 }
 
-function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchClass: number): TabNote[] {
+export function extractNotesFromAbc(visualObj: TuneObjectArray, abcSource: string, tonicPitchClass: number): TabNote[] {
     const audio = visualObj[0].setUpAudio({}) as unknown as { tracks: AudioNoteEvent[][] };
     const events = (audio.tracks?.[0] || []).filter((e) => e && e.cmd === "note" && typeof e.pitch === "number");
 
@@ -138,36 +161,40 @@ function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchC
         const newMeasure = notes.length > 0 && /\|/.test(abcSource.slice(prevEndChar, e.startChar));
         prevEndChar = e.endChar;
         const domKey = `${e.startChar}-${e.endChar}`;
-        const octave = Math.floor((pitch - fundamentalMidi(tonicPitchClass)) / 12);
-        const baseLabel = ABCJS.synth.pitchToNoteName[pitch] || String(pitch);
-        notes.push({
-            // domKey seul n'est pas unique : un signe de reprise rejoue les mêmes startChar/endChar.
-            key: `${domKey}#${notes.length}`,
-            domKey,
-            label: `${baseLabel}${breathMarker(octave)}`,
-            solfegeLabel: `${toSolfege(baseLabel)}${breathMarker(octave)}`,
-            pattern: fingeringFor(pitch - tonicPitchClass, octave),
-            newMeasure,
-            highOctave: octave > 0,
-        });
+        notes.push(buildTabNote(pitch, tonicPitchClass, domKey, notes.length, newMeasure));
+    });
+    return notes;
+}
+
+export interface MidiNoteEvent {
+    pitch: number; // numéro de note MIDI (ex. 60 = Do4)
+    startMs: number;
+    endMs: number;
+}
+
+export function extractNotesFromMidi(events: MidiNoteEvent[], tonicPitchClass: number): TabNote[] {
+    const sorted = [...events].sort((a, b) => a.startMs - b.startMs);
+    const notes: TabNote[] = [];
+    let lastStart: number | null = null;
+    sorted.forEach((e) => {
+        if (e.startMs === lastStart) return; // ponytail: ignore les notes empilées (accords), on garde la première
+        lastStart = e.startMs;
+        const domKey = String(notes.length);
+        const note = buildTabNote(Math.round(e.pitch), tonicPitchClass, domKey, notes.length, false);
+        note.startMs = e.startMs;
+        note.endMs = e.endMs;
+        notes.push(note);
     });
     return notes;
 }
 
 interface FluteTablatureProps {
-    visualObj: TuneObjectArray;
-    abcSource: string;
+    notes: TabNote[];
     fluteKey: FluteKey;
     onFluteKeyChange: (key: FluteKey) => void;
 }
 
-const FluteTablature = ({ visualObj, abcSource, fluteKey, onFluteKeyChange }: FluteTablatureProps) => {
-    const tonicPitchClass = FLUTE_KEYS.find((k) => k.value === fluteKey)?.pitchClass ?? 2;
-    const notes = useMemo(
-        () => extractNotes(visualObj, abcSource, tonicPitchClass),
-        [visualObj, abcSource, tonicPitchClass]
-    );
-
+const FluteTablature = ({ notes, fluteKey, onFluteKeyChange }: FluteTablatureProps) => {
     return (
         <Stack spacing={1}>
             <Select

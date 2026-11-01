@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { useNavigate } from 'react-router-dom';
-import { Share, Search, Info, Home } from '@mui/icons-material';
+import { Share, Search, Info, Home, UploadFile } from '@mui/icons-material';
 import AboutDialog from './AboutDialog';
 
 const ButtonAppBar: FunctionComponent = () => {
@@ -61,6 +61,15 @@ const ButtonAppBar: FunctionComponent = () => {
                         onClick={() => { handleSearch() }}
                     >
                         <Search />
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="end"
+                        color="inherit"
+                        aria-label="importer un fichier"
+                        onClick={() => { navigateTo('/import') }}
+                    >
+                        <UploadFile />
                     </IconButton>
                     <IconButton
                         size="large"

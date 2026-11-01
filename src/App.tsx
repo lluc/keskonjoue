@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home'))
 const Dance = lazy(() => import('./pages/Dance'))
 const Music = lazy(() => import('./pages/Music'))
 const Search = lazy(() => import('./pages/Search'))
+const Import = lazy(() => import('./pages/Import'))
 
 const App: FunctionComponent = () => {
 
@@ -28,6 +29,7 @@ const App: FunctionComponent = () => {
             <Route path="/dance/:slug" element={<Dance />} />
             <Route path="/music/:slug" element={<Music />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/import" element={<Import />} />
           </Routes>
         </Suspense>
       </Box>
