@@ -110,6 +110,7 @@ interface TabNote {
     solfegeLabel: string;
     pattern: HoleState[];
     newMeasure: boolean;
+    highOctave: boolean; // octave 2+ (marqueur +/++) : mise en couleur pour repérage rapide
 }
 
 // setUpAudio() n'est pas exposé par les types abcjs au-delà de sa signature ; on relit
@@ -147,6 +148,7 @@ function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchC
             solfegeLabel: `${toSolfege(baseLabel)}${breathMarker(octave)}`,
             pattern: fingeringFor(pitch - tonicPitchClass, octave),
             newMeasure,
+            highOctave: octave > 0,
         });
     });
     return notes;
@@ -187,17 +189,24 @@ const FluteTablature = ({ visualObj, abcSource, fluteKey, onFluteKeyChange }: Fl
                         key={note.key}
                         sx={note.newMeasure ? { borderLeft: "1px solid", borderColor: "divider", pl: 1.5 } : undefined}
                     >
-                        <Stack alignItems="center" spacing={0.5} data-note-key={note.domKey}>
+                        <Stack
+                            alignItems="center"
+                            spacing={0.5}
+                            data-note-key={note.domKey}
+                            className={note.highOctave ? "flute-tab-octave" : undefined}
+                        >
                             <FingeringDiagram pattern={note.pattern} />
                             <Typography variant="caption">{note.label}</Typography>
-                            <Typography variant="caption" color="text.secondary">{note.solfegeLabel}</Typography>
+                            <Typography variant="caption" color={note.highOctave ? undefined : "text.secondary"}>
+                                {note.solfegeLabel}
+                            </Typography>
                         </Stack>
                     </Box>
                 ))}
             </Stack>
 
             <Typography variant="caption" color="text.secondary">
-                ● trou fermé · ○ trou ouvert · ◐ demi-trou · + / ++ seconde/troisième octave (même doigté, souffle plus soutenu)
+                ● trou fermé · ○ trou ouvert · ◐ demi-trou · <Box component="span" className="flute-tab-octave">+ / ++</Box> seconde/troisième octave (même doigté, souffle plus soutenu)
             </Typography>
         </Stack>
     );

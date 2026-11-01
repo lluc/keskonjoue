@@ -19,6 +19,14 @@ code {
   filter: drop-shadow(0 0 3px #2196f3) drop-shadow(0 0 6px #2196f3);
 }
 
+/* Notes de seconde/troisième octave (+/++) dans la tablature flûte : couleur distincte
+   pour un repérage rapide, harmonisée (ambre chaud) avec le teal du surlignage de lecture
+   ci-dessous. Doit rester déclarée AVANT .flute-tab-note-playing pour que ce dernier
+   l'emporte pendant la lecture (même spécificité CSS, l'ordre de déclaration tranche). */
+.flute-tab-octave {
+  color: #b5651d;
+}
+
 /* Surlignage du doigté joué dans la tablature flûte irlandaise */
 .flute-tab-note-playing {
   color: #1e6b5c;
