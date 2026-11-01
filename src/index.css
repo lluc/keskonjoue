@@ -21,6 +21,7 @@ code {
 
 /* Surlignage du doigté joué dans la tablature flûte irlandaise */
 .flute-tab-note-playing {
-  color: #2196f3;
-  filter: drop-shadow(0 0 3px #2196f3) drop-shadow(0 0 6px #2196f3);
+  color: #1e6b5c;
+  background-color: rgba(30, 107, 92, 0.12);
+  border-radius: 8px;
 }

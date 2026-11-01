@@ -92,6 +92,8 @@ const Music = () => {
                 startChars.forEach((startChar, i) => {
                     const el = document.querySelector(`[data-note-key="${startChar}-${endChars[i]}"]`);
                     el?.classList.add('flute-tab-note-playing');
+                    // N'existe dans le DOM que si l'onglet Tablature est actif (rendu conditionnel).
+                    el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 });
 
                 // Boucle d'apprentissage : revenir au début de l'extrait sélectionné
