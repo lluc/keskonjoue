@@ -63,6 +63,15 @@ function breathMarker(octave: number): string {
     return octave === 1 ? "+" : "++";
 }
 
+const SOLFEGE: Record<string, string> = {
+    C: "Do", Db: "Réb", D: "Ré", Eb: "Mib", E: "Mi", F: "Fa",
+    Gb: "Solb", G: "Sol", Ab: "Lab", A: "La", Bb: "Sib", B: "Si",
+};
+
+function toSolfege(baseLabel: string): string {
+    return SOLFEGE[baseLabel.replace(/\d+$/, "")] ?? baseLabel;
+}
+
 function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
     const id = useId();
     const r = 7;
@@ -98,6 +107,7 @@ interface TabNote {
     key: string; // identifiant React (unique, même pour une note rejouée via un signe de reprise)
     domKey: string; // startChar-endChar : utilisé par Music.tsx pour cibler la note en cours de lecture
     label: string;
+    solfegeLabel: string;
     pattern: HoleState[];
     newMeasure: boolean;
 }
@@ -134,6 +144,7 @@ function extractNotes(visualObj: TuneObjectArray, abcSource: string, tonicPitchC
             key: `${domKey}#${notes.length}`,
             domKey,
             label: `${baseLabel}${breathMarker(octave)}`,
+            solfegeLabel: `${toSolfege(baseLabel)}${breathMarker(octave)}`,
             pattern: fingeringFor(pitch - tonicPitchClass, octave),
             newMeasure,
         });
@@ -179,6 +190,7 @@ const FluteTablature = ({ visualObj, abcSource, fluteKey, onFluteKeyChange }: Fl
                         <Stack alignItems="center" spacing={0.5} data-note-key={note.domKey}>
                             <FingeringDiagram pattern={note.pattern} />
                             <Typography variant="caption">{note.label}</Typography>
+                            <Typography variant="caption" color="text.secondary">{note.solfegeLabel}</Typography>
                         </Stack>
                     </Box>
                 ))}
