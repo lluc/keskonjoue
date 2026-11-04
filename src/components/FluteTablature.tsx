@@ -175,15 +175,22 @@ export function extractNotesFromAbc(visualObj: TuneObjectArray, abcSource: strin
     const events = (audio.tracks?.[0] || []).filter((e) => e && e.cmd === "note" && typeof e.pitch === "number");
 
     const notes: TabNote[] = [];
+    // setUpAudio() déroule la lecture telle qu'elle sera jouée, reprises comprises : une section
+    // encadrée par des signes de reprise (:|) y apparaît deux fois. La répétition se fait à
+    // l'écoute, pas besoin de la dupliquer dans la tablature -> on ne garde que le premier passage
+    // sur chaque plage de texte source (startChar-endChar propre à la reprise = nouveau passage).
+    const seenRanges = new Set<string>();
     let lastStart: number | null = null;
     let prevEndChar = 0;
     events.forEach((e) => {
         if (e.start === lastStart) return; // ponytail: ignore les notes empilées (accords/bourdon), on garde la première
         lastStart = e.start;
+        const domKey = `${e.startChar}-${e.endChar}`;
+        if (seenRanges.has(domKey)) return;
+        seenRanges.add(domKey);
         const pitch = Math.round(e.pitch);
         const newMeasure = notes.length > 0 && /\|/.test(abcSource.slice(prevEndChar, e.startChar));
         prevEndChar = e.endChar;
-        const domKey = `${e.startChar}-${e.endChar}`;
         notes.push(buildTabNote(pitch, instrument, domKey, notes.length, newMeasure));
     });
     return notes;

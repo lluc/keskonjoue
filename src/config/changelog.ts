@@ -7,6 +7,12 @@ export interface ChangelogEntry {
 // dans "À propos" (cf. AboutDialog) : pas la peine de remonter tout l'historique.
 export const CHANGELOG: ChangelogEntry[] = [
     {
+        version: '1.8.1',
+        items: [
+            "Corrige la tablature : une section jouée deux fois à cause d'une reprise ne s'affiche plus deux fois",
+        ],
+    },
+    {
         version: '1.8.0',
         items: [
             "Doigtés flûte à bec (soprano et alto, systèmes baroque et allemand) dans la tablature",
