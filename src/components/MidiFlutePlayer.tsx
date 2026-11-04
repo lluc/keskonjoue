@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Box, Button, Slider, Stack, Typography } from "@mui/material";
-import FluteTablature, { extractNotesFromMidi, FluteKey, MidiNoteEvent, pitchClassForFluteKey } from "./FluteTablature";
+import FluteTablature, { extractNotesFromMidi, getInstrument, INSTRUMENTS, MidiNoteEvent } from "./FluteTablature";
 
 interface MidiFlutePlayerProps {
     title: string;
@@ -15,13 +15,13 @@ const midiToFreq = (pitch: number) => 440 * Math.pow(2, (pitch - 69) / 12);
 // surlignage/défilement de la tablature, calée sur l'horloge de l'AudioContext
 // (qui se fige naturellement avec suspend(), ce qui simplifie la pause/reprise).
 const MidiFlutePlayer = ({ title, events, durationMs }: MidiFlutePlayerProps) => {
-    const [fluteKey, setFluteKey] = useState<FluteKey>("D");
+    const [instrumentId, setInstrumentId] = useState<string>(INSTRUMENTS[0].id);
     const [isPlaying, setIsPlaying] = useState(false);
     const [warp, setWarp] = useState(100);
 
     const notes = useMemo(
-        () => extractNotesFromMidi(events, pitchClassForFluteKey(fluteKey)),
-        [events, fluteKey]
+        () => extractNotesFromMidi(events, getInstrument(instrumentId)),
+        [events, instrumentId]
     );
     const notesRef = useRef(notes);
     useEffect(() => { notesRef.current = notes; }, [notes]);
@@ -161,7 +161,7 @@ const MidiFlutePlayer = ({ title, events, durationMs }: MidiFlutePlayerProps) =>
         <Stack spacing={2}>
             <Typography variant="h3">{title}</Typography>
             <Stack>
-                <Box>
+                <Box sx={{ position: 'sticky', top: 0, zIndex: 10, bgcolor: 'background.default', py: 1 }}>
                     <Button variant="contained" onClick={togglePlay}>
                         {isPlaying ? 'Pause' : 'Jouer'}
                     </Button>
@@ -185,7 +185,7 @@ const MidiFlutePlayer = ({ title, events, durationMs }: MidiFlutePlayerProps) =>
                         ]}
                     />
                 </Box>
-                <FluteTablature notes={notes} fluteKey={fluteKey} onFluteKeyChange={setFluteKey} />
+                <FluteTablature notes={notes} instrumentId={instrumentId} onInstrumentChange={setInstrumentId} />
             </Stack>
         </Stack>
     );

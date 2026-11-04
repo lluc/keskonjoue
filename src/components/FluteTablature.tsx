@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { Box, MenuItem, Select, SelectChangeEvent, Stack, Typography } from "@mui/material";
 import ABCJS, { TuneObjectArray } from "abcjs";
+import { RECORDER_INSTRUMENTS } from "./recorderFingering";
 
 export type FluteKey = "D" | "G" | "C" | "Bb" | "A";
 
@@ -13,6 +14,18 @@ export const FLUTE_KEYS: { value: FluteKey; label: string; pitchClass: number }[
 ];
 
 export type HoleState = "closed" | "half" | "open";
+
+// Décrit un instrument à vent sélectionnable dans la tablature : sa tonique (pour calculer
+// l'écart en demi-tons de chaque note jouée), sa fondamentale MIDI (pour déterminer le
+// registre/octave) et sa fonction de doigté propre (nombre de trous variable : 6 pour le
+// tin whistle, 8 - pouce compris - pour la flûte à bec).
+export interface WindInstrument {
+    id: string;
+    label: string;
+    tonicPitchClass: number;
+    fundamentalMidi: number;
+    fingeringFor: (semitoneFromTonic: number, octave: number) => HoleState[];
+}
 
 // Doigté traditionnel flûte/tin whistle : les 6 trous se ferment de haut en bas pour la
 // tonique, puis s'ouvrent un par un en partant du bas à mesure que la gamme majeure monte.
@@ -58,6 +71,20 @@ export function fundamentalMidi(tonicPitchClass: number): number {
     return f;
 }
 
+const WHISTLE_INSTRUMENTS: WindInstrument[] = FLUTE_KEYS.map((k) => ({
+    id: `whistle-${k.value}`,
+    label: `Tin whistle en ${k.label}`,
+    tonicPitchClass: k.pitchClass,
+    fundamentalMidi: fundamentalMidi(k.pitchClass),
+    fingeringFor,
+}));
+
+export const INSTRUMENTS: WindInstrument[] = [...WHISTLE_INSTRUMENTS, ...RECORDER_INSTRUMENTS];
+
+export function getInstrument(id: string): WindInstrument {
+    return INSTRUMENTS.find((i) => i.id === id) ?? INSTRUMENTS[0];
+}
+
 export function breathMarker(octave: number): string {
     if (octave <= 0) return "";
     return octave === 1 ? "+" : "++";
@@ -70,10 +97,6 @@ const SOLFEGE: Record<string, string> = {
 
 export function toSolfege(baseLabel: string): string {
     return SOLFEGE[baseLabel.replace(/\d+$/, "")] ?? baseLabel;
-}
-
-export function pitchClassForFluteKey(key: FluteKey): number {
-    return FLUTE_KEYS.find((k) => k.value === key)?.pitchClass ?? 2;
 }
 
 function FingeringDiagram({ pattern }: { pattern: HoleState[] }) {
@@ -120,8 +143,8 @@ export interface TabNote {
     endMs?: number;
 }
 
-function buildTabNote(pitch: number, tonicPitchClass: number, domKey: string, index: number, newMeasure: boolean): TabNote {
-    const octave = Math.floor((pitch - fundamentalMidi(tonicPitchClass)) / 12);
+function buildTabNote(pitch: number, instrument: WindInstrument, domKey: string, index: number, newMeasure: boolean): TabNote {
+    const octave = Math.floor((pitch - instrument.fundamentalMidi) / 12);
     const baseLabel = ABCJS.synth.pitchToNoteName[pitch] || String(pitch);
     return {
         // domKey seul n'est pas toujours unique (ex. reprise ABC qui rejoue les mêmes startChar/endChar).
@@ -129,7 +152,7 @@ function buildTabNote(pitch: number, tonicPitchClass: number, domKey: string, in
         domKey,
         label: `${baseLabel}${breathMarker(octave)}`,
         solfegeLabel: `${toSolfege(baseLabel)}${breathMarker(octave)}`,
-        pattern: fingeringFor(pitch - tonicPitchClass, octave),
+        pattern: instrument.fingeringFor(pitch - instrument.tonicPitchClass, octave),
         newMeasure,
         highOctave: octave > 0,
         midiPitch: pitch,
@@ -147,7 +170,7 @@ interface AudioNoteEvent {
     endChar: number;
 }
 
-export function extractNotesFromAbc(visualObj: TuneObjectArray, abcSource: string, tonicPitchClass: number): TabNote[] {
+export function extractNotesFromAbc(visualObj: TuneObjectArray, abcSource: string, instrument: WindInstrument): TabNote[] {
     const audio = visualObj[0].setUpAudio({}) as unknown as { tracks: AudioNoteEvent[][] };
     const events = (audio.tracks?.[0] || []).filter((e) => e && e.cmd === "note" && typeof e.pitch === "number");
 
@@ -161,7 +184,7 @@ export function extractNotesFromAbc(visualObj: TuneObjectArray, abcSource: strin
         const newMeasure = notes.length > 0 && /\|/.test(abcSource.slice(prevEndChar, e.startChar));
         prevEndChar = e.endChar;
         const domKey = `${e.startChar}-${e.endChar}`;
-        notes.push(buildTabNote(pitch, tonicPitchClass, domKey, notes.length, newMeasure));
+        notes.push(buildTabNote(pitch, instrument, domKey, notes.length, newMeasure));
     });
     return notes;
 }
@@ -172,7 +195,7 @@ export interface MidiNoteEvent {
     endMs: number;
 }
 
-export function extractNotesFromMidi(events: MidiNoteEvent[], tonicPitchClass: number): TabNote[] {
+export function extractNotesFromMidi(events: MidiNoteEvent[], instrument: WindInstrument): TabNote[] {
     const sorted = [...events].sort((a, b) => a.startMs - b.startMs);
     const notes: TabNote[] = [];
     let lastStart: number | null = null;
@@ -180,7 +203,7 @@ export function extractNotesFromMidi(events: MidiNoteEvent[], tonicPitchClass: n
         if (e.startMs === lastStart) return; // ponytail: ignore les notes empilées (accords), on garde la première
         lastStart = e.startMs;
         const domKey = String(notes.length);
-        const note = buildTabNote(Math.round(e.pitch), tonicPitchClass, domKey, notes.length, false);
+        const note = buildTabNote(Math.round(e.pitch), instrument, domKey, notes.length, false);
         note.startMs = e.startMs;
         note.endMs = e.endMs;
         notes.push(note);
@@ -190,22 +213,22 @@ export function extractNotesFromMidi(events: MidiNoteEvent[], tonicPitchClass: n
 
 interface FluteTablatureProps {
     notes: TabNote[];
-    fluteKey: FluteKey;
-    onFluteKeyChange: (key: FluteKey) => void;
+    instrumentId: string;
+    onInstrumentChange: (id: string) => void;
 }
 
-const FluteTablature = ({ notes, fluteKey, onFluteKeyChange }: FluteTablatureProps) => {
+const FluteTablature = ({ notes, instrumentId, onInstrumentChange }: FluteTablatureProps) => {
     return (
         <Stack spacing={1}>
             <Select
                 size="small"
-                value={fluteKey}
-                onChange={(e: SelectChangeEvent) => onFluteKeyChange(e.target.value as FluteKey)}
-                sx={{ width: 160 }}
+                value={instrumentId}
+                onChange={(e: SelectChangeEvent) => onInstrumentChange(e.target.value)}
+                sx={{ width: 280, maxWidth: '100%' }}
             >
-                {FLUTE_KEYS.map((k) => (
-                    <MenuItem key={k.value} value={k.value}>
-                        Flûte en {k.label}
+                {INSTRUMENTS.map((instrument) => (
+                    <MenuItem key={instrument.id} value={instrument.id}>
+                        {instrument.label}
                     </MenuItem>
                 ))}
             </Select>
@@ -233,7 +256,7 @@ const FluteTablature = ({ notes, fluteKey, onFluteKeyChange }: FluteTablaturePro
             </Stack>
 
             <Typography variant="caption" color="text.secondary">
-                ● trou fermé · ○ trou ouvert · ◐ demi-trou · <Box component="span" className="flute-tab-octave">+ / ++</Box> seconde/troisième octave (même doigté, souffle plus soutenu)
+                ● trou fermé · ○ trou ouvert · ◐ demi-trou · <Box component="span" className="flute-tab-octave">+ / ++</Box> seconde/troisième octave (même position de base, registre aigu)
             </Typography>
         </Stack>
     );

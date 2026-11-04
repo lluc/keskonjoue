@@ -2,7 +2,7 @@ import { Box, Button, Divider, Stack, Tab, Tabs, TextField, Typography } from "@
 import { Slider } from "@mui/material";
 import ABCJS, { TuneObjectArray, SynthObjectController, CursorControl, NoteTimingEvent } from 'abcjs'
 import { useEffect, useLayoutEffect, useMemo, useState, useRef } from "react";
-import FluteTablature, { extractNotesFromAbc, FluteKey, pitchClassForFluteKey } from "./FluteTablature";
+import FluteTablature, { extractNotesFromAbc, getInstrument, INSTRUMENTS } from "./FluteTablature";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import AirIcon from "@mui/icons-material/Air";
 import SchoolIcon from "@mui/icons-material/School";
@@ -22,10 +22,10 @@ const MusicPlayer = ({ title, copyrightNotice, youtubeId, notations }: MusicPlay
     const [warp, setWarp] = useState(100);
     const [isReady, setIsReady] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
-    const [fluteKey, setFluteKey] = useState<FluteKey>("D");
+    const [instrumentId, setInstrumentId] = useState<string>(INSTRUMENTS[0].id);
     const tabNotes = useMemo(
-        () => (visualObj && notations ? extractNotesFromAbc(visualObj, notations, pitchClassForFluteKey(fluteKey)) : []),
-        [visualObj, notations, fluteKey]
+        () => (visualObj && notations ? extractNotesFromAbc(visualObj, notations, getInstrument(instrumentId)) : []),
+        [visualObj, notations, instrumentId]
     );
     const [learnRange, setLearnRange] = useState<[number, number]>([1, 1]);
     const [totalMeasures, setTotalMeasures] = useState(0);
@@ -214,11 +214,10 @@ const MusicPlayer = ({ title, copyrightNotice, youtubeId, notations }: MusicPlay
             {notations &&
                 <Stack>
                     <Box id="audio-control" sx={{ display: 'none' }} />
-                    <Box>
+                    <Box sx={{ position: 'sticky', top: 0, zIndex: 10, bgcolor: 'background.default', py: 1 }}>
                         <Button variant="contained" onClick={togglePlayMusic} disabled={!isReady}>
                             {isPlaying ? 'Pause' : 'Jouer'}
                         </Button>
-
                     </Box>
                     <Box>
                         <Typography id="warp-slider" gutterBottom>
@@ -248,7 +247,7 @@ const MusicPlayer = ({ title, copyrightNotice, youtubeId, notations }: MusicPlay
                         allowScrollButtonsMobile
                     >
                         <Tab icon={<MusicNoteIcon />} iconPosition="start" label="Partition" />
-                        <Tab icon={<AirIcon />} iconPosition="start" label="Tablature flûte irlandaise" />
+                        <Tab icon={<AirIcon />} iconPosition="start" label="Tablature" />
                         <Tab icon={<SchoolIcon />} iconPosition="start" label="Apprentissage" />
                     </Tabs>
 
@@ -259,8 +258,8 @@ const MusicPlayer = ({ title, copyrightNotice, youtubeId, notations }: MusicPlay
                     {activeTab === 1 && visualObj &&
                         <FluteTablature
                             notes={tabNotes}
-                            fluteKey={fluteKey}
-                            onFluteKeyChange={setFluteKey}
+                            instrumentId={instrumentId}
+                            onInstrumentChange={setInstrumentId}
                         />
                     }
 
