@@ -5,12 +5,16 @@ import {
   DialogContent,
   DialogActions,
   Button,
+  Divider,
+  Stack,
   Typography,
   List,
   ListItem,
   ListItemText
 } from '@mui/material';
+import GroupsIcon from '@mui/icons-material/Groups';
 import { APP_INFO } from '../config/version';
+import { CHANGELOG } from '../config/changelog';
 
 interface AboutDialogProps {
   open: boolean;
@@ -28,9 +32,33 @@ const AboutDialog: FunctionComponent<AboutDialogProps> = ({ open, onClose }) => 
         <Typography variant="body2" color="text.secondary">
           {APP_INFO.description}
         </Typography>
+
         <Typography variant="body1" sx={{ mt: 2 }}>
-          Application développée grâce aux contributions des membres des associations :
+          Nouveautés
         </Typography>
+        {CHANGELOG.slice(0, 3).map((entry) => (
+          <div key={entry.version}>
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 1, fontWeight: 'bold' }}>
+              Version {entry.version}
+            </Typography>
+            <List dense disablePadding component="ul" sx={{ listStyleType: 'disc', pl: 3 }}>
+              {entry.items.map((item) => (
+                <ListItem key={item} disableGutters sx={{ display: 'list-item' }}>
+                  <ListItemText primary={item} primaryTypographyProps={{ variant: 'body2' }} />
+                </ListItem>
+              ))}
+            </List>
+          </div>
+        ))}
+
+        <Divider sx={{ mt: 2 }} />
+
+        <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 2 }}>
+          <GroupsIcon fontSize="small" color="action" />
+          <Typography variant="body1">
+            Application développée grâce aux contributions des membres des associations :
+          </Typography>
+        </Stack>
         <List dense disablePadding component="ul" sx={{ listStyleType: 'disc', pl: 3 }}>
           <ListItem disableGutters sx={{ display: 'list-item' }}>
             <ListItemText primary="P'tit Louis Laplanche (Vendôme - 41, France)" />
