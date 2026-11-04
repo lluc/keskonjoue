@@ -7,6 +7,12 @@ export interface ChangelogEntry {
 // dans "À propos" (cf. AboutDialog) : pas la peine de remonter tout l'historique.
 export const CHANGELOG: ChangelogEntry[] = [
     {
+        version: '1.8.2',
+        items: [
+            "La 3e octave (++) a désormais sa propre couleur dans la tablature, distincte de la 2e octave (+)",
+        ],
+    },
+    {
         version: '1.8.1',
         items: [
             "Corrige la tablature : une section jouée deux fois à cause d'une reprise ne s'affiche plus deux fois",

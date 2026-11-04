@@ -138,6 +138,7 @@ export interface TabNote {
     pattern: HoleState[];
     newMeasure: boolean;
     highOctave: boolean; // octave 2+ (marqueur +/++) : mise en couleur pour repérage rapide
+    veryHighOctave: boolean; // octave 3+ (marqueur ++) : couleur distincte de l'octave 2
     midiPitch: number;
     startMs?: number; // lecture pilotée par minuterie (import MIDI) plutôt que par le cursorControl abcjs
     endMs?: number;
@@ -155,6 +156,7 @@ function buildTabNote(pitch: number, instrument: WindInstrument, domKey: string,
         pattern: instrument.fingeringFor(pitch - instrument.tonicPitchClass, octave),
         newMeasure,
         highOctave: octave > 0,
+        veryHighOctave: octave > 1,
         midiPitch: pitch,
     };
 }
@@ -250,7 +252,7 @@ const FluteTablature = ({ notes, instrumentId, onInstrumentChange }: FluteTablat
                             alignItems="center"
                             spacing={0.5}
                             data-note-key={note.domKey}
-                            className={note.highOctave ? "flute-tab-octave" : undefined}
+                            className={note.veryHighOctave ? "flute-tab-octave-high" : note.highOctave ? "flute-tab-octave" : undefined}
                         >
                             <FingeringDiagram pattern={note.pattern} />
                             <Typography variant="caption">{note.label}</Typography>
@@ -263,7 +265,7 @@ const FluteTablature = ({ notes, instrumentId, onInstrumentChange }: FluteTablat
             </Stack>
 
             <Typography variant="caption" color="text.secondary">
-                ● trou fermé · ○ trou ouvert · ◐ demi-trou · <Box component="span" className="flute-tab-octave">+ / ++</Box> seconde/troisième octave (même position de base, registre aigu)
+                ● trou fermé · ○ trou ouvert · ◐ demi-trou · <Box component="span" className="flute-tab-octave">+</Box> seconde octave · <Box component="span" className="flute-tab-octave-high">++</Box> troisième octave (même position de base, registre aigu)
             </Typography>
         </Stack>
     );
