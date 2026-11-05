@@ -7,6 +7,13 @@ export interface ChangelogEntry {
 // dans "À propos" (cf. AboutDialog) : pas la peine de remonter tout l'historique.
 export const CHANGELOG: ChangelogEntry[] = [
     {
+        version: '1.9.0',
+        items: [
+            "Import ABC : détecte et corrige automatiquement un fichier dont les lignes de musique sont en commentaire",
+            "Import ABC : affiche la vidéo référencée dans le fichier, uniquement après confirmation (jamais chargée automatiquement)",
+        ],
+    },
+    {
         version: '1.8.2',
         items: [
             "La 3e octave (++) a désormais sa propre couleur dans la tablature, distincte de la 2e octave (+)",
